@@ -1,0 +1,48 @@
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  @include font-size(36px);
+}
+
+h3 {
+  @include font-size(30px);
+}
+
+h4 {
+  @include font-size(22px);
+}
+
+// Body copy
+p {
+  font-family: $base-font-family;
+  @include font-size($base-font-size);
+  line-height: $base-line-height;
+  margin-bottom: 16px;
+
+    small {
+      @include font-size(13px);
+    }
+}
+
+// Links
+a {
+  color: $colour-link;
+  &:visited {
+    color: $colour-link;
+  }
+  &:hover {
+    color: $colour-link-hover;
+  }
+  &:active {
+    color: $colour-link;
+  }
+
+  text-decoration: none;
+  @include transition(color ease .1s);
+}

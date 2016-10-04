@@ -1,0 +1,50 @@
+<?php
+/**
+ * @package Big Blue Box
+ */
+
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
+?>
+
+<aside id="secondary" class="sidebar" role="complementary">
+	<!-- Social widget -->
+	<section id="social-widget" class="widget sidebar-items">
+		<h5 class="widget-title">Let's be social</h5>
+		<p>We chat lots on the interwebs, follow us to keep up-to-date.</p>
+		<ul class="social-links">
+			<li class="widget-tw"><a href="https://twitter.com/bigblueboxpcast" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			<li class="widget-fb"><a href="https://facebook.com/bigblueboxpodcast" target="_blank"><i class="fa fa-facebook"></i></a></li>
+			<li class="widget-insta"><a href="https://instagram.com/bigblueboxpodcast" target="_blank"><i class="fa fa-instagram"></i></a></li>
+		</ul>
+	</section>
+	<!-- End social-widget -->
+
+	<!-- Begin MailChimp Signup Form -->
+	<section id="signup-widget" class="widget sidebar-items">
+		<h5 class="widget-title">Sign up to our newsletter</h5>
+		<div id="mc_embed_signup">
+		<form action="//bigblueboxpodcast.us1.list-manage.com/subscribe/post?u=72630f2037dc3aa1ffb849594&amp;id=38641c1f67" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		    <div id="mc_embed_signup_scroll">
+		<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+		<div class="mc-field-group">
+			<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+		</label>
+			<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+		</div>
+			<div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_72630f2037dc3aa1ffb849594_38641c1f67" tabindex="-1" value=""></div>
+		    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+		    </div>
+		</form>
+		</div>
+	</section>
+	<!--End mc_embed_signup-->
+
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+
+</aside><!-- #secondary -->
