@@ -13,6 +13,27 @@
   @extend %clearfix;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .main-content .main {
+    flex: 1;
+  }
+
+  .main-content aside {
+    flex: 0 0 250px;
+  }
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    flex: 1;
+  }
+}
+
 .main {
   width: $content-width;
   float: left;

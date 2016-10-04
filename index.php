@@ -37,27 +37,27 @@ else {
 </section>
 <!-- End two featured posts -->
 
-<main id="main" class="main" role="main">
+<div class="main-content">
 
-	<!-- Start main posts -->
-	<section>
-		<h4 class="main-title">Latest episodes</h4>
-		<?php
-			if ( have_posts() ) {
-			    while ( have_posts() ) {
-			        the_post();
-			        get_template_part('content',get_post_format());
-			    }
-				the_posts_navigation();
-			} else {
-				get_template_part( 'content', 'none' );
-			}
-		?>
-	</section>
-	<!-- End main posts -->
+	<main id="main" class="main" role="main">
+		<section>
+			<h4 class="main-title">Latest episodes</h4>
+			<?php
+				if ( have_posts() ) {
+				    while ( have_posts() ) {
+				        the_post();
+				        get_template_part('content',get_post_format());
+				    }
+					the_posts_navigation();
+				} else {
+					get_template_part( 'content', 'none' );
+				}
+			?>
+		</section>
+	</main>
 
-</main>
-<!-- #main -->
+	<?php get_sidebar(); ?>
 
-<?php get_sidebar(); ?>
+</div>
+
 <?php get_footer(); ?>
