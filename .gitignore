@@ -60,5 +60,3 @@ style.css.map
 # General CodeKit files to ignore
 config.codekit
 /min
-
-*.map
