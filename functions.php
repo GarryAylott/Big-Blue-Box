@@ -52,7 +52,7 @@ add_action( 'widgets_init', 'bigbluebox_widgets_init' );
 // Remove admin bar
 show_admin_bar(false);
 
-// Post offets and pagination/navigation fix
+// Post offsets and pagination/navigation fix
 add_action( 'pre_get_posts', function( \WP_Query $query )
 {
     // Nothing to do if backend or not home page or not the main query

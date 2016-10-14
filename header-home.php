@@ -15,49 +15,60 @@
 
 <body <?php body_class(); ?>>
 
-	<header id="masthead" class="header-home" role="banner">
+	<div class="header-wrap" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');">
 
-    <!--
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<a href="#" class="menu-link">
-	            <div id="nav-icon">
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	            </div>
-	        </a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav>
-     -->
+		<header id="masthead" class="header-home" role="banner">
 
-    <!-- Start logo -->
-		<div id="logo">
-			<a href="#">
-			<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
-			</a>
-		</div>
-    <!-- End logo -->
+			<!-- Header content -->
+			<section class="inner">
 
-    <!-- Start latest post -->
-    <section class="header-latest-post">
+				<div class="header-top">
+					<div class="logo">
+						<a href="/">
+						<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
+						</a>
+					</div>
 
-			<?php
-		    $featured_post = new WP_Query( 'type=post&posts_per_page=1' );
-		    if ( $featured_post->have_posts() ) {
-		        while ( $featured_post->have_posts() ) {
-		            $featured_post->the_post();
-		            get_template_part('content',get_post_format());
-		        }
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<a href="#" class="menu-link">
+				            <div id="nav-icon">
+				                <span></span>
+				                <span></span>
+				                <span></span>
+				            </div>
+				        </a>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+					</nav>
+				</div>
+				<!-- End header-top -->
 
-		    } else {
-		        // no posts found
-		    }
-		    wp_reset_postdata();
-			?>
+		    <!-- Start latest post -->
+		    <section class="header-post">
+					<?php
+						$args = array (
+							'type' => 'post',
+							'posts_per_page' => '1'	);
+				    $featured_post = new WP_Query( $args );
+				    if ( $featured_post->have_posts() ) {
+				        while ( $featured_post->have_posts() ) {
+				            $featured_post->the_post();
+				            get_template_part('content-home_header',get_post_format());
+				        }
 
-    </section>
-    <!-- End latest post -->
+				    } else {
+				        // no posts found
+				    }
+				    wp_reset_postdata();
+					?>
+		    </section>
+		    <!-- End latest post -->
 
-	</header>
+			</section>
+			<!-- End header content -->
+
+		</header>
+
+	</div>
+	<!-- End header-wrap -->
 
 	<div id="wrap" class="wrap">

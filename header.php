@@ -17,50 +17,54 @@
 
 	<header id="masthead" class="header" role="banner">
 
-    <!--
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<a href="#" class="menu-link">
-	            <div id="nav-icon">
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	            </div>
-	        </a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav>
-     -->
+		<!-- Header content -->
+		<section class="inner">
 
-    <!-- Start logo -->
-		<div id="logo">
-			<a href="#">
-			<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
-			</a>
-		</div>
-    <!-- End logo -->
+			<div class="header-top">
+				<div class="logo">
+					<a href="/">
+					<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
+					</a>
+				</div>
 
-    <!-- Start header episode player -->
-    <section class="header">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<a href="#" class="menu-link">
+									<div id="nav-icon">
+											<span></span>
+											<span></span>
+											<span></span>
+									</div>
+							</a>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</nav>
+			</div>
 
-			<?php
+	    <!-- Start header episode player -->
+	    <section class="header-post">
 
-				$lastPost = new WP_Query( 'type=post&posts_per_page=1' );
+				<?php
 
-				if( $lastPost->have_posts() ):
+					$lastPost = new WP_Query( 'type=post&posts_per_page=1' );
 
-					while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
+					if( $lastPost->have_posts() ):
 
-						<?php get_template_part('content',get_post_format()); ?>
+						while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
 
-					<?php endwhile;
+							<?php get_template_part('content',get_post_format()); ?>
 
-				endif;
+						<?php endwhile;
 
-				wp_reset_postdata();
+					endif;
 
-			?>
+					wp_reset_postdata();
 
-    </section>
-    <!-- End header episode player -->
+				?>
+
+	    </section>
+	    <!-- End header episode player -->
+
+		</section>
+		<!-- End header content -->
 
 	</header>
 

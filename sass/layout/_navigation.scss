@@ -1,0 +1,29 @@
+.header-top .main-navigation {
+  flex: 1 0 50%;
+  text-align: right;
+
+  .menu-header-menu-container ul {
+    margin-top: 10px;
+
+    li {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-left: 35px;
+    }
+
+    a, a:active, a:visited {
+      color: $text-light;
+    }
+
+    a:hover {
+      color: darken($text-light, 30%);
+    }
+
+    .current-menu-item {
+      border-bottom: 2px solid $colour-primary;
+      padding-bottom: 5px;
+    }
+  }
+}
