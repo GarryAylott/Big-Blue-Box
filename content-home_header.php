@@ -6,17 +6,18 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="post-content-home">
-		<?php the_title( sprintf( '<h1 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-		<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<span class="published-date"><?php the_time('jS F Y'); ?></span>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-		<?php the_excerpt(); ?>
-		<div class="powerpress-player">
-    	<?php the_powerpress_content(); ?>
+	<div class="header-home--post-content">
+		<div class="post-title">
+			<?php the_title( sprintf( '<h1><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+			<span>Latest Episode</span>
 		</div>
+		<div class="post-meta">
+			<?php if ( 'post' == get_post_type() ) : ?>
+				<span class="published-date"><?php the_time('jS F Y'); ?></span>
+			<?php endif; ?>
+		</div><!-- .entry-meta -->
+		<?php the_excerpt(); ?>
+    <?php the_powerpress_content(); ?>
 	</div><!-- End post-content-home -->
 
 </article><!-- #post-## -->

@@ -25,10 +25,40 @@
       }
     }
 
-    .header-post .entry-meta {
+    .header-post .post-meta {
+      display: block;
       font-size: 14px;
       text-transform: uppercase;
       color: darken($text-light, 50%);
+    }
+  }
+
+  .header-home--post-content {
+    margin-bottom: 80px;
+
+    .post-title {
+      position: relative;
+      @extend %clearfix;
+
+      h1 {
+        float: left;
+        font-size: 58px;
+        line-height: 1;
+      }
+      span {
+        content: 'Latest Episode';
+        display: inline-block;
+        margin: 11px 0 0 13px;
+        padding: 2px 7px;
+        font-size: 11px;
+        font-weight: $base-font-weight;
+        text-transform: uppercase;
+        color: $text-standard;
+        background: $colour-accent;
+      }
+    }
+    .post-cta-audio {
+      display: none;
     }
   }
 

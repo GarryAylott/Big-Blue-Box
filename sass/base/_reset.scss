@@ -13,12 +13,11 @@ html, body {
 }
 
 body {
-  margin:0;
-  padding:0;
-  width:100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   @include font-size($base-font-size);
-  font-family:$base-font-family;
-  line-height:1.4;
+  font-family: $base-font-family;
   color: $text-standard;
   background: $colour-bg-main;
 }

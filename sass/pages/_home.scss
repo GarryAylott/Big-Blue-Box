@@ -1,4 +1,39 @@
-// Homepage styles
+// Two recent posts
+.recent-posts {
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  .two-feat-posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+      .post {
+        flex: 0 0 48%;
+        position: relative;
+        height: 400px;
+
+        .post-content-recent {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 30px;
+          color: $text-light;
+
+          .entry-meta {
+            margin-bottom: 8px;
+            span {
+              @include font-size(14px);
+            }
+          }
+        }
+      }
+  }
+}
+
+// Ten remaining posts
 .main {
 
   .main-title {
@@ -9,46 +44,7 @@
     margin-bottom: 30px;
     @extend %clearfix;
 
-    .post-thumb {
-      float: left;
-      margin-right: 20px;
-      position: relative;
-
-      .thumb-play {
-        position: absolute;
-        margin: auto;
-        overflow: auto;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 10;
-      }
-
-      .feat-img-small-container {
-        position: relative;
-
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          background: rgba(0, 0, 0, .6);
-          @include transition(all .3s ease);
-        }
-      }
-    }
-
-    .feat-img-small-container:hover::after {
-      background: rgba(0, 0, 0, .2);
-    }
-
-    .thumb-play {
-      display: block;
-    }
+    @include post-thumb;
   }
 
   .post-content-home {

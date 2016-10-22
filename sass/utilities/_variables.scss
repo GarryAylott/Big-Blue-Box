@@ -1,20 +1,21 @@
 // Colours
 $colour-bg-main: #f5f5f5;
 $colour-bg-dark: #222222;
-$colour-primary: #5493FC;
-$colour-accent: #54FC69;
+$colour-primary: #5493fc;
+$colour-accent: #54fc69;
 $colour-link: $colour-primary;
 $colour-link-hover: darken($colour-primary, 10%);
-$colour-border-light: #D8D8D8;
+$colour-border-light: #d8d8d8;
 $colour-border-dark: #484848;
 $text-standard: #444444;
-$text-light: white;
+$text-light: #f2f2f2;
 
 // Typopgraphy
 $base-font-family: 'Source Sans Pro', sans-serif;
 $base-font-weight: 400;
 $base-font-size: 18px;
-$base-line-height: 1.6;
+$base-font-size-small: 14px;
+$base-line-height: 1.4;
 $header-font-weight: 600;
 
 // Layout

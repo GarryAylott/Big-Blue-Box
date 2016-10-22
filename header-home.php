@@ -15,7 +15,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="header-wrap" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');">
+	<div class="header-wrap" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>');">
 
 		<header id="masthead" class="header-home" role="banner">
 
@@ -47,7 +47,7 @@
 					<?php
 						$args = array (
 							'type' => 'post',
-							'posts_per_page' => '1'	);
+							'posts_per_page' => '1');
 				    $featured_post = new WP_Query( $args );
 				    if ( $featured_post->have_posts() ) {
 				        while ( $featured_post->have_posts() ) {

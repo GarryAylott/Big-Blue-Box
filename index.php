@@ -13,19 +13,18 @@ else {
   <section class="two-feat-posts">
 		<?php
 	    $args = array(
-	                    'post_status' => 'publish',
-	                    'posts_per_page'=>2,
-											'offset'=>1,
-	                    'order'=>'DESC',
-	                    'orderby'=>'ID'
-	                    );
+	      'post_status' => 'publish',
+	      'posts_per_page'=>2,
+				'offset'=>1,
+	      'orderby'=>'ID'
+      );
 
 	    $recent_two_posts = new WP_Query( $args );
 
 	    if ( $recent_two_posts->have_posts() ) {
 	        while ( $recent_two_posts->have_posts() ) {
 	            $recent_two_posts->the_post();
-	            get_template_part('content',get_post_format());
+	            get_template_part('content-recent-post',get_post_format());
 	        }
 
 	    } else {
