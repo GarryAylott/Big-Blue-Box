@@ -6,13 +6,10 @@ Description: Custom theme for the Big Blue Box website.
 Version: 2.0
 Text Domain: Big Blue Box
 */
-.wrap, .inner, .header-wrap .header-home--post-content .post-title, .main .post {
-  *zoom: 1; }
-  .wrap:before, .inner:before, .header-wrap .header-home--post-content .post-title:before, .main .post:before, .wrap:after, .inner:after, .header-wrap .header-home--post-content .post-title:after, .main .post:after {
-    content: " ";
-    display: table; }
-  .wrap:after, .inner:after, .header-wrap .header-home--post-content .post-title:after, .main .post:after {
-    clear: both; }
+.wrap:after, .inner:after, .header-wrap .header-home--post-content .post-title:after, .main .post:after, .main .post-content-home:after {
+  content: '';
+  display: table;
+  clear: both; }
 
 html, body {
   font-family: sans-serif;
@@ -31,8 +28,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 17px;
+  font-size: 1.0625rem;
   font-family: "Source Sans Pro", sans-serif;
   color: #444444;
   background: #f5f5f5; }
@@ -255,8 +252,8 @@ h6 {
 
 p {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.4;
   margin-bottom: 16px; }
   p small {
@@ -266,8 +263,8 @@ p {
 a {
   color: #5493fc;
   text-decoration: none;
-  -webkit-transition: color ease 0.1s;
-  transition: color ease 0.1s; }
+  -webkit-transition: color ease .1s;
+  transition: color ease .1s; }
   a:visited {
     color: #5493fc; }
   a:hover {
@@ -431,6 +428,32 @@ a {
   .powerpress_links a {
     margin-left: 12px; }
 
+.btn-medium, .btn-large, .btn-small, .recent-posts .two-feat-posts .post .post-content-recent .post-cta-audio .btn-medium {
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  background: #5493fc;
+  background-size: 25px;
+  background-position: 3px 50%;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out; }
+
+.btn-large {
+  padding: 12px 18px 12px 35px;
+  font-size: 17px; }
+
+.btn-small {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+.btn-small:hover, .btn-medium:hover, .btn-large:hover, .btn-small:hover, .recent-posts .two-feat-posts .post .post-content-recent .post-cta-audio .btn-medium:hover, .btn-large:hover {
+  color: white;
+  background: #3b83fc; }
+
 .recent-posts h4 {
   margin-bottom: 20px; }
 .recent-posts .two-feat-posts {
@@ -466,7 +489,7 @@ a {
 .main .main-title {
   margin: -5px 0 20px 0; }
 .main .post {
-  margin-bottom: 30px; }
+  margin-bottom: 40px; }
   .main .post .post-thumb {
     float: left;
     margin-right: 20px;
@@ -491,25 +514,26 @@ a {
         height: 100%;
         text-align: center;
         background: rgba(0, 0, 0, 0.6);
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease; }
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
   .main .post .feat-img-small-container:hover::after {
     background: rgba(0, 0, 0, 0.2); }
   .main .post .thumb-play {
     display: block; }
 .main .post-content-home h3 {
-  margin: -6px 0 0 0;
+  margin: -6px 0 5px 0;
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1;
   text-transform: uppercase; }
 .main .post-content-home .entry-meta {
-  margin-bottom: 8px; }
-  .main .post-content-home .entry-meta span {
-    font-size: 14px;
-    font-size: 0.875rem; }
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #737373;
+  margin-bottom: 10px; }
 .main .post-content-home p {
-  margin: 0; }
+  margin: 0 0 15px 0; }
 .main .pagination .nav-previous {
   float: left;
   width: 50%; }

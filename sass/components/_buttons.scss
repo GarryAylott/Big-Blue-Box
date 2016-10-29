@@ -1,0 +1,31 @@
+.btn-medium {
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-size: $base-font-size-small;
+    font-weight: $header-font-weight;
+    text-transform: uppercase;
+    color: white;
+    background: $colour-primary;
+    background-size: 25px;
+    background-position: 3px 50%;
+    transition: all .1s ease-in-out;
+}
+
+.btn-large {
+  @extend .btn-medium;
+  padding: 12px 18px 12px 35px;
+  font-size: $base-font-size;
+}
+
+.btn-small {
+  @extend .btn-medium;
+  padding: 5px 10px;
+  @include font-size(12px);
+}
+
+.btn-small, .btn-medium, .btn-large {
+  &:hover {
+    color: white;
+    background: darken($colour-primary, 5%);
+  }
+}

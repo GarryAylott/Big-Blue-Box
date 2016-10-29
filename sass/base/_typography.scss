@@ -61,5 +61,5 @@ a {
   }
 
   text-decoration: none;
-  @include transition(color ease .1s);
+  transition: color ease .1s;
 }

@@ -26,11 +26,10 @@ else {
 	            $recent_two_posts->the_post();
 	            get_template_part('content-recent-post',get_post_format());
 	        }
-
+					wp_reset_postdata();
 	    } else {
 	    	get_template_part( 'content', 'none' );
 	    }
-	    wp_reset_postdata();
 		?>
   </section>
 </section>
@@ -40,7 +39,7 @@ else {
 
 	<main id="main" class="main" role="main">
 		<section>
-			<h4 class="main-title">Latest episodes</h4>
+			<h4 class="main-title">More episodes</h4>
 			<?php
 				if ( have_posts() ) {
 				    while ( have_posts() ) {

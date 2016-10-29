@@ -54,11 +54,10 @@
 				            $featured_post->the_post();
 				            get_template_part('content-home_header',get_post_format());
 				        }
-
+								wp_reset_postdata();
 				    } else {
 				        // no posts found
 				    }
-				    wp_reset_postdata();
 					?>
 		    </section>
 		    <!-- End latest post -->
