@@ -9,7 +9,9 @@ else {
 
 <!-- Start two featured posts -->
 <section class="recent-posts">
-	<h4 class="main-title">Recent episodes</h4>
+	<div class="title-container">
+		<h4 class="main-title">Recent episodes</h4>
+	</div>
   <section class="two-feat-posts">
 		<?php
 	    $args = array(
@@ -39,7 +41,9 @@ else {
 
 	<main id="main" class="main" role="main">
 		<section>
-			<h4 class="main-title">More episodes</h4>
+			<div class="title-container">
+				<h4 class="main-title">More episodes</h4>
+			</div>
 			<?php
 				if ( have_posts() ) {
 				    while ( have_posts() ) {

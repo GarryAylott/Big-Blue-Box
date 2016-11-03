@@ -26,7 +26,8 @@
 				<span class="published-date"><?php the_time('jS F Y'); ?></span>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-		<?php the_excerpt(); ?>
+		<?php echo excerpt(22); ?>
+		<a href="<?php the_permalink(); ?>">Listen now</a>
 	</div><!-- End post-content-home -->
 
 </article><!-- #post-## -->

@@ -16,7 +16,7 @@
 				<span class="published-date"><?php the_time('jS F Y'); ?></span>
 			<?php endif; ?>
 		</div><!-- .entry-meta -->
-		<?php the_excerpt(); ?>
+		<?php echo excerpt(45); ?>
     <?php the_powerpress_content(); ?>
 	</div><!-- End post-content-home -->
 

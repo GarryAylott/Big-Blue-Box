@@ -91,6 +91,22 @@
 }
 // Usage: .element { @include center-vertically; }
 
+// Title overline
+@mixin title-overline {
+  position: relative;
+  padding-top: 15px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 5px;
+      top: 0;
+      left: 0;
+      background: $colour-border-light;
+    }
+}
+
 // Post meta date format
 @mixin post-meta {
   display: block;

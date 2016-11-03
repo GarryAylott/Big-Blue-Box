@@ -14,16 +14,33 @@
     }
 
     a, a:active, a:visited {
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 10px;
       color: $text-light;
-    }
 
-    a:hover {
-      color: darken($text-light, 30%);
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 3px;
+        width: 0;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease, left .5s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
+        background: $colour-primary;
+      }
     }
 
     .current-menu-item {
-      border-bottom: 2px solid $colour-primary;
-      padding-bottom: 5px;
+      border-bottom: 3px solid $colour-primary;
+      padding-bottom: 7px;
     }
   }
 }

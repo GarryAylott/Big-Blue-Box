@@ -23,10 +23,8 @@
           color: $text-light;
 
           .entry-meta {
-            margin-bottom: 8px;
-            span {
-              @include font-size(14px);
-            }
+            @include post-meta;
+            color: darken($text-light, 25%);
           }
 
           .post-cta-audio {
@@ -43,7 +41,7 @@
 .main {
 
   .main-title {
-    margin: -5px 0 20px 0;
+    margin: 0 0 20px 0;
   }
 
   .post {
@@ -96,9 +94,9 @@
     @include clearfix;
 
     h3 {
-      margin: -6px 0 5px 0;
-      @include font-size(30px);
-      line-height: 1;
+      @include font-size(25px);
+      display: inline-block;
+      margin-top: -10px;
       text-transform: uppercase;
     }
 

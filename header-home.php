@@ -45,6 +45,10 @@
 		    <!-- Start latest post -->
 		    <section class="header-post">
 					<?php
+						function latest_post_ID() {
+							global $post;
+							$thePostID = $post->ID;
+						}
 						$args = array (
 							'type' => 'post',
 							'posts_per_page' => '1');
@@ -56,7 +60,7 @@
 				        }
 								wp_reset_postdata();
 				    } else {
-				        // no posts found
+							get_template_part('content-none',get_post_format());
 				    }
 					?>
 		    </section>
