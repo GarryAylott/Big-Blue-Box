@@ -6,7 +6,7 @@ Description: Custom theme for the Big Blue Box website.
 Version: 2.0
 Text Domain: Big Blue Box
 */
-.wrap:after, .inner:after, .header-wrap .header-home--post-content .post-title:after, .main .post:after, .main .post-content-home:after {
+.wrap:after, .inner:after, .header-home--post-content .post-title:after, .main .post:after, .main .post-content-home:after {
   content: '';
   display: table;
   clear: both; }
@@ -86,11 +86,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: inherit; }
-
-b,
-strong {
-  font-weight: bolder; }
+  font-weight: 700; }
 
 dfn {
   font-style: italic; }
@@ -218,7 +214,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase; }
 
 h1 {
@@ -229,6 +225,7 @@ h1 {
 h2 {
   font-size: 36px;
   font-size: 2.25rem;
+  line-height: 38px;
   margin-left: -1px !important; }
 
 h3 {
@@ -349,60 +346,77 @@ a {
       border-bottom: 3px solid #5493fc;
       padding-bottom: 7px; }
 
-.header-wrap {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-  .header-wrap .header, .header-wrap .header-home {
-    color: #f2f2f2;
-    padding-top: 10px;
+.header, .header-home {
+  position: relative;
+  color: #f2f2f2; }
+  .header::after, .header-home::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    z-index: 10;
     /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(15%, transparent), color-stop(100%, transparent));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(25%, transparent), color-stop(100%, transparent));
     /* safari4+,chrome */
-    background: -webkit-linear-gradient(270deg, black 5%, transparent 30%, transparent 100%);
+    background: -webkit-linear-gradient(270deg, black 25%, transparent 95%, transparent 100%);
     /* safari5.1+,chrome10+ */
     /* opera 11.10+ */
     /* ie10+ */
-    background: -webkit-linear-gradient(top, black 5%, transparent 30%, transparent 100%);
-    background: linear-gradient(180deg, black 5%, transparent 30%, transparent 100%);
+    background: -webkit-linear-gradient(top, black 25%, transparent 95%, transparent 100%);
+    background: linear-gradient(180deg, black 25%, transparent 95%, transparent 100%);
     /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
     /* ie6-9 */ }
-    .header-wrap .header .header-top, .header-wrap .header-home .header-top {
+  .header .header-top, .header-home .header-top {
+    position: absolute;
+    width: 1100px;
+    margin: auto;
+    top: 10px;
+    right: 0;
+    left: 0;
+    z-index: 20; }
+    .header .header-top .inner, .header-home .header-top .inner {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin-bottom: 70px; }
-      .header-wrap .header .header-top .logo, .header-wrap .header-home .header-top .logo {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .header .header-top .inner .logo, .header-home .header-top .inner .logo {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 auto;
-                flex: 0 1 auto; }
-    .header-wrap .header .header-post .post-meta, .header-wrap .header-home .header-post .post-meta {
-      display: block;
-      font-size: 14px;
+                flex: 0 1 auto;
+        display: inline-block; }
+  .header .header-post .post-meta, .header-home .header-post .post-meta {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #737373;
+    color: #b2b2b2; }
+
+.header-home--post-content {
+  margin-bottom: 95px;
+  padding-top: 200px; }
+  .header-home--post-content .post-title {
+    position: relative; }
+    .header-home--post-content .post-title h2 {
+      float: left;
+      line-height: 1; }
+    .header-home--post-content .post-title span {
+      content: 'Latest Episode';
+      display: inline-block;
+      margin: 5px 0 0 8px;
+      padding: 2px 7px;
+      vertical-align: top;
+      font-size: 11px;
+      font-weight: 400;
       text-transform: uppercase;
-      color: #737373;
-      color: #b2b2b2; }
-  .header-wrap .header-home--post-content {
-    margin-bottom: 80px; }
-    .header-wrap .header-home--post-content .post-title {
-      position: relative; }
-      .header-wrap .header-home--post-content .post-title h1 {
-        float: left;
-        font-size: 58px;
-        line-height: 1; }
-      .header-wrap .header-home--post-content .post-title span {
-        content: 'Latest Episode';
-        display: inline-block;
-        margin: 11px 0 0 13px;
-        padding: 2px 7px;
-        font-size: 11px;
-        font-weight: 400;
-        text-transform: uppercase;
-        color: #444444;
-        background: #54fc69; }
-    .header-wrap .header-home--post-content .post-cta-audio {
-      display: none; }
+      color: #444444;
+      background: #54fc69; }
+  .header-home--post-content .post-cta-audio {
+    display: none; }
 
 .powerpress_player .mejs-container {
   background: none; }
@@ -413,6 +427,8 @@ a {
       height: 18px;
       margin: 6px 5px;
       background: transparent url(img/player-play-btn.svg) no-repeat; }
+      .powerpress_player .mejs-container .mejs-controls .mejs-play button:hover {
+        opacity: .7; }
       .powerpress_player .mejs-container .mejs-controls .mejs-play button:focus, .powerpress_player .mejs-container .mejs-controls .mejs-play button:active {
         outline: none; }
     .powerpress_player .mejs-container .mejs-controls .mejs-pause button {
@@ -420,6 +436,8 @@ a {
       height: 18px;
       margin: 5px 5px;
       background: transparent url(img/player-pause-btn.svg) no-repeat; }
+      .powerpress_player .mejs-container .mejs-controls .mejs-pause button:hover {
+        opacity: .7; }
       .powerpress_player .mejs-container .mejs-controls .mejs-pause button:focus, .powerpress_player .mejs-container .mejs-controls .mejs-pause button:active {
         outline: none; }
     .powerpress_player .mejs-container .mejs-controls .mejs-time-rail {
@@ -441,7 +459,7 @@ a {
 
 .powerpress_links {
   font-size: 14px;
-  margin-bottom: 0; }
+  margin: 5px 0 0 65px; }
   .powerpress_links a {
     margin-left: 12px; }
 
@@ -485,6 +503,7 @@ a {
 
 .recent-posts h4 {
   margin-bottom: 20px; }
+
 .recent-posts .two-feat-posts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -518,6 +537,7 @@ a {
 
 .main .main-title {
   margin: 0 0 20px 0; }
+
 .main .post {
   margin-bottom: 40px; }
   .main .post .post-thumb {
@@ -550,26 +570,30 @@ a {
     background: rgba(0, 0, 0, 0.2); }
   .main .post .thumb-play {
     display: block; }
+
 .main .post-content-home h3 {
   font-size: 25px;
   font-size: 1.5625rem;
   display: inline-block;
   margin-top: -10px;
   text-transform: uppercase; }
+
 .main .post-content-home .entry-meta {
   display: block;
   font-size: 14px;
   text-transform: uppercase;
   color: #737373;
   margin-bottom: 10px; }
+
 .main .post-content-home p {
   margin: 0 0 15px 0; }
+
 .main .pagination .nav-previous {
   float: left;
   width: 50%; }
+
 .main .pagination .nav-next {
   float: right;
   width: 50%;
   text-align: right; }
-
 /*# sourceMappingURL=style.css.map */

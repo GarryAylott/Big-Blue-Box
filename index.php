@@ -14,9 +14,10 @@ else {
 	</div>
   <section class="two-feat-posts">
 		<?php
-	    $args = array(
+	    $args = array (
 	      'post_status' => 'publish',
 	      'posts_per_page'=>2,
+				'category_name' => 'podcasts',
 				'offset'=>1,
 	      'orderby'=>'ID'
       );

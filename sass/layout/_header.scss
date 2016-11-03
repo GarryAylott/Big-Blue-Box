@@ -1,63 +1,80 @@
-.header-wrap {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.header, .header-home {
+  position: relative;
+  color: $text-light;
 
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
-  .header, .header-home {
-    color: $text-light;
-    padding-top: 10px;
-
-    background: -moz-linear-gradient(270deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(15%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(270deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(270deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(270deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* ie10+ */
-    background: linear-gradient(180deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* w3c */
+    background: -moz-linear-gradient(270deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 95%, rgba(0,0,0,0) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(25%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 95%, rgba(0,0,0,0) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 95%, rgba(0,0,0,0) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 95%, rgba(0,0,0,0) 100%); /* ie10+ */
+    background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 95%, rgba(0,0,0,0) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* ie6-9 */
+  }
 
-    .header-top {
-      display: flex;
-      margin-bottom: 70px;
+  .header-top {
+    position: absolute;
+    width: 1100px;
+    margin: auto;
+    top: 10px;
+    right: 0;
+    left: 0;
+    z-index: 20;
 
-      .logo {
-        flex: 0 1 auto;
+      .inner {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+          flex: 0 1 auto;
+          display: inline-block;
+        }
       }
-    }
+  }
 
-    .header-post .post-meta {
+  .header-post {
+
+    .post-meta {
       @include post-meta;
       color: darken($text-light, 25%);
     }
   }
+}
 
-  .header-home--post-content {
-    margin-bottom: 80px;
+.header-home--post-content {
+  margin-bottom: 95px;
+  padding-top: 200px;
 
-    .post-title {
-      position: relative;
-      @include clearfix;
+  .post-title {
+    position: relative;
+    @include clearfix;
 
-      h1 {
-        float: left;
-        font-size: 58px;
-        line-height: 1;
-      }
-      span {
-        content: 'Latest Episode';
-        display: inline-block;
-        margin: 11px 0 0 13px;
-        padding: 2px 7px;
-        font-size: 11px;
-        font-weight: $base-font-weight;
-        text-transform: uppercase;
-        color: $text-standard;
-        background: $colour-accent;
-      }
+    h2 {
+      float: left;
+      line-height: 1;
     }
-    .post-cta-audio {
-      display: none;
+    span {
+      content: 'Latest Episode';
+      display: inline-block;
+      margin: 5px 0 0 8px;
+      padding: 2px 7px;
+      vertical-align: top;
+      font-size: 11px;
+      font-weight: $base-font-weight;
+      text-transform: uppercase;
+      color: $text-standard;
+      background: $colour-accent;
     }
   }
-
+  .post-cta-audio {
+    display: none;
+  }
 }

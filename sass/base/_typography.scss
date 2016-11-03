@@ -2,7 +2,7 @@
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -13,6 +13,7 @@ h1 {
 
 h2 {
   @include font-size(36px);
+  line-height: 38px;
   margin-left: -1px !important;
 }
 

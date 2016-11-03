@@ -13,6 +13,10 @@
         margin: 6px 5px;
         background: transparent url(img/player-play-btn.svg) no-repeat;
 
+          &:hover {
+            opacity: .7;
+          }
+
           &:focus, &:active {
             outline: none;
           }
@@ -23,6 +27,10 @@
         height: 18px;
         margin: 5px 5px;
         background: transparent url(img/player-pause-btn.svg) no-repeat;
+
+          &:hover {
+            opacity: .7;
+          }
 
           &:focus, &:active {
             outline: none;
@@ -60,7 +68,7 @@
 
 .powerpress_links {
   font-size: $base-font-size-small;
-  margin-bottom: 0;
+  margin: 5px 0 0 65px;
 
   a {
     margin-left: 12px;
