@@ -20,14 +20,14 @@
 	</div>
 
 	<div class="post-content-home">
-		<?php the_title( sprintf( '<h3 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		<?php the_title( sprintf( '<h4 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<span class="published-date"><?php the_time('jS F Y'); ?></span>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		<?php echo excerpt(22); ?>
-		<a href="<?php the_permalink(); ?>">Listen now</a>
+		<a class="btn-small" href="<?php the_permalink(); ?>">Listen now</a>
 	</div><!-- End post-content-home -->
 
 </article><!-- #post-## -->

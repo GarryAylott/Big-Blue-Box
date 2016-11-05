@@ -8,18 +8,18 @@
     background: $colour-primary;
     background-size: 25px;
     background-position: 3px 50%;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .btn-large {
   @extend .btn-medium;
-  padding: 12px 18px 12px 35px;
+  padding: 12px 18px;
   font-size: $base-font-size;
 }
 
 .btn-small {
   @extend .btn-medium;
-  padding: 5px 10px;
+  padding: 5px 12px;
   @include font-size(12px);
 }
 
@@ -27,5 +27,9 @@
   &:hover {
     color: white;
     background: darken($colour-primary, 5%);
+  }
+
+  &:visited {
+    color: white;
   }
 }

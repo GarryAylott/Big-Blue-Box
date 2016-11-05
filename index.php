@@ -38,7 +38,12 @@ else {
 </section>
 <!-- End two featured posts -->
 
-<div class="main-content">
+<section class="subscribe">
+	<h3>Subscribe on iTunes and never miss a show</h3>
+	<a class="btn-large" href="#" target="_blank">Subscribe on iTunes</a>
+</section>
+
+<section class="main-content">
 
 	<main id="main" class="main" role="main">
 		<section>
@@ -61,6 +66,6 @@ else {
 
 	<?php get_sidebar(); ?>
 
-</div>
+</section>
 
 <?php get_footer(); ?>

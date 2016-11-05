@@ -46,7 +46,14 @@
 
   .post {
     margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $colour-border-light;
     @include clearfix;
+
+    &.last {
+      border: 0;
+      margin-bottom: 0;
+    }
 
     .post-thumb {
       float: left;

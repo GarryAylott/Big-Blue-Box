@@ -9,7 +9,7 @@
 	<section class="inner">
 		<div class="header-home--post-content">
 			<div class="post-title">
-				<?php the_title( '<h2>', '</h2>' ); ?>
+				<?php the_title( '<h1>', '</h1>' ); ?>
 				<span>Latest Episode</span>
 			</div>
 			<div class="post-meta">

@@ -57,9 +57,10 @@
     position: relative;
     @include clearfix;
 
-    h2 {
+    h1 {
       float: left;
       line-height: 1;
+      margin-bottom: 5px;
     }
     span {
       content: 'Latest Episode';

@@ -215,6 +215,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   font-weight: 600;
+  line-height: 1.4;
   text-transform: uppercase; }
 
 h1 {
@@ -225,26 +226,30 @@ h1 {
 h2 {
   font-size: 36px;
   font-size: 2.25rem;
-  line-height: 38px;
+  line-height: 41px;
   margin-left: -1px !important; }
 
 h3 {
-  font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 35px;
   margin-left: -1px !important; }
 
 h4 {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 32px;
   margin-left: -1px !important; }
 
 h5 {
   font-size: 19px;
-  font-size: 1.1875rem; }
+  font-size: 1.1875rem;
+  line-height: 27px; }
 
 h6 {
   font-size: 16px;
   font-size: 1rem;
+  line-height: 24px;
   font-weight: 400; }
 
 p {
@@ -260,8 +265,8 @@ p {
 a {
   color: #5493fc;
   text-decoration: none;
-  -webkit-transition: color ease .1s;
-  transition: color ease .1s; }
+  -webkit-transition: color ease .2s;
+  transition: color ease .2s; }
   a:visited {
     color: #5493fc; }
   a:hover {
@@ -401,9 +406,10 @@ a {
   padding-top: 200px; }
   .header-home--post-content .post-title {
     position: relative; }
-    .header-home--post-content .post-title h2 {
+    .header-home--post-content .post-title h1 {
       float: left;
-      line-height: 1; }
+      line-height: 1;
+      margin-bottom: 5px; }
     .header-home--post-content .post-title span {
       content: 'Latest Episode';
       display: inline-block;
@@ -473,21 +479,24 @@ a {
   background: #5493fc;
   background-size: 25px;
   background-position: 3px 50%;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out; }
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
 
 .btn-large {
-  padding: 12px 18px 12px 35px;
+  padding: 12px 18px;
   font-size: 17px; }
 
 .btn-small {
-  padding: 5px 10px;
+  padding: 5px 12px;
   font-size: 12px;
   font-size: 0.75rem; }
 
 .btn-small:hover, .btn-medium:hover, .btn-large:hover, .btn-small:hover, .recent-posts .two-feat-posts .post .post-content-recent .post-cta-audio .btn-medium:hover, .btn-large:hover {
   color: white;
   background: #3b83fc; }
+
+.btn-small:visited, .btn-medium:visited, .btn-large:visited, .btn-small:visited, .recent-posts .two-feat-posts .post .post-content-recent .post-cta-audio .btn-medium:visited, .btn-large:visited {
+  color: white; }
 
 .title-container {
   position: relative;
@@ -500,6 +509,30 @@ a {
     top: 0;
     left: 0;
     background: #d8d8d8; }
+
+.subscribe {
+  position: relative;
+  z-index: 1;
+  margin: 50px 0;
+  padding: 30px 0 50px 0;
+  text-align: center;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8; }
+  .subscribe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .2;
+    background: url(img/tardis-bg.svg) no-repeat;
+    background-size: 35%;
+    background-position: 50% 10%; }
+  .subscribe h3 {
+    margin-bottom: 30px; }
 
 .recent-posts h4 {
   margin-bottom: 20px; }
@@ -539,7 +572,12 @@ a {
   margin: 0 0 20px 0; }
 
 .main .post {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d8d8d8; }
+  .main .post.last {
+    border: 0;
+    margin-bottom: 0; }
   .main .post .post-thumb {
     float: left;
     margin-right: 20px;
