@@ -7,7 +7,7 @@ else {
 }
 ?>
 
-<!-- Start two featured posts -->
+<!-- Start two recent posts -->
 <section class="recent-posts">
 	<div class="title-container">
 		<h4 class="main-title">Recent episodes</h4>
@@ -36,13 +36,22 @@ else {
 		?>
   </section>
 </section>
-<!-- End two featured posts -->
+<!-- End two recent posts -->
 
+<!-- Start subscribe -->
 <section class="subscribe">
 	<h3>Subscribe on iTunes and never miss a show</h3>
-	<a class="btn-large" href="#" target="_blank">Subscribe on iTunes</a>
+	<a class="btn-large" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank">Subscribe on iTunes</a>
+	<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
+	<ul>
+		<li><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">Stitcher</a></li>
+		<li><a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">Android</a></li>
+		<li><a href="http://www.bigblueboxpodcast.co.uk/feed/podcast/" target="_blank">RSS</a></li>
+	</ul>
 </section>
+<!-- End subscribe -->
 
+<!-- Start main content -->
 <section class="main-content">
 
 	<main id="main" class="main" role="main">
@@ -67,5 +76,6 @@ else {
 	<?php get_sidebar(); ?>
 
 </section>
+<!-- End main content -->
 
 <?php get_footer(); ?>

@@ -1,0 +1,69 @@
+.sidebar {
+  .sidebar-items {
+    @include clearfix;
+  }
+
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  .social-links li {
+    display: inline-block;
+  }
+
+  .newsletter-form {
+    label {
+      display: block;
+      margin-bottom: 10px;
+      @include clearfix;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      height: 35px;
+      border: 0;
+      margin-bottom: 10px;
+      padding: 0 10px;
+      font-size: 16px;
+      line-height: 35px;
+      background: #f2f2f2;
+      transition: all .2s ease-in-out;
+
+      &:focus {
+        outline: none;
+        box-shadow: inset 0 0 5px rgba(84, 147, 252, 1);
+      }
+    }
+
+    input[type="email"]::-webkit-input-placeholder {
+      font-style: italic;
+      opacity: .3;
+    }
+
+    input[type="email"]:-moz-placeholder { /* Firefox 18- */
+      font-style: italic;
+      opacity: .3;
+    }
+
+    input[type="email"]::-moz-placeholder {  /* Firefox 19+ */
+      font-style: italic;
+      opacity: .3;
+    }
+
+    input[type="email"]:-ms-input-placeholder {
+      font-style: italic;
+      opacity: .3;
+    }
+
+    input[type="submit"] {
+      float: right;
+      border: 0;
+      cursor: pointer;
+    }
+
+    p {
+      width: 60%;
+      margin-bottom: 0;
+    }
+  }
+}

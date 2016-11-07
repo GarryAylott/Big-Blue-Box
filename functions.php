@@ -83,6 +83,16 @@ add_action( 'pre_get_posts', function( \WP_Query $query )
     $query->set( 'posts_per_page', $query->is_paged() ? $pp_op : $pp_fp );
 } );
 
+// Custom continue buttons
+function new_excerpt_more($more) {
+	if (in_category ('Podcasts')) {
+		return '... <div class="post-cta-audio"><a class="btn-large" href="' . get_permalink() . '">Listen now</a></div>';
+		} else {
+		return '... <div><a class="btn-large" href="' . get_permalink() . '">Continue reading</a></div>';
+	  }
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 //Load jQuery
 function load_jQuery() {
     if (!is_admin())

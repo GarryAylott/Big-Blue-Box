@@ -110,6 +110,7 @@
 // Post meta date format
 @mixin post-meta {
   display: block;
+  margin-bottom: 12px;
   font-size: 14px;
   text-transform: uppercase;
   color: darken($text-light, 50%);

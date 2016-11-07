@@ -100,16 +100,16 @@
   .post-content-home {
     @include clearfix;
 
-    h3 {
-      @include font-size(25px);
+    h4 {
+      width: 65%;
       display: inline-block;
+      @include font-size(25px);
       margin-top: -10px;
       text-transform: uppercase;
     }
 
     .entry-meta {
       @include post-meta;
-      margin-bottom: 10px;
     }
 
     p {
