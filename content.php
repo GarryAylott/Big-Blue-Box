@@ -8,7 +8,6 @@
 
 	<div class="post-thumb">
 		<a href="<?php the_permalink(); ?>">
-			<img class="thumb-play" src="<?php bloginfo('template_url'); ?>/img/thumb-play-btn.svg" width="50" height="50">
 			<div class="feat-img-small-container">
 				<?php
 					if ( has_post_thumbnail() ):

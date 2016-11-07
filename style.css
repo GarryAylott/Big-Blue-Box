@@ -6,7 +6,7 @@ Description: Custom theme for the Big Blue Box website.
 Version: 2.0
 Text Domain: Big Blue Box
 */
-.wrap:after, .inner:after, .header-home--post-content .post-title:after, .sidebar .sidebar-items:after, .sidebar .newsletter-form label:after, .main .post:after, .main .post-content-home:after {
+.wrap:after, .inner:after, .header-home--post-content .post-title:after, .sidebar .sidebar-items:after, .main .post:after, .main .post-content-home:after {
   content: '';
   display: table;
   clear: both; }
@@ -450,24 +450,20 @@ a {
   .sidebar .newsletter-form input[type="email"]:focus {
     outline: none;
     box-shadow: inset 0 0 5px #5493fc; }
-
-.sidebar .newsletter-form input[type="email"]::-webkit-input-placeholder {
-  font-style: italic;
-  opacity: .3; }
-
-.sidebar .newsletter-form input[type="email"]:-moz-placeholder {
-  /* Firefox 18- */
-  font-style: italic;
-  opacity: .3; }
-
-.sidebar .newsletter-form input[type="email"]::-moz-placeholder {
-  /* Firefox 19+ */
-  font-style: italic;
-  opacity: .3; }
-
-.sidebar .newsletter-form input[type="email"]:-ms-input-placeholder {
-  font-style: italic;
-  opacity: .3; }
+  .sidebar .newsletter-form input[type="email"]:input[type="email"]::-webkit-input-placeholder {
+    font-style: italic;
+    opacity: .3; }
+  .sidebar .newsletter-form input[type="email"]:input[type="email"]:-moz-placeholder {
+    /* Firefox 18- */
+    font-style: italic;
+    opacity: .3; }
+  .sidebar .newsletter-form input[type="email"]:input[type="email"]::-moz-placeholder {
+    /* Firefox 19+ */
+    font-style: italic;
+    opacity: .3; }
+  .sidebar .newsletter-form input[type="email"]:input[type="email"]:-ms-input-placeholder {
+    font-style: italic;
+    opacity: .3; }
 
 .sidebar .newsletter-form input[type="submit"] {
   float: right;
@@ -477,6 +473,43 @@ a {
 .sidebar .newsletter-form p {
   width: 60%;
   margin-bottom: 0; }
+
+.sidebar .search-form span {
+  display: block;
+  margin-bottom: 10px; }
+
+.sidebar .search-form input[type="search"] {
+  width: 100%;
+  height: 35px;
+  border: 0;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  line-height: 35px;
+  background: #f2f2f2;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+  .sidebar .search-form input[type="search"]:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px #5493fc; }
+  .sidebar .search-form input[type="search"]:input[type="email"]::-webkit-input-placeholder {
+    font-style: italic;
+    opacity: .3; }
+  .sidebar .search-form input[type="search"]:input[type="email"]:-moz-placeholder {
+    /* Firefox 18- */
+    font-style: italic;
+    opacity: .3; }
+  .sidebar .search-form input[type="search"]:input[type="email"]::-moz-placeholder {
+    /* Firefox 19+ */
+    font-style: italic;
+    opacity: .3; }
+  .sidebar .search-form input[type="search"]:input[type="email"]:-ms-input-placeholder {
+    font-style: italic;
+    opacity: .3; }
+
+.sidebar .search-form .screen-reader-text {
+  position: absolute;
+  left: -10000px; }
 
 .powerpress_player .mejs-container {
   background: none; }
@@ -645,15 +678,6 @@ a {
     float: left;
     margin-right: 20px;
     position: relative; }
-    .main .post .post-thumb .thumb-play {
-      position: absolute;
-      margin: auto;
-      overflow: auto;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 10; }
     .main .post .post-thumb .feat-img-small-container {
       position: relative; }
       .main .post .post-thumb .feat-img-small-container::after {
@@ -669,8 +693,6 @@ a {
         transition: all .3s ease; }
   .main .post .feat-img-small-container:hover::after {
     background: rgba(0, 0, 0, 0.2); }
-  .main .post .thumb-play {
-    display: block; }
 
 .main .post-content-home h4 {
   width: 65%;
