@@ -14,7 +14,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		<?php echo excerpt(20); ?>
-		<a class="btn-medium" href="<?php the_permalink(); ?>">Listen now</a>
+		<a class="btn-medium post-link" href="<?php the_permalink(); ?>">Listen now</a>
 	</div><!-- End post-content-home -->
 
 </article><!-- #post-## -->

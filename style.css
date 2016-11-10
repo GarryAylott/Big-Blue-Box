@@ -452,18 +452,18 @@ a {
     box-shadow: inset 0 0 5px #5493fc; }
   .sidebar .newsletter-form input[type="email"]:input[type="email"]::-webkit-input-placeholder {
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
   .sidebar .newsletter-form input[type="email"]:input[type="email"]:-moz-placeholder {
     /* Firefox 18- */
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
   .sidebar .newsletter-form input[type="email"]:input[type="email"]::-moz-placeholder {
     /* Firefox 19+ */
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
   .sidebar .newsletter-form input[type="email"]:input[type="email"]:-ms-input-placeholder {
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
 
 .sidebar .newsletter-form input[type="submit"] {
   float: right;
@@ -494,22 +494,38 @@ a {
     box-shadow: inset 0 0 5px #5493fc; }
   .sidebar .search-form input[type="search"]:input[type="email"]::-webkit-input-placeholder {
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
   .sidebar .search-form input[type="search"]:input[type="email"]:-moz-placeholder {
     /* Firefox 18- */
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
   .sidebar .search-form input[type="search"]:input[type="email"]::-moz-placeholder {
     /* Firefox 19+ */
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
   .sidebar .search-form input[type="search"]:input[type="email"]:-ms-input-placeholder {
     font-style: italic;
-    opacity: .3; }
+    opacity: .2; }
 
 .sidebar .search-form .screen-reader-text {
   position: absolute;
   left: -10000px; }
+
+.sidebar .search-form input[type="submit"] {
+  float: right;
+  border: 0;
+  cursor: pointer; }
+
+.sidebar .widget_oauth_twitter_widget .oauth-twitter-tweet {
+  font-style: normal;
+  margin-bottom: 5px; }
+
+.sidebar .widget_oauth_twitter_widget .oauth-twitter-tweet-time {
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+  .sidebar .widget_oauth_twitter_widget .oauth-twitter-tweet-time:last-child {
+    margin-bottom: 0; }
 
 .powerpress_player .mejs-container {
   background: none; }
@@ -556,7 +572,7 @@ a {
   .powerpress_links a {
     margin-left: 12px; }
 
-.btn-medium, .btn-large, .btn-small, .recent-posts .two-feat-posts .post .post-content-recent .post-cta-audio .btn-medium {
+.btn-medium, .btn-large, .btn-small {
   display: inline-block;
   padding: 7px 13px;
   border-radius: 3px;
@@ -579,11 +595,11 @@ a {
   font-size: 14px;
   font-size: 0.875rem; }
 
-.btn-small:hover, .btn-medium:hover, .btn-large:hover, .btn-small:hover, .recent-posts .two-feat-posts .post .post-content-recent .post-cta-audio .btn-medium:hover, .btn-large:hover {
+.btn-small:hover, .btn-medium:hover, .btn-large:hover, .btn-small:hover, .btn-large:hover {
   color: white;
   background: #3b83fc; }
 
-.btn-small:visited, .btn-medium:visited, .btn-large:visited, .btn-small:visited, .recent-posts .two-feat-posts .post .post-content-recent .post-cta-audio .btn-medium:visited, .btn-large:visited {
+.btn-small:visited, .btn-medium:visited, .btn-large:visited, .btn-small:visited, .btn-large:visited {
   color: white; }
 
 .title-container {

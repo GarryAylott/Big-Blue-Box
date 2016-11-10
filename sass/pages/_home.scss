@@ -26,12 +26,6 @@
             @include post-meta;
             color: darken($text-light, 25%);
           }
-
-          .post-cta-audio {
-            .btn-medium {
-              @extend .btn-medium;
-            }
-          }
         }
       }
   }
