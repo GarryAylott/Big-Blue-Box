@@ -15,9 +15,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<h5 class="widget-title">Let's be social</h5>
 		<p>We chat lots on the interwebs, follow us to keep up-to-date.</p>
 		<ul class="social-links">
-			<li class="widget-tw"><a href="https://twitter.com/bigblueboxpcast" target="_blank"><i class="fa fa-twitter"></i></a></li>
-			<li class="widget-fb"><a href="https://facebook.com/bigblueboxpodcast" target="_blank"><i class="fa fa-facebook"></i></a></li>
-			<li class="widget-insta"><a href="https://instagram.com/bigblueboxpodcast" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			<li><a class="icon-twitter" href="https://twitter.com/bigblueboxpcast" target="_blank">Twitter</a></li>
+			<li><a class="icon-facebook" href="https://facebook.com/bigblueboxpodcast" target="_blank">Facebook</a></li>
+			<li><a class="icon-instagram" href="https://instagram.com/bigblueboxpodcast" target="_blank">Instagram</a></li>
 		</ul>
 	</section>
 	<!-- End social-widget -->

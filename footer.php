@@ -7,8 +7,14 @@
  * @package Big Blue Box
  */
 ?>
+		</section>
+		<!-- End inner -->
+	</div>
+	<!-- End wrap -->
 
-	</div><!-- #content -->
+	<section class="instagram">
+		<?php echo do_shortcode('[instagram-feed]'); ?>
+	</section>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="darken">
@@ -40,9 +46,9 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
 
 					<p>Big Blue Box Podcast original content &copy;
-						<?php 
-						  $fromYear = 2014; 
-						  $thisYear = (int)date('Y'); 
+						<?php
+						  $fromYear = 2014;
+						  $thisYear = (int)date('Y');
 						  echo $fromYear . (($fromYear != $thisYear) ? ' - ' . $thisYear : '');?>.<br />
 					This website and audio podcast has no affiliation with the BBC and Doctor Who is &copy; BBC. Any copyright infringement is unintentional.</p>
 				</section><!-- End footer-legals -->

@@ -66,3 +66,4 @@
 	</header>
 
 	<div id="wrap" class="wrap">
+		<section class="inner">
