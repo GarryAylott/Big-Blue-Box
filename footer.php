@@ -16,9 +16,9 @@
 		<?php echo do_shortcode('[instagram-feed]'); ?>
 	</section>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer class="site-footer" role="contentinfo">
 		<div class="darken">
-			<div class="inner-max-width">
+			<div class="inner">
 
 				<section class="footer-col footer-about">
 					<h4>About</h4>
@@ -55,7 +55,7 @@
 
 			</div><!-- End inner-max-width -->
 		</div><!-- End darken -->
-	</footer><!-- #colophon -->
+	</footer>
 
 <?php wp_footer(); ?>
 

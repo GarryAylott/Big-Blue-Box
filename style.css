@@ -11,26 +11,28 @@ Text Domain: Big Blue Box
   display: table;
   clear: both; }
 
-html, body {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  vertical-align: baseline;
+html {
+  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
-  background: transparent;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  background: transparent; }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  vertical-align: baseline;
   font-size: 17px;
   font-size: 1.0625rem;
   font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   color: #444444;
   background: #fefefe; }
 
@@ -561,6 +563,25 @@ a {
 .sidebar .widget_archive li {
   margin-bottom: 10px; }
 
+footer {
+  position: relative;
+  background: #222222;
+  color: #f2f2f2;
+  z-index: 1; }
+  footer .darken::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .15;
+    background: url(img/footer-bg.png) no-repeat;
+    background-size: 25%;
+    background-position: -2% 100px; }
+
 .powerpress_player .mejs-container {
   background: none; }
   .powerpress_player .mejs-container .mejs-controls {
@@ -678,6 +699,12 @@ a {
   .subscribe ul li {
     display: inline-block;
     margin: 0 20px; }
+
+#sb_instagram #sbi_images .sbi_item {
+  width: 16.66666666667% !important; }
+
+#sb_instagram #sbi_load {
+  padding-top: 0 !important; }
 
 .recent-posts h4 {
   margin-bottom: 20px; }
