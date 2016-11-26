@@ -17,9 +17,9 @@
 	</section>
 
 	<footer class="site-footer" role="contentinfo">
-		<div class="darken">
-			<div class="inner">
+		<div class="inner">
 
+			<div class="footer-cols">
 				<section class="footer-col footer-about">
 					<h4>About</h4>
 					<p>A weekly Doctor Who podcast show bringing you news, reviews, commentaries and general chat on everything Who from your hosts Garry and Adam.</p>
@@ -30,18 +30,20 @@
 					<h4>Social Stuff</h4>
 					<p>Stay up to date with show news, our review episodes plus plenty of Who chat.</p>
 					<ul class="social-links">
-						<li class="widget-tw"><a href="https://twitter.com/bigblueboxpcast" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li class="widget-fb"><a href="https://facebook.com/bigblueboxpodcast" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li class="widget-insta"><a href="https://instagram.com/bigblueboxpodcast" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a class="icon-twitter" href="https://twitter.com/bigblueboxpcast" target="_blank">Twitter</a></li>
+						<li><a class="icon-facebook" href="https://facebook.com/bigblueboxpodcast" target="_blank">Facebook</a></li>
+						<li><a class="icon-instagram" href="https://instagram.com/bigblueboxpodcast" target="_blank">Instagram</a></li>
 					</ul>
 				</section>
 
 				<section class="footer-col footer-feedback">
-					<h4>Feedback</h4>
-					<p>We'd love to hear your thoughts on the show. Let us know your thoughts using the <a href="index.php?page_id=378">contact us form.</a></p>
-					<p>To leave a review in iTunes, <a href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2" target="_blank">click here.</a></p>
+					<h4>What do you think?</h4>
+					<p>We love hearing from you and your thoughts on the show. Shoot us an email <a href="mailto:hello@bigblueboxpodcast.co.uk">here.</a></p>
+					<p>If you're an iTunes listener you can leave a review here: <a href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2" target="_blank">click here.</a></p>
 				</section>
+			</div><!-- End footer-cols -->
 
+			<div class="footer-btm-info">
 				<section class="footer-legals">
 					<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
 
@@ -52,9 +54,12 @@
 						  echo $fromYear . (($fromYear != $thisYear) ? ' - ' . $thisYear : '');?>.<br />
 					This website and audio podcast has no affiliation with the BBC and Doctor Who is &copy; BBC. Any copyright infringement is unintentional.</p>
 				</section><!-- End footer-legals -->
+				<section class="footer-logo">
+					<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="180" height="auto">
+				</section>
+			</div><!-- End footer-btm-info -->
 
-			</div><!-- End inner-max-width -->
-		</div><!-- End darken -->
+		</div><!-- End inner-max-width -->
 	</footer>
 
 <?php wp_footer(); ?>

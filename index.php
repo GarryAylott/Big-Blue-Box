@@ -10,7 +10,7 @@ else {
 <!-- Start two recent posts -->
 <section class="recent-posts">
 	<div class="title-container">
-		<h4 class="main-title">Recent episodes</h4>
+		<h3 class="main-title">Recent episodes</h3>
 	</div>
   <section class="two-feat-posts">
 		<?php
@@ -57,7 +57,7 @@ else {
 	<main id="main" class="main" role="main">
 		<section>
 			<div class="title-container">
-				<h4 class="main-title">More episodes</h4>
+				<h3 class="main-title">More episodes</h3>
 			</div>
 			<?php
 				if ( have_posts() ) {

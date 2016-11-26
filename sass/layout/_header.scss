@@ -75,6 +75,13 @@
       background: $colour-accent;
     }
   }
+  .post-excerpt p {
+    margin-bottom: 0;
+  }
+  .show-notes-link {
+    display: block;
+    margin-bottom: 15px;
+  }
   .post-cta-audio {
     display: none;
   }

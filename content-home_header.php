@@ -16,8 +16,11 @@
 				<?php if ( 'post' == get_post_type() ) : ?>
 					<span class="published-date"><?php the_time('jS F Y'); ?></span>
 				<?php endif; ?>
-			</div><!-- .entry-meta -->
-			<?php echo excerpt(45); ?>
+			</div><!-- End entry-meta -->
+			<div class="post-excerpt">
+				<?php echo excerpt(45); ?>
+			</div>
+			<a class="show-notes-link" href="<?php the_permalink(); ?>">Read full show notes</a>
 	    <?php the_powerpress_content(); ?>
 		</div><!-- End post-content-home -->
 	</section>

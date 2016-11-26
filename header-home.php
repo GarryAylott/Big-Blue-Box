@@ -21,7 +21,7 @@
 			<section class="inner">
 				<div class="logo">
 					<a href="/">
-					<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
+						<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
 					</a>
 				</div>
 

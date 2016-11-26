@@ -113,8 +113,6 @@ function bigbluebox_scripts() {
 	wp_enqueue_script('add-custom-js');
 	wp_enqueue_script('bigbluebox-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script('bigbluebox-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	wp_enqueue_style('font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css', null, '4.0.1' );
 	wp_enqueue_style('bigbluebox-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

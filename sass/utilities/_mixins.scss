@@ -94,7 +94,7 @@
 // Title overline
 @mixin title-overline {
   position: relative;
-  padding-top: 15px;
+  padding-top: 10px;
 
     &:after {
       content: '';
@@ -152,4 +152,40 @@
       font-style: italic;
       opacity: .2;
     }
+}
+
+// Social link svg icons
+@mixin social-link-icons {
+  li {
+    display: inline-block;
+    margin-right: 15px;
+
+    [class^="icon-"] {
+      display: block;
+      width: 36px;
+      height: 30px;
+      background: url('img/socialicons-sprite.svg');
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .icon-twitter {
+      background-position: -92px 0;
+    }
+    .icon-facebook {
+      background-position: 0 0;
+    }
+    .icon-instagram {
+      background-position: -46px 0;
+    }
+  }
+
+  a {
+    transition: all .3s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
 }
