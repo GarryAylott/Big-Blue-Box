@@ -1,6 +1,6 @@
 <?php
-if (is_home()) {
-	get_header('home');
+if ( is_home() ) {
+	get_header('audio');
 }
 else {
 	get_header();
@@ -15,9 +15,7 @@ else {
   <section class="two-feat-posts">
 		<?php
 	    $args = array (
-	      'post_status' => 'publish',
 	      'posts_per_page'=>2,
-				'category_name' => 'podcasts',
 				'offset'=>1,
 	      'orderby'=>'ID'
       );
@@ -29,7 +27,7 @@ else {
 	            $recent_two_posts->the_post();
 	            get_template_part('content-recent-post',get_post_format());
 	        }
-					wp_reset_postdata();
+			wp_reset_postdata();
 	    } else {
 	    	get_template_part( 'content', 'none' );
 	    }
@@ -41,7 +39,7 @@ else {
 <!-- Start subscribe -->
 <section class="subscribe">
 	<h3>Subscribe on iTunes and never miss a show</h3>
-	<a class="btn-large" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank">Subscribe on iTunes</a>
+	<a class="btn-large btn-itunes" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank">Subscribe on iTunes</a>
 	<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
 	<ul>
 		<li><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">Stitcher</a></li>

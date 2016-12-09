@@ -34,3 +34,16 @@
     color: white;
   }
 }
+
+.btn-audio::after {
+  font-family: 'bigblueboxicons';
+  content: '\e907';
+  margin-left: 10px;
+}
+
+.btn-itunes::after {
+  font-family: 'bigblueboxicons';
+  content: '\e908';
+  margin-left: 10px;
+  vertical-align: 10%;
+}

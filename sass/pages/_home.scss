@@ -64,29 +64,29 @@
           transition: all .3s ease;
         }
       }
+
+      .feat-img-small-container:hover::after {
+        background: rgba(0, 0, 0, .4);
+      }
     }
 
-    .feat-img-small-container:hover::after {
-      background: rgba(0, 0, 0, .4);
-    }
-  }
+    .post-content-home {
+      overflow: hidden;
+      margin: 0;
 
-  .post-content-home {
-    @include clearfix;
+      h4 {
+        display: inline-block;
+        text-transform: uppercase;
+        line-height: 1;
+      }
 
-    h4 {
-      width: 65%;
-      display: inline-block;
-      margin-top: -10px;
-      text-transform: uppercase;
-    }
+      .entry-meta {
+        @include post-meta;
+      }
 
-    .entry-meta {
-      @include post-meta;
-    }
-
-    p {
-      margin: 0 0 15px 0;
+      p {
+        margin: 0 0 15px 0;
+      }
     }
   }
 

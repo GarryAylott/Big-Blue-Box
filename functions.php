@@ -49,6 +49,8 @@ function bigbluebox_widgets_init() {
 }
 add_action( 'widgets_init', 'bigbluebox_widgets_init' );
 
+// Add Home link for current nav state
+
 // Remove admin bar
 show_admin_bar(false);
 
@@ -83,12 +85,24 @@ add_action( 'pre_get_posts', function( \WP_Query $query )
     $query->set( 'posts_per_page', $query->is_paged() ? $pp_op : $pp_fp );
 } );
 
+// Excerpt length
+function my_excerpt_length() {
+	global $myExcerptLength;
+
+	if ($myExcerptLength) {
+		return $myExcerptLength;
+		} else {
+		return 30;
+	}
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
 // Custom continue buttons
 function new_excerpt_more($more) {
-	if (in_category ('Podcasts')) {
-		return '... <div class="post-cta-audio"><a class="btn-large" href="' . get_permalink() . '">Listen now</a></div>';
+	if (in_category ('podcasts')) {
+		return '... <div class="post-cta-audio"><a class="btn-medium btn-audio" href="' . get_permalink() . '">Listen now</a></div>';
 		} else {
-		return '... <div><a class="btn-large" href="' . get_permalink() . '">Continue reading</a></div>';
+		return '... <div><a class="btn-medium" href="' . get_permalink() . '">Read more</a></div>';
 	  }
 }
 add_filter('excerpt_more', 'new_excerpt_more');

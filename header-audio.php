@@ -14,7 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header id="masthead" class="header-home" role="banner">
+	<header id="masthead" class="header-audio" role="banner">
 
 		<!-- Header content -->
 		<div class="header-top">
@@ -44,7 +44,6 @@
 			<?php
 				$args = array (
 					'type' => 'post',
-					'category_name' => 'podcasts',
 					'posts_per_page' => '1'
 				);
 
@@ -53,7 +52,7 @@
 		    if ( $featured_post->have_posts() ) {
 		        while ( $featured_post->have_posts() ) {
 		            $featured_post->the_post();
-		            get_template_part('content-home_header',get_post_format());
+		            get_template_part('content-header_audio',get_post_format());
 		        }
 						wp_reset_postdata();
 		    } else {

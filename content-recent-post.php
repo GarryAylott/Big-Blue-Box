@@ -13,8 +13,7 @@
 				<span class="published-date"><?php the_time('jS F Y'); ?></span>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-		<?php echo excerpt(20); ?>
-		<a class="btn-medium post-link" href="<?php the_permalink(); ?>">Listen now</a>
+		<?php the_excerpt(); ?>
 	</div><!-- End post-content-home -->
 
 </article><!-- #post-## -->

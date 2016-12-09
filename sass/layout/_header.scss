@@ -1,4 +1,4 @@
-.header, .header-home {
+.header, .header-audio {
   position: relative;
   color: $text-light;
 
@@ -41,7 +41,6 @@
   }
 
   .header-post {
-
     .post-meta {
       @include post-meta;
       color: darken($text-light, 25%);
@@ -49,7 +48,7 @@
   }
 }
 
-.header-home--post-content {
+.header-audio--post-content {
   margin-bottom: 95px;
   padding-top: 200px;
 

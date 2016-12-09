@@ -14,8 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<header id="masthead" class="header" role="banner">
+	<header id="masthead" class="header-audio" role="banner">
 
 		<!-- Header content -->
 		<section class="inner">
@@ -50,7 +49,7 @@
 
 						while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
 
-							<?php get_template_part('content',get_post_format()); ?>
+							<?php get_template_part('content-home-single',get_post_format()); ?>
 
 						<?php endwhile;
 

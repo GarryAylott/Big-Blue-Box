@@ -25,14 +25,7 @@
 				<span class="published-date"><?php the_time('jS F Y'); ?></span>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-		<?php echo excerpt(22); ?>
-		<?php
-			if (in_category( 'Podcasts' )) {
-				echo '<a class="btn-small" href="' . get_permalink() . '">Listen now</a>';
-			} else {
-				echo '<a class="btn-small" href="' . get_permalink() . '">Read article</a>';
-			}
-		?>
+		<?php the_excerpt(); ?>
 	</div><!-- End post-content-home -->
 
 </article><!-- #post-## -->
