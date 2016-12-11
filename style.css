@@ -413,10 +413,10 @@ a {
       border-bottom: 3px solid #5493fc;
       padding-bottom: 7px; }
 
-.header, .header-audio {
+.header, .header-audio, .header-simple {
   position: relative;
   color: #f2f2f2; }
-  .header::after, .header-audio::after {
+  .header::after, .header-audio::after, .header-simple::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -436,7 +436,7 @@ a {
     /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
     /* ie6-9 */ }
-  .header .header-top, .header-audio .header-top {
+  .header .header-top, .header-audio .header-top, .header-simple .header-top {
     position: absolute;
     width: 1100px;
     margin: auto;
@@ -444,19 +444,19 @@ a {
     right: 0;
     left: 0;
     z-index: 20; }
-    .header .header-top .inner, .header-audio .header-top .inner {
+    .header .header-top .inner, .header-audio .header-top .inner, .header-simple .header-top .inner {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-      .header .header-top .inner .logo, .header-audio .header-top .inner .logo {
+      .header .header-top .inner .logo, .header-audio .header-top .inner .logo, .header-simple .header-top .inner .logo {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 auto;
                 flex: 0 1 auto;
         display: inline-block; }
-  .header .post-meta, .header-audio .post-meta {
+  .header .post-meta, .header-audio .post-meta, .header-simple .post-meta {
     display: block;
     margin-bottom: 12px;
     font-size: 14px;
@@ -491,6 +491,19 @@ a {
     margin-bottom: 15px; }
   .header-audio--post-content .post-cta-audio {
     display: none; }
+
+.header-simple {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/page-header.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/page-header.jpg) no-repeat;
+  background-size: cover; }
+  .header-simple .title-area {
+    width: 100%;
+    height: 300px;
+    text-align: center; }
+    .header-simple .title-area .page-title {
+      color: white;
+      line-height: 300px;
+      padding-top: 20px; }
 
 .sidebar .sidebar-items {
   position: relative; }
