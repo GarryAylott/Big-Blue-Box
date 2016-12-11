@@ -40,11 +40,9 @@
       }
   }
 
-  .header-post {
-    .post-meta {
-      @include post-meta;
-      color: darken($text-light, 25%);
-    }
+  .post-meta {
+    @include post-meta;
+    color: darken($text-light, 25%);
   }
 }
 

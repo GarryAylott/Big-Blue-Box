@@ -1,29 +1,25 @@
-<?php
-/**
- * The template for displaying all single posts.
- *
- * @package Big Blue Box
- */
+<?php get_header('single'); ?>
 
-get_header(); ?>
+<!-- Start main content -->
+<section class="main-content">
 
-	<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
+	<main id="main" class="main" role="main">
+		<?php
+			if ( have_posts() ) {
+					while ( have_posts() ) {
+							the_post();
+							get_template_part('content', 'single');
+					}
+				the_posts_navigation();
+			} else {
+				get_template_part( 'content', 'none' );
+			}
+		?>
 	</main><!-- #main -->
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
+
+</section>
+<!-- End main content -->
+
 <?php get_footer(); ?>

@@ -1,11 +1,4 @@
-<?php
-if ( is_home() ) {
-	get_header('audio');
-}
-else {
-	get_header();
-}
-?>
+<?php get_header(); ?>
 
 <!-- Start two recent posts -->
 <section class="recent-posts">

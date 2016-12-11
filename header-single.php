@@ -1,8 +1,4 @@
-<?php
-/**
- * @package Big Blue Box
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -12,7 +8,6 @@
 
 	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
 	<header id="masthead" class="header-audio" role="banner">
 
@@ -39,28 +34,26 @@
 		</div>
 		<!-- End header-top -->
 
-    <!-- Start latest post -->
-    <section class="header-post">
-			<?php
-				$args = array (
-					'type' => 'post',
-					'posts_per_page' => '1'
-				);
+		<article id="post-<?php the_ID(); ?>" <?php post_class('header-latest-post'); ?> style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>'); background-size: cover; background-position: 0 50%; background-repeat: no-repeat;">
 
-		    $featured_post = new WP_Query( $args );
+			<section class="inner">
+				<div class="header-audio--post-content">
+					<div class="post-title">
+						<?php the_title( '<h1>', '</h1>' ); ?>
+						<?php if ( is_home() && in_category('podcasts') ) : ?>
+							<span>Latest Episode</span>
+						<?php endif; ?>
+					</div>
+					<div class="post-meta">
+						<?php if ( 'post' == get_post_type() ) : ?>
+							<span class="published-date"><?php the_time('jS F Y'); ?></span>
+						<?php endif; ?>
+					</div><!-- End entry-meta -->
+			    <?php the_powerpress_content(); ?>
+				</div><!-- End post-content-home -->
+			</section>
 
-		    if ( $featured_post->have_posts() ) {
-		        while ( $featured_post->have_posts() ) {
-		            $featured_post->the_post();
-		            get_template_part('content-header_audio',get_post_format());
-		        }
-						wp_reset_postdata();
-		    } else {
-					get_template_part('content-none',get_post_format());
-		    }
-			?>
-    </section>
-    <!-- End latest post -->
+		</article>
 
 	</header>
 

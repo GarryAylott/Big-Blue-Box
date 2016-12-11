@@ -9,5 +9,9 @@
 		<span class="screen-reader-text">Search for:</span>
 		<input type="search" class="search-field" placeholder="Your search" value name="s" title="Search...">
 	</label>
-	<input type="submit" class="btn-medium" value="Search">
+	<div class="search-btn-icon">
+		<button type="submit">
+			<i class="bbbicon-search"></i>
+		</button>
+	</div>
 </form>

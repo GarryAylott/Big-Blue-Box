@@ -241,7 +241,7 @@ h4 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 32px;
-  margin-left: -1px !important; }
+  margin-bottom: 5px; }
 
 h5 {
   font-size: 19px;
@@ -260,7 +260,7 @@ p {
   font-size: 1.0625rem;
   line-height: 1.4;
   margin: 0;
-  margin-bottom: 16px; }
+  margin-bottom: 26px; }
   p.small {
     font-size: 13px;
     font-size: 0.8125rem; }
@@ -456,7 +456,7 @@ a {
             -ms-flex: 0 1 auto;
                 flex: 0 1 auto;
         display: inline-block; }
-  .header .header-post .post-meta, .header-audio .header-post .post-meta {
+  .header .post-meta, .header-audio .post-meta {
     display: block;
     margin-bottom: 12px;
     font-size: 14px;
@@ -494,6 +494,9 @@ a {
 
 .sidebar .sidebar-items {
   position: relative; }
+  .sidebar .sidebar-items:last-child {
+    border-bottom: 0;
+    padding-bottom: 0; }
 
 .sidebar h5 {
   margin-bottom: 10px; }
@@ -564,47 +567,65 @@ a {
   width: 60%;
   margin-bottom: 0; }
 
-.sidebar .search-form span {
-  display: block;
-  margin-bottom: 10px; }
-
-.sidebar .search-form input[type="search"] {
-  width: 100%;
-  height: 35px;
-  border: 0;
-  margin-bottom: 10px;
-  padding: 0 10px;
-  font-size: 16px;
-  line-height: 35px;
-  background: #f2f2f2;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; }
-  .sidebar .search-form input[type="search"]:focus {
-    outline: none;
-    box-shadow: inset 0 0 5px #5493fc; }
-  .sidebar .search-form input[type="search"]:input[type="email"]::-webkit-input-placeholder {
-    font-style: italic;
-    opacity: .2; }
-  .sidebar .search-form input[type="search"]:input[type="email"]:-moz-placeholder {
-    /* Firefox 18- */
-    font-style: italic;
-    opacity: .2; }
-  .sidebar .search-form input[type="search"]:input[type="email"]::-moz-placeholder {
-    /* Firefox 19+ */
-    font-style: italic;
-    opacity: .2; }
-  .sidebar .search-form input[type="search"]:input[type="email"]:-ms-input-placeholder {
-    font-style: italic;
-    opacity: .2; }
-
-.sidebar .search-form .screen-reader-text {
-  position: absolute;
-  left: -10000px; }
-
-.sidebar .search-form input[type="submit"] {
-  float: right;
-  border: 0;
-  cursor: pointer; }
+.sidebar .search-form {
+  position: relative; }
+  .sidebar .search-form span {
+    display: block;
+    margin-bottom: 10px; }
+  .sidebar .search-form input[type="search"] {
+    width: 100%;
+    height: 35px;
+    border: 0;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 35px;
+    background: #f2f2f2;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin-bottom: 0; }
+    .sidebar .search-form input[type="search"]:focus {
+      outline: none;
+      box-shadow: inset 0 0 5px #5493fc; }
+    .sidebar .search-form input[type="search"]:input[type="email"]::-webkit-input-placeholder {
+      font-style: italic;
+      opacity: .2; }
+    .sidebar .search-form input[type="search"]:input[type="email"]:-moz-placeholder {
+      /* Firefox 18- */
+      font-style: italic;
+      opacity: .2; }
+    .sidebar .search-form input[type="search"]:input[type="email"]::-moz-placeholder {
+      /* Firefox 19+ */
+      font-style: italic;
+      opacity: .2; }
+    .sidebar .search-form input[type="search"]:input[type="email"]:-ms-input-placeholder {
+      font-style: italic;
+      opacity: .2; }
+  .sidebar .search-form .screen-reader-text {
+    position: absolute;
+    left: -10000px; }
+  .sidebar .search-form .search-btn-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 100%;
+    background: #5493fc; }
+    .sidebar .search-form .search-btn-icon button[type="submit"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #5493fc;
+      color: white;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      cursor: pointer; }
+      .sidebar .search-form .search-btn-icon button[type="submit"]:hover {
+        color: white;
+        background: #3b83fc; }
 
 .sidebar .widget_oauth_twitter_widget .oauth-twitter-tweet {
   font-style: normal;
@@ -790,8 +811,8 @@ footer {
   margin-left: 10px; }
 
 .btn-itunes::after {
-  font-family: 'bigblueboxicons';
   content: '\e908';
+  font-family: 'bigblueboxicons';
   margin-left: 10px;
   vertical-align: 10%; }
 
@@ -934,4 +955,7 @@ footer {
     float: right;
     width: 50%;
     text-align: right; }
+
+.single-post .post-notes-title {
+  margin-bottom: 20px; }
 /*# sourceMappingURL=style.css.map */

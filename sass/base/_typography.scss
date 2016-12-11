@@ -27,7 +27,7 @@ h3 {
 h4 {
   @include font-size(24px);
   line-height: 32px;
-  margin-left: -1px !important;
+  margin-bottom: 5px;
 }
 
 h5 {
@@ -47,7 +47,7 @@ p {
   @include font-size($base-font-size);
   line-height: $base-line-height;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 
     &.small {
       @include font-size(13px);

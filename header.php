@@ -1,8 +1,4 @@
-<?php
-/**
- * @package Big Blue Box
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -17,54 +13,52 @@
 	<header id="masthead" class="header-audio" role="banner">
 
 		<!-- Header content -->
-		<section class="inner">
-
-			<div class="header-top">
+		<div class="header-top">
+			<section class="inner">
 				<div class="logo">
 					<a href="/">
-					<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
+						<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
 					</a>
 				</div>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<a href="#" class="menu-link">
-									<div id="nav-icon">
-											<span></span>
-											<span></span>
-											<span></span>
-									</div>
-							</a>
+			            <div id="nav-icon">
+			                <span></span>
+			                <span></span>
+			                <span></span>
+			            </div>
+			        </a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav>
-			</div>
+			</section>
+		</div>
+		<!-- End header-top -->
 
-	    <!-- Start header episode player -->
-	    <section class="header-post">
+    <!-- Start latest post -->
+    <section class="header-post">
+			<?php
+				$args = array (
+					'type' => 'post',
+					'posts_per_page' => '1'
+				);
 
-				<?php
+		    $featured_post = new WP_Query( $args );
 
-					$lastPost = new WP_Query( 'type=post&posts_per_page=1' );
-
-					if( $lastPost->have_posts() ):
-
-						while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
-
-							<?php get_template_part('content-home-single',get_post_format()); ?>
-
-						<?php endwhile;
-
-					endif;
-
-					wp_reset_postdata();
-
-				?>
-
-	    </section>
-	    <!-- End header episode player -->
-
-		</section>
-		<!-- End header content -->
+		    if ( $featured_post->have_posts() ) {
+		        while ( $featured_post->have_posts() ) {
+		            $featured_post->the_post();
+		            get_template_part('content-header_home',get_post_format());
+		        }
+						wp_reset_postdata();
+		    } else {
+					get_template_part('content-none',get_post_format());
+		    }
+			?>
+    </section>
+    <!-- End latest post -->
 
 	</header>
 
 	<div id="wrap" class="wrap">
+		<section class="inner">
