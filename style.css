@@ -6,7 +6,7 @@ Description: Custom theme for the Big Blue Box website.
 Version: 2.0
 Text Domain: Big Blue Box
 */
-.wrap:after, .inner:after, .header-audio--post-content .post-title:after, .sidebar .sidebar-items:after, .main .post:after {
+.home .wrap:after, .inner:after, .header-audio--post-content .post-title:after, .sidebar .sidebar-items:after, .main .post:after {
   content: '';
   display: table;
   clear: both; }
@@ -328,23 +328,27 @@ a {
 *:before {
   box-sizing: border-box; }
 
-.wrap {
+.home .wrap {
   width: 100%;
   position: relative;
-  margin: 50px auto 0 auto;
-  padding-bottom: 50px; }
-  .wrap::before {
+  margin: 0 auto;
+  padding: 50px 0; }
+  .home .wrap::before {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     bottom: 0;
     left: 0;
     z-index: -1;
-    opacity: .3;
-    background: url(img/body-bg.jpg) no-repeat;
-    background-position: bottom center;
-    background-size: contain; }
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/space-bg.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/space-bg.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    will-change: transform; }
+
+.wrap {
+  padding: 50px 0; }
 
 .main-content {
   display: -webkit-box;
@@ -427,12 +431,12 @@ a {
     /* ff3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(25%, transparent), color-stop(100%, transparent));
     /* safari4+,chrome */
-    background: -webkit-linear-gradient(270deg, black 25%, transparent 95%, transparent 100%);
+    background: -webkit-linear-gradient(180deg, black 25%, transparent 95%, transparent 100%);
     /* safari5.1+,chrome10+ */
     /* opera 11.10+ */
     /* ie10+ */
-    background: -webkit-linear-gradient(top, black 25%, transparent 95%, transparent 100%);
-    background: linear-gradient(180deg, black 25%, transparent 95%, transparent 100%);
+    background: -webkit-linear-gradient(top, black 15%, transparent 100%, transparent 100%);
+    background: linear-gradient(180deg, black 15%, transparent 100%, transparent 100%);
     /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
     /* ie6-9 */ }
@@ -495,10 +499,10 @@ a {
 .header-simple {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/page-header.jpg) no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/page-header.jpg) no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: 100% 40%; }
   .header-simple .title-area {
     width: 100%;
-    height: 300px;
     text-align: center; }
     .header-simple .title-area .page-title {
       color: white;
@@ -512,7 +516,7 @@ a {
     padding-bottom: 0; }
 
 .sidebar h5 {
-  margin-bottom: 10px; }
+  margin: -5px 0 10px 0; }
 
 .sidebar .social-links li {
   display: inline-block;
@@ -657,7 +661,7 @@ a {
 footer {
   position: relative;
   padding: 60px 0 30px 0;
-  background: #222222;
+  background: #151515;
   color: #f2f2f2;
   z-index: 1; }
   footer::before {
@@ -848,8 +852,8 @@ footer {
   margin: 50px 0;
   padding: 30px 0;
   text-align: center;
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8; }
+  border-top: 1px solid #484848;
+  border-bottom: 1px solid #484848; }
   .subscribe::before {
     content: '';
     position: absolute;
@@ -859,7 +863,7 @@ footer {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: .2;
+    opacity: .4;
     background: url(img/tardis-bg.svg) no-repeat;
     background-size: 35%;
     background-position: 50% 10%; }
@@ -879,45 +883,56 @@ footer {
 #sb_instagram #sbi_load {
   padding-top: 0 !important; }
 
-.recent-posts h4 {
-  margin-bottom: 20px; }
+.home .subscribe, .home .main, .home .sidebar {
+  color: #f2f2f2; }
 
-.recent-posts .two-feat-posts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 50px; }
-  .recent-posts .two-feat-posts .post {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 48%;
-            flex: 0 0 48%;
-    position: relative;
-    height: 400px; }
-    .recent-posts .two-feat-posts .post .post-content-recent {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 30px;
-      color: #f2f2f2; }
-      .recent-posts .two-feat-posts .post .post-content-recent .entry-meta {
-        display: block;
-        margin-bottom: 12px;
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #737373;
-        color: #b2b2b2; }
+.home .main-content aside {
+  border-left: 1px solid #484848; }
+  .home .main-content aside section {
+    border-bottom: 1px solid #484848; }
+    .home .main-content aside section:first-child {
+      padding-top: 0; }
+
+.recent-posts {
+  color: #f2f2f2; }
+  .recent-posts h4 {
+    margin-bottom: 20px; }
+  .recent-posts .two-feat-posts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 50px; }
+    .recent-posts .two-feat-posts .post {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 48%;
+              flex: 0 0 48%;
+      position: relative;
+      height: 400px; }
+      .recent-posts .two-feat-posts .post .post-content-recent {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 30px;
+        color: #f2f2f2; }
+        .recent-posts .two-feat-posts .post .post-content-recent .entry-meta {
+          display: block;
+          margin-bottom: 12px;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #737373;
+          color: #b2b2b2; }
 
 .main .post {
   margin-bottom: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid #d8d8d8; }
+  border-bottom: 1px solid #484848; }
   .main .post.last {
     border: 0;
     margin-bottom: 0; }
@@ -969,6 +984,12 @@ footer {
     width: 50%;
     text-align: right; }
 
+.archive .main .post {
+  border-bottom: 1px solid #d8d8d8; }
+
 .single-post .post-notes-title {
   margin-bottom: 20px; }
+
+.page-id-24 .wrap::before {
+  background: none; }
 /*# sourceMappingURL=style.css.map */

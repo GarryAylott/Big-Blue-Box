@@ -1,5 +1,24 @@
+// Home page specific styles
+.home .subscribe, .home .main, .home .sidebar {
+  color: $text-light;
+}
+
+.home .main-content aside {
+  border-left: 1px solid $colour-border-dark;
+
+  section {
+    border-bottom: 1px solid $colour-border-dark;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
 // Two recent posts
 .recent-posts {
+  color: $text-light;
+
   h4 {
     margin-bottom: 20px;
   }
@@ -37,7 +56,7 @@
   .post {
     margin-bottom: 40px;
     padding-bottom: 40px;
-    border-bottom: 1px solid $colour-border-light;
+    border-bottom: 1px solid $colour-border-dark;
     @include clearfix;
 
     &.last {
@@ -111,4 +130,8 @@
     }
   }
 
+}
+
+.archive .main .post {
+  border-bottom: 1px solid $colour-border-light;
 }

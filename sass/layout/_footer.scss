@@ -1,7 +1,7 @@
 footer {
   position: relative;
   padding: 60px 0 30px 0;
-  background: $colour-bg-dark;
+  background: darken($colour-bg-dark, 5%);
   color: $text-light;
   z-index: 1;
 
