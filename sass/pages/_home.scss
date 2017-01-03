@@ -3,31 +3,19 @@
   color: $text-light;
 }
 
-.home .main-content aside {
-  border-left: 1px solid $colour-border-dark;
-
-  section {
-    border-bottom: 1px solid $colour-border-dark;
-
-    &:first-child {
-      padding-top: 0;
-    }
-  }
-}
-
 // Two recent posts
 .recent-posts {
   color: $text-light;
 
-  h4 {
-    margin-bottom: 20px;
-  }
+    h4 {
+      margin-bottom: 20px;
+    }
 
-  .two-feat-posts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    .two-feat-posts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 50px;
 
       .post {
         flex: 0 0 48%;
@@ -41,12 +29,12 @@
           padding: 30px;
           color: $text-light;
 
-          .entry-meta {
-            @include post-meta;
-            color: darken($text-light, 25%);
-          }
+        .entry-meta {
+          @include post-meta;
+          color: darken($text-light, 25%);
         }
       }
+    }
   }
 }
 
@@ -110,8 +98,9 @@
   }
 
   .posts-navigation {
-    text-transform: uppercase;
+    font-size: 18px;
     font-weight: 600;
+    text-transform: uppercase;
 
     .screen-reader-text {
       position: absolute;
@@ -130,8 +119,4 @@
     }
   }
 
-}
-
-.archive .main .post {
-  border-bottom: 1px solid $colour-border-light;
 }

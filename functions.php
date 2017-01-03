@@ -1,8 +1,4 @@
 <?php
-/**
- * @package Big Blue Box
- */
-
 if ( ! isset( $content_width ) ) {
 	$content_width = 1100; /* pixels */
 }
@@ -48,8 +44,6 @@ function bigbluebox_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'bigbluebox_widgets_init' );
-
-// Add Home link for current nav state
 
 // Remove admin bar
 show_admin_bar(false);

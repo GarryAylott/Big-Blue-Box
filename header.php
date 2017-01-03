@@ -8,8 +8,8 @@
 
 	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
+
 	<header id="masthead" class="header-audio" role="banner">
 
 		<!-- Header content -->

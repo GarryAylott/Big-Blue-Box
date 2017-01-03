@@ -1,4 +1,14 @@
-.sidebar {
+.main-content aside {
+  border-left: 1px solid $colour-border-light;
+
+  section {
+    border-bottom: 1px solid $colour-border-light;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
   .sidebar-items {
     position: relative;
     @include clearfix;
@@ -108,5 +118,12 @@
   .widget_archive li {
     margin-bottom: 10px;
   }
+}
 
+.home .main-content aside {
+  border-left: 1px solid $colour-border-dark;
+
+  section {
+    border-bottom: 1px solid $colour-border-dark;
+  }
 }
