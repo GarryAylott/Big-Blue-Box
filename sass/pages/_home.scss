@@ -110,12 +110,34 @@
     .nav-previous {
       float: left;
       width: 50%;
+
+      a {
+        &::before {
+          content: '\e900';
+          font-family: bigblueboxicons;
+          font-size: 16px;
+          margin-right: 4px;
+          position: relative;
+          top: -1px;
+        }
+      }
     }
 
     .nav-next {
       float: right;
       width: 50%;
       text-align: right;
+
+      a {
+        &::after {
+          content: '\e901';
+          font-family: bigblueboxicons;
+          font-size: 16px;
+          margin-left: 4px;
+          position: relative;
+          top: -1px;
+        }
+      }
     }
   }
 

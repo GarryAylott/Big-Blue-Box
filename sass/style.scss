@@ -9,7 +9,6 @@ Text Domain: Big Blue Box
 
 // Utilities
 @import "utilities/variables";
-// @import "utilities/functions";
 @import "utilities/mixins";
 
 // Base
@@ -23,8 +22,6 @@ Text Domain: Big Blue Box
 @import "layout/header";
 @import "layout/sidebar";
 @import "layout/footer";
-// @import "layout/single-post";
-// @import "layout/forms";
 
 // Components
 @import "components/podcast-player";
@@ -32,8 +29,8 @@ Text Domain: Big Blue Box
 @import "components/titles";
 @import "components/subscribe";
 @import "components/instagram";
-// @import "components/instagallery";
-// @import "components/feat-audio-player";
+@import "components/images";
+@import "components/contact-form";
 
 // Pages
 @import "pages/home";

@@ -36,8 +36,11 @@
 }
 
 .btn-audio::after {
+  content: '\e904';
   font-family: 'bigblueboxicons';
-  content: '\e907';
+  font-size: 12px;
+  position: relative;
+  top: -1.8px;
   margin-left: 10px;
 }
 

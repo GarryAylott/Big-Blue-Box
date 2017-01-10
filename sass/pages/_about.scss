@@ -2,4 +2,26 @@
   .wrap::before {
     background: none;
   }
+
+  .profile-pics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+
+    .profile-pic {
+      flex: 0 0 400px;
+      height: 400px;
+      box-shadow: 0 25px 45px -20px rgba(0, 0, 0, .6);
+    }
+
+    .garry {
+      background: url('/img/about-garry.jpg') no-repeat;
+      background-size: 100%;
+    }
+
+    .adam {
+      background: url('/img/about-adam.jpg') no-repeat;
+      background-size: 100%;
+    }
+  }
 }
