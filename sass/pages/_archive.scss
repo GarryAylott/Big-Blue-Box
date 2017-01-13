@@ -6,3 +6,15 @@
     padding-bottom: 0;
   }
 }
+
+.category-articles {
+  .post-notes-title {
+    display: none;
+  }
+
+  .entry-content p {
+    &:first-child {
+      font-size: $base-font-size-large;
+    }
+  }
+}

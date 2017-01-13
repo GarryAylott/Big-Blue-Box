@@ -39,7 +39,7 @@
 				<section class="footer-col footer-feedback">
 					<h4>What do you think?</h4>
 					<p>We love hearing from you and your thoughts on the show. Shoot us an email <a href="mailto:hello@bigblueboxpodcast.co.uk">here.</a></p>
-					<p>If you're an iTunes listener you can leave a review here: <a href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2" target="_blank">click here.</a></p>
+					<p>If you're an iTunes listener you can <a href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2" target="_blank">leave a review here.</a></p>
 				</section>
 			</div><!-- End footer-cols -->
 
