@@ -1,0 +1,18 @@
+.SprdMain {
+  font-family: $base-font-family;
+
+  .SprdHeader {
+    #startpageButton {
+      display: none;
+    }
+  }
+
+  .sprd-price {
+    font-size: 18px;
+  }
+
+  .sprd-productName {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}

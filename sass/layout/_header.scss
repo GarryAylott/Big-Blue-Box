@@ -30,13 +30,24 @@
     left: 0;
     z-index: 20;
 
-      .inner {
+    @include screen('desktop') {
+      width: 90%;
+    }
+
+      .header-main {
         display: flex;
         justify-content: space-between;
+        position: relative;
 
         .logo {
           flex: 0 1 auto;
           display: inline-block;
+          transition: all .2s ease-in-out;
+
+
+          &:hover {
+            transform: scale(1.1) rotate(-1deg);
+          }
         }
       }
   }
@@ -72,6 +83,11 @@
       text-transform: uppercase;
       color: $text-standard;
       background: $colour-accent;
+
+      @include screen('tablet') {
+          float: left;
+          margin: 0 0 10px 0;
+      }
     }
   }
   .post-excerpt p {

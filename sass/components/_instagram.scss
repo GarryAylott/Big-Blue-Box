@@ -2,6 +2,11 @@
 #sb_instagram {
   #sbi_images .sbi_item {
     width: 16.66666666667% !important;
+
+    @include screen('mobile') {
+      width: 33.33333333% !important;
+      height: auto;
+    }
   }
 
   #sbi_load {

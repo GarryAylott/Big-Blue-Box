@@ -14,14 +14,14 @@
 
 		<!-- Header content -->
 		<div class="header-top">
-			<section class="inner">
+			<section class="header-main">
 				<div class="logo">
 					<a href="/">
 						<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
 					</a>
 				</div>
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+				<nav id="menu" class="main-navigation nav-collapse" role="navigation">
 					<a href="#" class="menu-link">
 			            <div id="nav-icon">
 			                <span></span>

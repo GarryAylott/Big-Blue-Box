@@ -20,10 +20,16 @@
 
 // Breakpoints
 @mixin screen($size) {
-  $desktop: "(min-width: 1024px)";
-  $tablet: "(min-width: 768px) and (max-width: 1023px)";
-  $mobile: "(max-width: 767px)";
-  @if $size == desktop {
+  $wide: "(min-width: 1200px)";
+  $desktop: "(max-width: 1199px)";
+  $tablet: "(max-width: 1024px)";
+  $mobile: "(max-width: 768px)";
+  @if $size == wide {
+    @media only screen and #{$wide} {
+      @content;
+    }
+  }
+  @else if $size == desktop {
     @media only screen and #{$desktop} {
       @content;
     }

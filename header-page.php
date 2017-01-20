@@ -13,7 +13,7 @@
 
 		<!-- Header content -->
 		<div class="header-top">
-			<section class="inner">
+			<section class="header-main">
 				<div class="logo">
 					<a href="/">
 						<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">

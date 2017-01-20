@@ -16,6 +16,9 @@ Text Domain: Big Blue Box
 @import "base/typography";
 @import "base/iconfont";
 
+// Vendors
+@import "vendors/swiper";
+
 // Layout
 @import "layout/grid";
 @import "layout/navigation";
@@ -30,7 +33,10 @@ Text Domain: Big Blue Box
 @import "components/subscribe";
 @import "components/instagram";
 @import "components/images";
+@import "components/search-form";
 @import "components/contact-form";
+@import "components/testimonials";
+@import "components/spreadshirt";
 
 // Pages
 @import "pages/home";
@@ -38,4 +44,4 @@ Text Domain: Big Blue Box
 @import "pages/about";
 @import "pages/archive";
 @import "pages/subscribe";
-// @import "pages/contact";
+@import "pages/error-404";

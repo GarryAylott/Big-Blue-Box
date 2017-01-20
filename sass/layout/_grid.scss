@@ -56,4 +56,8 @@
   width: $content-max-width;
   margin: 0 auto;
   @include clearfix;
+
+  @include screen('desktop') {
+    width: 90%;
+  }
 }

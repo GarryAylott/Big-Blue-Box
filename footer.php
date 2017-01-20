@@ -1,13 +1,4 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package Big Blue Box
- */
-?>
-		</section>
+</section>
 		<!-- End inner -->
 	</div>
 	<!-- End wrap -->
@@ -64,5 +55,20 @@
 
 <?php wp_footer(); ?>
 
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 300,
+        autoplay: 13000,
+				speed: 700,
+        autoplayDisableOnInteraction: false,
+				autoHeight: true,
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				loop: true,
+				effect: 'fade',
+				fade: { crossFade: true }
+    });
+</script>
 </body>
 </html>
