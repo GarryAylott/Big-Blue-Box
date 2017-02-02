@@ -1,5 +1,7 @@
 .error404 {
   background: $colour-border-dark url(/img/tennant-cry.gif) no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
 
   .header::after {

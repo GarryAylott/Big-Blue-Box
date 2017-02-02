@@ -36,20 +36,23 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @include screen('tablet') {
+    flex-direction: column;
+  }
 }
 
   .main-content .main {
     flex: 0 0 65%;
+
+    @include screen('tablet') {
+      margin-bottom: 3em;
+    }
   }
 
   .main-content aside {
     flex: 0 0 30%;
     border-left: 1px solid $colour-border-light;
-
-      section {
-        padding: 25px 0 25px 25px;
-        border-bottom: 1px solid $colour-border-light;
-      }
   }
 
 .inner {

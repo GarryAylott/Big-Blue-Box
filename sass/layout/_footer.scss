@@ -28,8 +28,20 @@ footer {
       padding-bottom: 50px;
       border-bottom: 1px solid rgba(255, 255, 255, .1);
 
+      @include screen('mobile') {
+        flex-direction: column;
+      }
+
       .footer-col {
         flex: 0 0 28%;
+
+        @include screen('mobile') {
+          margin-bottom: 3em;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
 
       h4 {
@@ -41,12 +53,22 @@ footer {
           @include social-link-icons;
         }
       }
+
+      @include screen('mobile') {
+        .footer-feedback p:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     .footer-btm-info {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      @include screen('mobile') {
+        flex-direction: column;
+      }
 
       .footer-legals {
         flex: 0 0 40%;
@@ -64,10 +86,22 @@ footer {
             margin-right: 20px;
           }
         }
+
+        @include screen('mobile') {
+          margin-bottom: 3em;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
 
       .footer-logo {
         flex: 0 0 180px;
+
+        @include screen('mobile') {
+          flex: 0;
+        }
       }
     }
 }

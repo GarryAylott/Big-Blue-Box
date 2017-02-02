@@ -1,8 +1,18 @@
 .main-content aside {
   border-left: 1px solid $colour-border-light;
 
+  @include screen('tablet') {
+    border-left: 0;
+  }
+
   section {
+    padding: 25px 0 25px 25px;
     border-bottom: 1px solid $colour-border-light;
+
+    @include screen('tablet') {
+      padding: 0 0 2em 0;
+      margin-bottom: 2em;
+    }
 
     &:first-child {
       padding-top: 0;
@@ -73,13 +83,32 @@
   // Archive links
   .widget_archive li {
     margin-bottom: 10px;
+
+    @include screen('tablet') {
+      display: inline-block;
+      width: 30%;
+    }
+
+    @include screen('mobile') {
+      width: 100%;
+    }
   }
 }
 
 .home .main-content aside {
   border-left: 1px solid $colour-border-dark;
 
+  @include screen('tablet') {
+    border-left: none;
+  }
+
   section {
     border-bottom: 1px solid $colour-border-dark;
+  }
+}
+
+@include screen('tablet') {
+  #sfp_page_plugin_widget-2, #text-2 {
+    display: none;
   }
 }

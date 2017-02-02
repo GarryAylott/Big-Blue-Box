@@ -4,7 +4,7 @@
     width: 16.66666666667% !important;
 
     @include screen('mobile') {
-      width: 33.33333333% !important;
+      width: 50% !important;
       height: auto;
     }
   }

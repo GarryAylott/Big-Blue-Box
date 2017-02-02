@@ -17,10 +17,23 @@
       justify-content: space-between;
       margin-bottom: 50px;
 
+      @include screen('tablet') {
+        flex-direction: column;
+        margin-bottom: 2em;
+      }
+
       .post {
         flex: 0 0 48%;
         position: relative;
         height: 400px;
+
+        @include screen('tablet') {
+          margin-bottom: 2em;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
 
         .post-content-recent {
           position: absolute;
@@ -41,6 +54,10 @@
 // Main content section - homepage only
 .home .main-content {
   margin-bottom: 100px;
+
+  @include screen('mobile') {
+    margin-bottom: 0;
+  }
 }
 
 // Ten remaining posts
@@ -62,6 +79,11 @@
       margin-right: 20px;
       position: relative;
 
+      @include screen('mobile') {
+        float: none;
+        width: 100%;
+      }
+
       .feat-img-small-container {
         position: relative;
 
@@ -74,6 +96,13 @@
           height: 100%;
           text-align: center;
           transition: all .3s ease;
+        }
+
+        @include screen('mobile') {
+          img {
+            width: 100%;
+            margin-bottom: 1em;
+          }
         }
       }
 

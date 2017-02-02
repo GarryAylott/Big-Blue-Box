@@ -23,7 +23,7 @@
   $wide: "(min-width: 1200px)";
   $desktop: "(max-width: 1199px)";
   $tablet: "(max-width: 1024px)";
-  $mobile: "(max-width: 768px)";
+  $mobile: "(max-width: 480px)";
   @if $size == wide {
     @media only screen and #{$wide} {
       @content;

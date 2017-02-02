@@ -35,9 +35,9 @@
 	<a class="btn-large btn-itunes" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank">Subscribe on iTunes</a>
 	<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
 	<ul>
-		<div class='swiper-slide'><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">Stitcher</a></div>
-		<div class='swiper-slide'><a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">Android</a></div>
-		<div class='swiper-slide'><a href="http://www.bigblueboxpodcast.co.uk/feed/podcast/" target="_blank">RSS</a></div>
+		<li><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">Stitcher</a></li>
+		<li><a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">Android</a></li>
+		<li><a href="http://www.bigblueboxpodcast.co.uk/feed/podcast/" target="_blank">RSS</a></li>
 	</ul>
 </section>
 <!-- End subscribe -->
