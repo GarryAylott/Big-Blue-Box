@@ -3,13 +3,17 @@
   #sbi_images .sbi_item {
     width: 16.66666666667% !important;
 
-    @include screen('mobile') {
-      width: 50% !important;
+    @include screen('tablet') {
+      width: 33.3333333% !important;
       height: auto;
     }
   }
 
   #sbi_load {
     padding-top: 0 !important;
+  }
+
+  @include screen('mobile') {
+    display: none;
   }
 }
