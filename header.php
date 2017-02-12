@@ -21,14 +21,14 @@
 					</a>
 				</div>
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+				<nav id="menu" class="main-navigation nav-collapse" role="navigation">
 					<a href="#" class="menu-link">
-	          <div id="nav-icon">
-	              <span></span>
-	              <span></span>
-	              <span></span>
-	          </div>
-	        </a>
+			            <div id="nav-icon">
+			                <span></span>
+			                <span></span>
+			                <span></span>
+			            </div>
+			        </a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav>
 			</section>

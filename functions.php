@@ -200,8 +200,20 @@ add_action('init', 'load_jQuery');
 // Enqueue scripts and styles
 function bigbluebox_scripts() {
 	wp_enqueue_style('bigbluebox-style', get_stylesheet_uri() );
+<<<<<<< HEAD
 	wp_register_script('main-js', get_template_directory_uri() . 'js/min/main.min.js', '', '', true);
 	wp_enqueue_script('main-js');
+=======
+
+	wp_register_script('fitvids-js', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), '', true);
+	wp_register_script('swiper-js', '//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js', '', '3.4.1', true);
+	wp_register_script('custom-js', get_template_directory_uri() . '/js/custom.js', '', '', true);
+
+	wp_enqueue_script('fitvids-js');
+	wp_enqueue_script('swiper-js');
+	wp_enqueue_script('bigbluebox-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script('custom-js');
+>>>>>>> parent of b885aa9... Responsive layout finish up and responsive nav finished.
 }
 add_action( 'wp_enqueue_scripts', 'bigbluebox_scripts' );
 
