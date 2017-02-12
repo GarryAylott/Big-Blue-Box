@@ -3,34 +3,119 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 1100; /* pixels */
 }
 
-if ( ! function_exists( 'bigbluebox_setup' ) ) :
-
-function bigbluebox_setup() {
-
-	load_theme_textdomain( 'bigbluebox', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	add_theme_support( 'title-tag' );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Header Menu', 'bigbluebox' ),
-		'secondary' => __( 'Footer Menu', 'bigbluebox' )
-	) );
-
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
-
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
+// Theme support for post thumbnails and featured images
+function custom_image_setup () {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 260, 180 );
+    add_image_size( 'post-feat-small', 230, 157, true );
+    add_image_size( 'post-feat-large', 730, 9999 );
 }
+add_action( 'after_setup_theme', 'custom_image_setup' );
 
-endif; // bigbluebox_setup
-add_action( 'after_setup_theme', 'bigbluebox_setup' );
+// Add SVG support
+  function cc_mime_types( $mimes ){
+	  $mimes['svg'] = 'image/svg+xml';
+	  return $mimes;
+  }
+ add_filter( 'upload_mimes', 'cc_mime_types' );
+
+// Stop WP compressing images to 90% as already optimised pre-upload and also using WPSmush.it
+add_filter( 'jpeg_quality', function($arg){return 100;} );
+add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
+
+// Remove WP version generator from head and RSS feed
+	function my_remove_version_info() {
+	return '';
+}
+add_filter('the_generator', 'my_remove_version_info');
+
+// Stop WP from wrapping images in <p> tags
+function filter_ptags_on_images($content)
+{
+$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');
+
+// Add class to last post
+function my_post_class($classes) {
+	global $wp_query;
+	if(($wp_query->current_post+1) == $wp_query->post_count) $classes[] = 'last';
+	return $classes;
+}
+add_filter('post_class', 'my_post_class');
+
+// Add subscribe link to Powerpress section
+function themename_powerpress_player_links($content, $media_url, $ExtraData = array())
+{
+	$content .= '<a href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2" class="powerpress_link_sub" target="_blank">Subscribe on iTunes</a>';
+	return $content;
+}
+add_filter('powerpress_player_links', 'themename_powerpress_player_links', 100, 3);
+
+// Remove pages from search results
+function SearchFilter($query) {
+	if ($query->is_search) {
+		$query->set('post_type', 'post');
+	}
+	return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
+
+// Remove inline width and height from images
+function remove_thumbnail_dimensions( $html ) {
+	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+	return $html;
+}
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+// Removes attached image sizes as well
+add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
+
+
+// Limit sidebar archives to 12 months max
+function my_limit_archives( $args ) {
+    $args['limit'] = 12;
+    return $args;
+}
+add_filter( 'widget_archives_args', 'my_limit_archives' );
+add_filter( 'widget_archives_dropdown_args', 'my_limit_archives' );
+
+// Add Home link to menu
+function home_page_menu_args( $args ) {
+	$args['show_home'] = true;
+	return $args;
+}
+add_filter( 'wp_page_menu_args', 'home_page_menu_args' );
+
+// Limit database revisions to keep it in check
+define( 'WP_POST_REVISIONS', 2 );
+
+// Load Google Font
+function load_fonts() {
+wp_register_style('et-googleFonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,400,600,700');
+wp_enqueue_style( 'et-googleFonts');
+}
+add_action('wp_print_styles', 'load_fonts');
+
+// Add default posts and comments RSS feed links to head.
+add_theme_support( 'automatic-feed-links' );
+
+add_theme_support( 'title-tag' );
+
+// This theme uses wp_nav_menu() in one location.
+register_nav_menus( array(
+	'primary' => __( 'Header Menu', 'bigbluebox' ),
+	'secondary' => __( 'Footer Menu', 'bigbluebox' )
+) );
+
+add_theme_support( 'html5', array(
+	'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+) );
+
+add_theme_support( 'post-formats', array(
+	'aside', 'image', 'video', 'quote', 'link',
+) );
 
 function bigbluebox_widgets_init() {
 	register_sidebar( array(
@@ -115,7 +200,7 @@ add_action('init', 'load_jQuery');
 // Enqueue scripts and styles
 function bigbluebox_scripts() {
 	wp_enqueue_style('bigbluebox-style', get_stylesheet_uri() );
-	wp_register_script('main-js', get_template_directory_uri() . '/js/min/main.min.js', '', '', true);
+	wp_register_script('main-js', get_template_directory_uri() . 'js/min/main.min.js', '', '', true);
 	wp_enqueue_script('main-js');
 }
 add_action( 'wp_enqueue_scripts', 'bigbluebox_scripts' );
