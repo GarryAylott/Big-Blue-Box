@@ -21,7 +21,7 @@
 					</a>
 				</div>
 
-				<nav id="menu" class="main-navigation nav-collapse" role="navigation">
+				<nav id="site-navigation" class="main-navigation nav-collapse" role="navigation">
 					<a href="#" class="menu-link">
 			            <div id="nav-icon">
 			                <span></span>
