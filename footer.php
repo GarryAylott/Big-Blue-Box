@@ -14,7 +14,7 @@
 				<section class="footer-col footer-about">
 					<h4>About</h4>
 					<p>A weekly Doctor Who podcast show bringing you news, reviews, commentaries and general chat on everything Who from your hosts Garry and Adam.</p>
-					<a class="btn-small" href="index.php?page_id=24">About your hosts</a>
+					<a class="btn-small" href="index.php?page_id=1148">About your hosts</a>
 				</section>
 
 				<section class="footer-col footer-social">

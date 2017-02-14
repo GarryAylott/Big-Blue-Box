@@ -8,16 +8,28 @@ function custom_image_setup () {
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 260, 180 );
     add_image_size( 'post-feat-small', 230, 157, true );
-    add_image_size( 'post-feat-large', 730, 9999 );
+    add_image_size( 'post-feat-large', 1920, 9999 );
 }
 add_action( 'after_setup_theme', 'custom_image_setup' );
 
 // Add SVG support
-  function cc_mime_types( $mimes ){
+  function cc_mime_types( $mimes ) {
 	  $mimes['svg'] = 'image/svg+xml';
 	  return $mimes;
   }
  add_filter( 'upload_mimes', 'cc_mime_types' );
+
+// SVG support latest
+function bodhi_svgs_disable_real_mime_check( $data, $file, $filename, $mimes ) {
+	$wp_filetype = wp_check_filetype( $filename, $mimes );
+
+	$ext = $wp_filetype['ext'];
+	$type = $wp_filetype['type'];
+	$proper_filename = $data['proper_filename'];
+
+	return compact( 'ext', 'type', 'proper_filename' );
+}
+add_filter( 'wp_check_filetype_and_ext', 'bodhi_svgs_disable_real_mime_check', 10, 4 );
 
 // Stop WP compressing images to 90% as already optimised pre-upload and also using WPSmush.it
 add_filter( 'jpeg_quality', function($arg){return 100;} );
