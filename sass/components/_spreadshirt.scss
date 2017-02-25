@@ -1,5 +1,6 @@
 .SprdMain {
   font-family: $base-font-family;
+  color: $text-standard;
 
   .SprdHeader {
     #startpageButton {
@@ -14,5 +15,11 @@
   .sprd-productName {
     font-size: 20px;
     text-transform: uppercase;
+  }
+
+  .sprd-overlayView {
+    .customPageBackground {
+      color: $text-standard;
+    }
   }
 }
