@@ -21,6 +21,12 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* ie6-9 */
   }
 
+  @include screen('tablet') {
+    .header-latest-post {
+      background-position: center center !important;
+    }
+  }
+
   .header-top {
     position: absolute;
     width: 1100px;
