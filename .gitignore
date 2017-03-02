@@ -60,3 +60,6 @@ style.css.map
 # General CodeKit files to ignore
 config.codekit
 config.codekit3
+
+### VS Code ###
+settings.json
