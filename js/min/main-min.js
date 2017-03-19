@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".page-wrap").fitVids(),$(".menu-link").click(function(){$(".main-navigation ul").toggleClass("showing")}),$("#nav-icon").click(function(){$(this).toggleClass("open")}),$('a[target^="_blank"]').attr("rel","noopener noreferrer")});

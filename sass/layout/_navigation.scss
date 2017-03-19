@@ -42,6 +42,16 @@
           border-bottom: 0;
         }
       }
+
+      &.current-menu-item {
+        border-bottom: 3px solid $colour-primary;
+        padding-bottom: 7px;
+
+        @include screen('tablet') {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          padding: 1em 0;
+        }
+      }
     }
 
     a, a:active, a:visited {
@@ -81,15 +91,7 @@
       }
     }
 
-    .current-menu-item {
-      border-bottom: 3px solid $colour-primary;
-      padding-bottom: 7px;
-
-      @include screen('tablet') {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 1em 0;
-      }
-    }
+    
   }
 }
 

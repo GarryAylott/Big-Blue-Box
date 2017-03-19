@@ -32,12 +32,12 @@
 <!-- Start subscribe -->
 <section class="subscribe">
 	<h3>Subscribe on iTunes and never miss a show</h3>
-	<a class="btn-large btn-itunes" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank">Subscribe on iTunes</a>
+	<a class="btn-large btn-itunes" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank rel="noopener">Subscribe on iTunes</a>
 	<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
 	<ul>
-		<li><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">Stitcher</a></li>
-		<li><a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">Android</a></li>
-		<li><a href="http://www.bigblueboxpodcast.co.uk/feed/podcast/" target="_blank">RSS</a></li>
+		<li><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank"  rel="noopener">Stitcher</a></li>
+		<li><a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank" rel="noopener">Android</a></li>
+		<li><a href="http://www.bigblueboxpodcast.co.uk/feed/podcast/" target="_blank" rel="noopener">RSS</a></li>
 	</ul>
 </section>
 <!-- End subscribe -->
