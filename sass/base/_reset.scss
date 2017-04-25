@@ -34,8 +34,12 @@ main,
 menu,
 nav,
 section,
-summary,
+summary, {
+  display: block;
+}
+
 img {
+  max-width: 100%;
   display: block;
 }
 
