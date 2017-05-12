@@ -209,6 +209,22 @@ function grd_custom_archive_title( $title ) {
 }
 add_filter( 'get_the_archive_title', 'grd_custom_archive_title' );
 
+// Custom login page stylesheet
+function my_custom_login() {
+	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login/custom-login-styles.css" />';
+}
+add_action('login_head', 'my_custom_login');
+
+function my_login_logo_url() {
+	return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+	return 'Big Blue Box Podcast';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
 //Load jQuery
 function load_jQuery() {
     if (!is_admin())
