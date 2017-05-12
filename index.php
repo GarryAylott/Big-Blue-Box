@@ -5,34 +5,34 @@
 	<div class="title-container">
 		<h3 class="main-title">Recent episodes</h3>
 	</div>
-  <section class="two-feat-posts">
+	<section class="two-feat-posts">
 		<?php
-	    $args = array (
-	      'posts_per_page'=>2,
+			$args = array (
+				'posts_per_page'=>2,
 				'offset'=>1,
-	      'orderby'=>'ID'
-      );
+				'orderby'=>'ID'
+			);
 
-	    $recent_two_posts = new WP_Query( $args );
+			$recent_two_posts = new WP_Query( $args );
 
-	    if ( $recent_two_posts->have_posts() ) {
-	        while ( $recent_two_posts->have_posts() ) {
-	            $recent_two_posts->the_post();
-	            get_template_part('content-recent-post',get_post_format());
-	        }
-			wp_reset_postdata();
-	    } else {
-	    	get_template_part( 'content', 'none' );
-	    }
+			if ( $recent_two_posts->have_posts() ) {
+				while ( $recent_two_posts->have_posts() ) {
+					$recent_two_posts->the_post();
+					get_template_part('content-recent-post',get_post_format());
+					}
+					wp_reset_postdata();
+				} else {
+				get_template_part( 'content', 'none' );
+			}
 		?>
-  </section>
+	</section>
 </section>
 <!-- End two recent posts -->
 
 <!-- Start subscribe -->
 <section class="subscribe">
 	<h3>Subscribe on iTunes and never miss a show</h3>
-	<a class="btn-large btn-itunes" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank rel="noopener">Subscribe on iTunes</a>
+	<a class="btn-large btn-itunes" href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank" rel="noopener">Subscribe on iTunes</a>
 	<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
 	<ul>
 		<li><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank"  rel="noopener">Stitcher</a></li>
