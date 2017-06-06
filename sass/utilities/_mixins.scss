@@ -126,7 +126,8 @@
 @mixin form-field {
   width: 100%;
   height: 35px;
-  border: 0;
+  border: 1px solid $text-light;
+  border-radius: 5px;
   margin-bottom: 10px;
   padding: 0 10px;
   font-size: 16px;
@@ -136,7 +137,7 @@
 
     &:focus {
       outline: none;
-      box-shadow: inset 0 0 5px rgba(84, 147, 252, 1);
+      border: 1px solid $colour-primary;
     }
 
     &:input[type="email"]::-webkit-input-placeholder {

@@ -3,11 +3,14 @@
     background: none;
   }
 
-  .profile-pics {
+  .about-intro {
+      margin-bottom: 60px;
+    }
+
+  .about-content {
     display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    margin-bottom: 2em;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     @include screen('mobile') {
       flex-direction: column;
@@ -17,6 +20,7 @@
     .profile-pic {
       flex: 0 0 45%;
       height: 400px;
+      margin-bottom: 30px;
       box-shadow: 0 25px 45px -20px rgba(0, 0, 0, .6);
 
       @include screen('tablet') {
@@ -57,4 +61,11 @@
   .about-text-adam {
     float: right;
   }
+}
+
+@include screen('mobile') {
+    .about-content-1 { order: 1; }
+    .about-content-2 { order: 3; }
+    .about-content-3 { order: 2; margin-bottom: 60px; }
+    .about-content-4 { order: 4; }
 }
