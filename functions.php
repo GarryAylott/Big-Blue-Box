@@ -41,6 +41,18 @@ add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
 }
 add_filter('the_generator', 'my_remove_version_info');
 
+// Add featured image to RSS feed
+function rss_post_thumbnail($content) {
+	global $post;
+	if(has_post_thumbnail($post->ID)) {
+		$content = '<p>' . get_the_post_thumbnail($post->ID) .
+		'</p>' . get_the_content();
+	}
+	return $content;
+}
+add_filter('the_excerpt_rss', 'rss_post_thumbnail');
+add_filter('the_content_feed', 'rss_post_thumbnail');
+
 // Stop WP from wrapping images in <p> tags
 function filter_ptags_on_images($content)
 {
