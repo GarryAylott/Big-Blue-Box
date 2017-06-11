@@ -37,7 +37,7 @@
 	<ul>
 		<li><a href="http://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank"  rel="noopener">Stitcher</a></li>
 		<li><a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank" rel="noopener">Android</a></li>
-		<li><a href="http://www.bigblueboxpodcast.co.uk/feed/podcast/" target="_blank" rel="noopener">RSS</a></li>
+		<li><a href="https://www.bigblueboxpodcast.co.uk/feed/podcast/" target="_blank" rel="noopener">RSS</a></li>
 	</ul>
 </section>
 <!-- End subscribe -->
