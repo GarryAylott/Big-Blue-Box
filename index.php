@@ -31,29 +31,31 @@
 
 <!-- Start subscribe -->
 <section class="subscribe">
-	<h3>Subscribe on iTunes and never miss a show</h3>
-	<a class="itunes-link" href="https://itunes.apple.com/gb/podcast/the-doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank" rel="noopener">
-		<img alt="Listen on Apple Podcasts" src="<?php bloginfo('template_url'); ?>/img/badge-ListenApplePodcasts.svg" />
-			
-	</a>
-	<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
-	<ul>
-		<li>
+	<div class="sub-itunes">
+		<h3>Subscribe on iTunes and never miss a show</h3>
+		<a class="itunes-link" href="https://itunes.apple.com/gb/podcast/the-doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank" rel="noopener">
+			<img alt="Listen on Apple Podcasts" src="<?php bloginfo('template_url'); ?>/img/badge-ListenApplePodcasts.svg" />
+		</a>
+		<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
+	</div>
+
+	<div class="sub-others">
+		<div class="sub-others--link">
 			<a href='https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/Iotxjuso6fr7kqr3siuyewckecq?t%3DThe_Doctor_Who_Big_Blue_Box_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16' target="_blank" rel="noopener">
 				<img src="https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png" width="125px" alt="Listen on Google Play Music"/>
 			</a>
-		</li>
-		<li>
+		</div>
+		<div class="sub-others--link">
 			<a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" alt="Subscribe on Android" target="_blank" rel="noopener">
 				<img src="<?php bloginfo('template_url'); ?>/img/badge-subAndroid.png" width="125px" style="border:0;" />
 			</a>
-		</li>
-		<li>
+		</div>
+		<div class="sub-others--link">
 			<a href="https://www.bigblueboxpodcast.co.uk/feed/podcast/" alt="Subscribe on RSS" target="_blank" rel="noopener">
 				<img src="<?php bloginfo('template_url'); ?>/img/badge-subRSS.png" width="125px" style="border:0;" />
 			</a>
-		</li>
-	</ul>
+		</div>
+	</div>
 </section>
 <!-- End subscribe -->
 
