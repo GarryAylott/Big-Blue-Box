@@ -1,4 +1,15 @@
 // Overrides for Instagram plugin layout and spacing
+.instagram-title {
+  color: white;
+  height: 40px;
+  padding: 0 30px;
+  background: rgba(255, 255, 255, .3);
+
+  h4 {
+    line-height: 40px;
+  }
+}
+
 #sb_instagram {
   #sbi_images .sbi_item {
     width: 16.66666666667% !important;

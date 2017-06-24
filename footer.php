@@ -4,6 +4,9 @@
 	<!-- End wrap -->
 
 	<section class="instagram">
+		<div class="instagram-title">
+			<h4>Instagram</h4>
+		</div>
 		<?php echo do_shortcode('[instagram-feed]'); ?>
 	</section>
 
