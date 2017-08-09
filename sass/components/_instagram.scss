@@ -10,6 +10,12 @@
   }
 }
 
+.single-post, .page, .archive, .search { 
+  .instagram-title {
+    background: $colour-border-light;
+  }
+}
+
 #sb_instagram {
   #sbi_images .sbi_item {
     width: 16.66666666667% !important;
