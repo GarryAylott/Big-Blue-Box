@@ -63,6 +63,7 @@ config.codekit3
 
 ### VS Code ###
 settings.json
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
