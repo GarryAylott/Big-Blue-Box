@@ -74,9 +74,14 @@
     @include clearfix;
 
     h1 {
+      display: inline-block;
       float: left;
       line-height: 1;
       margin-bottom: 5px;
+      color: white;
+      background: -webkit-linear-gradient(180deg, #54fc69, #5493fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     span {
       content: 'Latest Episode';
@@ -123,5 +128,12 @@
       line-height: 300px;
       padding-top: 20px;
     }
+  }
+}
+
+// Remove show notes link from non-audio posts
+.category-news, .category-articles, .category-reviews, .category-opinions {
+  .show-notes-link {
+    display: none;
   }
 }
