@@ -38,18 +38,23 @@
 
 			<section class="inner">
 				<div class="header-audio--post-content">
+
 					<div class="post-title">
 						<?php the_title( '<h1>', '</h1>' ); ?>
-						<?php if ( is_home() && in_category('podcasts') ) : ?>
+						<?php if ( is_home() && in_category('podcasts')) : ?>
 							<span>Latest Episode</span>
 						<?php endif; ?>
 					</div>
-					<div class="post-meta">
-						<?php if ( 'post' == get_post_type() ) : ?>
-							<span class="published-date"><?php the_time('jS F Y'); ?></span>
-						<?php endif; ?>
-					</div><!-- End entry-meta -->
-			    <?php the_powerpress_content(); ?>
+
+					<?php global $post; $author_id=$post->post_author; ?>
+					<?php if ('post' == get_post_type() && in_category('podcasts')) {
+						echo ('<div class="post-meta--podcast">'.get_the_time('jS F, Y').'</div>');
+					} elseif ('post' == get_post_type() && in_category('articles')) {
+						echo ('<div class="post-meta--article"><span class="post-meta-name">'.get_the_author_meta('display_name', $author_id).' </span> '.get_the_time('jS F, Y').'</div>');
+					} ?>
+
+					<?php the_powerpress_content(); ?>
+				
 				</div><!-- End post-content-home -->
 			</section>
 

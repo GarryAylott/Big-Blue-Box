@@ -1,0 +1,11 @@
+.wpcf7 {
+    width: 50%;
+
+    @include screen('tablet') {
+        width: 85%;
+    }
+
+    @include screen('mobile') {
+        width: 100%;
+    }
+}

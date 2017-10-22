@@ -7,12 +7,15 @@ $colour-link: $colour-primary;
 $colour-link-hover: darken($colour-primary, 10%);
 $colour-border-light: #d8d8d8;
 $colour-border-dark: #484848;
-$text-standard: #444444;
+$text-standard: #333333;
 $text-light: #f2f2f2;
+$text-fade: rgba(0, 0, 0, 0.5);
 
 // Typopgraphy
 $base-font-family: 'Source Sans Pro', sans-serif;
 $base-font-weight: 400;
+$base-font-weight-bold: 600;
+$base-font-weight-heavy: 700;
 $base-font-size: 17px;
 $base-font-size-large: 20px;
 $base-font-size-small: 15px;

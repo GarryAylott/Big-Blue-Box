@@ -44,7 +44,7 @@
           color: $text-light;
 
         .entry-meta {
-          @include post-meta;
+          @include post-meta--podcast;
           color: darken($text-light, 25%);
         }
       }
@@ -123,7 +123,7 @@
       }
 
       .entry-meta {
-        @include post-meta;
+        @include post-meta--podcast;
       }
 
       p {

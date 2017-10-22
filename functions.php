@@ -61,6 +61,20 @@ return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $conten
 }
 add_filter('the_content', 'filter_ptags_on_images');
 
+// Add category class to body tag for single posts
+add_filter('body_class','add_category_to_single');
+function add_category_to_single($classes) {
+  if (is_single() ) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $category) {
+      // add category slug to the $classes array
+      $classes[] = $category->category_nicename;
+    }
+  }
+  // return the $classes array
+  return $classes;
+}
+
 // Add class to last post
 function my_post_class($classes) {
 	global $wp_query;
@@ -124,7 +138,6 @@ add_action('wp_print_styles', 'load_fonts');
 
 // Add default posts and comments RSS feed links to head.
 add_theme_support( 'automatic-feed-links' );
-
 add_theme_support( 'title-tag' );
 
 // This theme uses wp_nav_menu() in one location.

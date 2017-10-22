@@ -39,19 +39,48 @@ summary, {
   display: block;
 }
 
-img {
-  max-width: 100%;
+img, figure {
   display: block;
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+  border-style: none;
+}
+
+figcaption {
+  position: absolute;
+  left: 0;
+  bottom: -32px;
+  @include font-size($base-font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: $text-fade;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-indent: -1.2rem;
 }
 
-ol li {
-  margin-bottom: 5px;
+ol {
+  counter-reset: item;
+  padding: 0;
+
+  li {
+    margin-bottom: 1em;
+    list-style-type: none;
+    counter-increment: item;
+
+    &:before {
+      display: inline-block;
+      width: 1.1em;
+      padding-right: 0.6em;
+      font-weight: $base-font-weight-bold;
+      content: counter(item) '.';
+    }
+  }
 }
 
 audio,
@@ -125,10 +154,6 @@ sup {
   top: -0.5em;
 }
 
-img {
-  border-style: none;
-}
-
 svg:not(:root) {
   overflow: hidden;
 }
@@ -139,10 +164,6 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
-}
-
-figure {
-  margin: 1em 40px;
 }
 
 hr {
