@@ -33,29 +33,6 @@
   padding: 50px 0;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  @include screen('tablet') {
-    flex-direction: column;
-  }
-}
-
-  .main-content .main {
-    flex: 0 0 65%;
-
-    @include screen('tablet') {
-      margin-bottom: 3em;
-    }
-  }
-
-  .main-content aside {
-    flex: 0 0 30%;
-    border-left: 1px solid $colour-border-light;
-  }
-
 .inner {
   width: $content-max-width;
   margin: 0 auto;
@@ -63,5 +40,116 @@
 
   @include screen('desktop') {
     width: 90%;
+  }
+}
+
+// For homepage, archive and search
+.home .main-content,
+.archive .main-content,
+.search .main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include screen('tablet') {
+    flex-direction: column;
+  }
+
+  .main {
+    flex: 0 0 65%;
+
+    @include screen('tablet') {
+      margin-bottom: 3em;
+    }
+  }
+
+  aside {
+    flex: 0 0 30%;
+    border-left: 1px solid $colour-border-light;
+  }
+}
+
+// For single posts
+.articles .main-content, .podcasts .main-content {
+  .main {
+    width: 100%;
+    margin: 0 auto;
+
+    @include screen('tablet') {
+      margin-bottom: 3em;
+    }
+
+    article { 
+
+      p, article h4, article h3, blockquote, ol, ul  {
+      width: 75%;
+      margin: 0 auto 20px auto;
+
+        @include screen('tablet') {
+          width: 85%;
+        }
+
+        @include screen('mobile') {
+          width: 100%;
+        }
+      }
+    }
+
+    article h2, article h3, article h4 {
+      width: 75%;
+      margin: 2.2rem auto 1rem auto;
+    }
+
+    article img {
+      margin: 3em auto 5em auto;
+    }
+
+    blockquote {
+      display: block;
+      margin: 3rem auto;
+      border-left: 4px solid $colour-link;
+
+      p {
+        width: auto;
+        @include font-size(20px);
+        font-style: italic;
+        background: -webkit-linear-gradient(180deg, #005b94, #94008d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        padding: 0 2em;
+      }
+    }
+
+    .author-bio {
+      width: 75%;
+      display: grid;
+      margin: 7em auto 5em auto;
+      grid-template-columns: auto 1fr;
+
+      .author-avatar {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        align-items: center;
+
+        img {
+          margin: 0 2em 0 0;
+          border-radius: 50%;
+        }        
+      }
+
+      p {
+        width: 100%;
+        @include font-size(16px);
+        margin: 0;
+      }
+
+      .author-name {
+        font-size: $base-font-size;
+        font-weight: $base-font-weight-bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+    }
   }
 }

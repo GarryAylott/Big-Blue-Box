@@ -10,16 +10,16 @@
   }
 
   .header-top {
+    position: absolute;
     width: 100%;
-    background: $colour-bg-main;
-    background-image: linear-gradient(-90deg, #005b94, #94008d);
 
       .header-main {
         display: flex;
-        max-width: 1100px;
+        height: 100px;
         justify-content: space-between;
         align-items: center;
-        margin: 0 auto;
+        margin: 0 3em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
         .logo {
           flex: 0 1 auto;
@@ -35,25 +35,29 @@
           }
 
           &:hover {
-            transform: translateX(10px);
+            transform: scale(1.1) rotate(-5deg);
           }
         }
 
         @include screen('desktop') {
           width: 90%;
+          margin: 0 auto;
         }
       }
   }
 
-  .post-meta {
-    @include post-meta;
-    color: darken($text-light, 25%);
+  .post-meta--podcast {
+    @include post-meta--podcast;
   }
 }
 
-// Audio player in header
+// Homepage header
 .header-audio--post-content {
-  padding: 150px 0;
+  padding: 10em 0 5em 0;
+
+  @include screen('mobile') {
+    padding: 8em 0 3em 0;
+  }
 
   .post-title {
     position: relative;
@@ -63,39 +67,51 @@
       display: inline-block;
       float: left;
       line-height: 1;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       color: white;
       background: -webkit-linear-gradient(180deg, #54fc69, #5493fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-    span {
-      content: 'Latest Episode';
-      display: inline-block;
-      margin: 5px 0 0 8px;
-      padding: 2px 7px;
-      vertical-align: top;
-      font-size: 11px;
-      font-weight: $base-font-weight;
-      text-transform: uppercase;
-      color: $text-standard;
-      background: $colour-accent;
 
-      @include screen('tablet') {
-          float: left;
-          margin: 0 0 10px 0;
+      @include screen('mobile') {
+        font-size: 44px;
       }
     }
   }
-  .post-excerpt p {
-    margin-bottom: 0;
+
+  .post-excerpt {
+    margin-bottom: 1em;
+
+    p {
+      @include font-size(19px);
+      margin-bottom: 0;
+    }
   }
+
   .show-notes-link {
-    display: block;
-    margin-bottom: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: $base-font-weight-bold;
+    margin-bottom: 1em;
   }
+  
   .post-cta-audio {
     display: none;
+  }
+}
+
+// Single page header
+.podcasts, .articles {
+  .header-audio--post-content {
+    padding: 14em 0 8em 0;
+
+    @include screen('tablet') {
+      padding: 8em 0 3em 0;
+    }
+
+    .post-meta--article {
+      @include post-meta--article;
+    }
   }
 }
 

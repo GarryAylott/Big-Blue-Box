@@ -17,8 +17,6 @@
 		?>
 	</main><!-- #main -->
 
-	<?php get_sidebar(); ?>
-
 </section>
 <!-- End main content -->
 

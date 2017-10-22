@@ -113,13 +113,34 @@
     }
 }
 
-// Post meta date format
-@mixin post-meta {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 14px;
+// Post meta - podcast posts
+@mixin post-meta--podcast {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 5px 8px;
+  @include font-size(12px);
+  font-weight: $base-font-weight-bold;
   text-transform: uppercase;
-  color: darken($text-light, 50%);
+  line-height: 1;
+  color: darken($text-light, 40%);
+  border: 1px solid darken($text-light, 40%);
+}
+
+// Post meta - articles
+@mixin post-meta--article {
+  display: inline-block;
+  margin-bottom: 1em;
+  @include font-size(16px);
+  font-weight: $base-font-weight;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $text-light;
+
+  .post-meta-name {
+    font-weight: $base-font-weight-bold;
+    letter-spacing: 0.5px;
+    margin-right: 0.8em;
+  }
 }
 
 // Form fields
