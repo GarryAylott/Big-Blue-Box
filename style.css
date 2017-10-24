@@ -58,6 +58,9 @@ img, figure {
   margin: 0;
   border-style: none; }
 
+figure.aligncenter {
+  margin: 0 auto; }
+
 figcaption {
   position: absolute;
   left: 0;
