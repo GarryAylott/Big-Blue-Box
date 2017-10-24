@@ -1015,7 +1015,7 @@ button.swiper-pagination-bullet {
   .menu-bluebox-header-container ul li {
     display: inline;
     position: relative;
-    margin-left: 4em;
+    margin-left: 3em;
     font-size: 17px;
     font-size: 1.0625rem;
     font-weight: 700;
@@ -1043,10 +1043,6 @@ button.swiper-pagination-bullet {
       @media only screen and (max-width: 1024px) {
         .menu-bluebox-header-container ul a::after, .menu-bluebox-header-container ul a:active::after, .menu-bluebox-header-container ul a:visited::after {
           display: none; } }
-    .menu-bluebox-header-container ul a:hover::after, .menu-bluebox-header-container ul a:active:hover::after, .menu-bluebox-header-container ul a:visited:hover::after {
-      width: 100%;
-      left: 0;
-      background: #5493fc; }
     @media only screen and (max-width: 1024px) {
       .menu-bluebox-header-container ul a, .menu-bluebox-header-container ul a:active, .menu-bluebox-header-container ul a:visited {
         position: absolute;
@@ -2212,3 +2208,4 @@ footer {
       margin-bottom: 10px; }
     .error404 .error-404 .search-form {
       width: 33%; }
+/*# sourceMappingURL=style.css.map */

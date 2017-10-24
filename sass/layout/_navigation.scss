@@ -19,7 +19,7 @@
   li {
     display: inline;
     position: relative;
-    margin-left: 4em;
+    margin-left: 3em;
     @include font-size(17px);
     font-weight: 700;
     text-transform: uppercase;
@@ -51,12 +51,6 @@
       @include screen('tablet') {
         display: none;
       }
-    }
-
-    &:hover::after {
-      width: 100%;
-      left: 0;
-      background: $colour-primary;
     }
 
     @include screen('tablet') {
