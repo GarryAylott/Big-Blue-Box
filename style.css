@@ -1238,6 +1238,8 @@ button.swiper-pagination-bullet {
     margin-bottom: 1em; }
   .header-audio--post-content .post-cta-audio {
     display: none; }
+  .header-audio--post-content .post-cta-article {
+    margin-top: 1em; }
 
 .podcasts .header-audio--post-content, .articles .header-audio--post-content {
   padding: 14em 0 8em 0; }

@@ -13,8 +13,14 @@
 			<div class="post-excerpt">
 				<?php the_excerpt(); ?>
 			</div>
-			<a class="show-notes-link" href="<?php the_permalink(); ?>">Read full show notes</a>
-	    <?php the_powerpress_content(); ?>
+			<?php 
+				if ( is_home() && in_category( 'podcasts' ) ) {
+					echo '<a class="show-notes-link" href="'. get_the_permalink() .'">Read full show notes</a>';
+				} else {
+					'';
+				}
+			?>
+	    	<?php the_powerpress_content(); ?>
 		</div><!-- End post-content-home -->
 	</section>
 

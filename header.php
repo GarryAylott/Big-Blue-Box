@@ -35,28 +35,28 @@
 		</div>
 		<!-- End header-top -->
 
-    <!-- Start latest post -->
-    <section class="header-post">
-			<?php
-				$args = array (
-					'type' => 'post',
-					'posts_per_page' => '1'
-				);
+		<!-- Start latest post -->
+		<section class="header-post">
+				<?php
+					$args = array (
+						'type' => 'post',
+						'posts_per_page' => '1'
+					);
 
-		    $featured_post = new WP_Query( $args );
+				$featured_post = new WP_Query( $args );
 
-		    if ( $featured_post->have_posts() ) {
-		        while ( $featured_post->have_posts() ) {
-		            $featured_post->the_post();
-		            get_template_part('content-header_home',get_post_format());
-		        }
+				if ( $featured_post->have_posts() ) {
+					while ( $featured_post->have_posts() ) {
+						$featured_post->the_post();
+						get_template_part('content-header_home',get_post_format());
+					}
 						wp_reset_postdata();
-		    } else {
-					get_template_part('content-none',get_post_format());
-		    }
-			?>
-    </section>
-    <!-- End latest post -->
+				} else {
+						get_template_part('content-none',get_post_format());
+				}
+				?>
+		</section>
+		<!-- End latest post -->
 
 	</header>
 

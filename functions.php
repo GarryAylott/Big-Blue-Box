@@ -217,7 +217,7 @@ function new_excerpt_more($more) {
 	if (in_category ('podcasts')) {
 		return '... <div class="post-cta-audio"><a class="btn-medium btn-audio" href="' . get_permalink() . '">Listen now</a></div>';
 		} else {
-		return '... <div><a class="btn-medium" href="' . get_permalink() . '">Read more</a></div>';
+		return '... <div class="post-cta-article"><a class="btn-medium" href="' . get_permalink() . '">Read more</a></div>';
 	  }
 }
 add_filter('excerpt_more', 'new_excerpt_more');
