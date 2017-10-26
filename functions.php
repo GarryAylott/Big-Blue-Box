@@ -110,7 +110,6 @@ add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
 // Removes attached image sizes as well
 add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
 
-
 // Limit sidebar archives to 12 months max
 function my_limit_archives( $args ) {
     $args['limit'] = 12;
@@ -171,35 +170,35 @@ add_action( 'widgets_init', 'bigbluebox_widgets_init' );
 show_admin_bar(false);
 
 // Post offsets and pagination/navigation fix
-add_action( 'pre_get_posts', function( \WP_Query $query )
-{
-    // Nothing to do if backend or not home page or not the main query
-    if ( is_admin() || ! $query->is_home() || ! $query->is_main_query() )
-        return;
+// add_action( 'pre_get_posts', function( \WP_Query $query )
+// {
+//     // Nothing to do if backend or not home page or not the main query
+//     if ( is_admin() || ! $query->is_home() || ! $query->is_main_query() )
+//         return;
 
-    // Get current pagination
-    $paged = get_query_var( 'paged', 1 );
+//     // Get current pagination
+//     $paged = get_query_var( 'paged', 1 );
 
-    // Modify sticky posts display
-    $query->set( 'ignore_sticky_posts', true );
+//     // Modify sticky posts display
+//     $query->set( 'ignore_sticky_posts', true );
 
-    // Modify post status
-    $query->set( 'post_status', 'publish' );
+//     // Modify post status
+//     $query->set( 'post_status', 'publish' );
 
-    // Edit to your needs
-    $pp_fp      = 10; // posts per first page
-    $pp_op      = 10; // posts per other pages
-    $offset_fp  = 3;  // offset for the first page
+//     // Edit to your needs
+//     $pp_fp      = 10; // posts per first page
+//     $pp_op      = 10; // posts per other pages
+//     $offset_fp  = 3;  // offset for the first page
 
-    // Offset for other pages than the first page
-    $offset_op = ( $paged - 2 ) * $pp_op + $pp_fp + $offset_fp;
+//     // Offset for other pages than the first page
+//     $offset_op = ( $paged - 2 ) * $pp_op + $pp_fp + $offset_fp;
 
-    // Modify offset
-    $query->set( 'offset', $query->is_paged() ? $offset_op : $offset_fp );
+//     // Modify offset
+//     $query->set( 'offset', $query->is_paged() ? $offset_op : $offset_fp );
 
-    // Modify posts per page
-    $query->set( 'posts_per_page', $query->is_paged() ? $pp_op : $pp_fp );
-} );
+//     // Modify posts per page
+//     $query->set( 'posts_per_page', $query->is_paged() ? $pp_op : $pp_fp );
+// } );
 
 // Excerpt length
 function my_excerpt_length() {

@@ -1,34 +1,5 @@
 <?php get_header(); ?>
 
-<!-- Start two recent posts -->
-<section class="recent-posts">
-	<div class="title-container">
-		<h3 class="main-title">Recent episodes</h3>
-	</div>
-	<section class="two-feat-posts">
-		<?php
-			$args = array (
-				'posts_per_page'=>2,
-				'offset'=>1,
-				'orderby'=>'ID'
-			);
-
-			$recent_two_posts = new WP_Query( $args );
-
-			if ( $recent_two_posts->have_posts() ) {
-				while ( $recent_two_posts->have_posts() ) {
-					$recent_two_posts->the_post();
-					get_template_part('content-recent-post',get_post_format());
-					}
-					wp_reset_postdata();
-				} else {
-				get_template_part( 'content', 'none' );
-			}
-		?>
-	</section>
-</section>
-<!-- End two recent posts -->
-
 <!-- Start subscribe -->
 <section class="subscribe">
 	<div class="sub-itunes">
@@ -69,10 +40,8 @@
 
 	<main id="main" class="main" role="main">
 		<section>
-			<div class="title-container">
-				<h3 class="main-title">More episodes</h3>
-			</div>
 			<?php
+				query_posts('posts_per_page=8&offset=1');
 				if ( have_posts() ) {
 				    while ( have_posts() ) {
 				        the_post();
