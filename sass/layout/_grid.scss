@@ -29,13 +29,9 @@
   }
 }
 
-.wrap {
-  padding-bottom: 50px;
-}
-
 .inner {
   width: $content-max-width;
-  margin: 0 auto;
+  margin: 0 auto; 
   @include clearfix;
 
   @include screen('desktop') {
@@ -70,6 +66,10 @@
 }
 
 // For single posts
+.single-post .wrap {
+    padding: 50px 0;
+}
+
 .articles .main-content, .podcasts .main-content {
   .main {
     width: 100%;
