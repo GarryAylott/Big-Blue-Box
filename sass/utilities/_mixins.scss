@@ -150,10 +150,22 @@
   text-transform: uppercase;
   color: $text-light;
 
+  > span {
+    margin-right: 1em;
+
+    @include screen('mobile') {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  }
+
   .post-meta-name {
     font-weight: $base-font-weight-bold;
     letter-spacing: 0.5px;
-    margin-right: 0.8em;
+  }
+
+  .post-meta-twitter {
+    text-transform: lowercase;
   }
 }
 

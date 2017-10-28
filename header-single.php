@@ -50,7 +50,7 @@
 					<?php if ('post' == get_post_type() && in_category('podcasts')) {
 						echo ('<div class="post-meta--podcast">'.get_the_time('jS F, Y').'</div>');
 					} elseif ('post' == get_post_type() && in_category('articles')) {
-						echo ('<div class="post-meta--article"><span class="post-meta-name">'.get_the_author_meta('display_name', $author_id).' </span> '.get_the_time('jS F, Y').'</div>');
+						echo ('<div class="post-meta--article"><span class="post-meta-name"> '.get_the_author_meta('display_name', $author_id).' </span><span class="post-meta-date">'.get_the_time('jS F, Y').'</span><span class="post-meta-twitter"><a href="https://twitter.com/'.get_the_author_meta('twitter', $author_id).'" target="_blank">'.get_the_author_meta('twitter', $author_id).'</a></span></div>');
 					} ?>
 
 					<?php the_powerpress_content(); ?>

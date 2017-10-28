@@ -1019,6 +1019,16 @@ button.swiper-pagination-bullet {
       font-weight: 600;
       letter-spacing: 0.5px;
       text-transform: uppercase; }
+    @media only screen and (max-width: 480px) {
+      .articles .main-content .main .author-bio, .podcasts .main-content .main .author-bio {
+        width: 100%;
+        display: block;
+        margin: 3em auto 0 auto;
+        padding: 2em 0;
+        border-top: 1px solid #d8d8d8;
+        border-bottom: 1px solid #d8d8d8; }
+        .articles .main-content .main .author-bio .author-avatar, .podcasts .main-content .main .author-bio .author-avatar {
+          margin: 1em 0; } }
 
 .header-top .main-navigation {
   -webkit-box-flex: 1;
@@ -1276,10 +1286,17 @@ button.swiper-pagination-bullet {
     line-height: 1;
     text-transform: uppercase;
     color: #f2f2f2; }
+    .podcasts .header-audio--post-content .post-meta--article > span, .articles .header-audio--post-content .post-meta--article > span {
+      margin-right: 1em; }
+      @media only screen and (max-width: 480px) {
+        .podcasts .header-audio--post-content .post-meta--article > span, .articles .header-audio--post-content .post-meta--article > span {
+          display: block;
+          margin-bottom: 0.5em; } }
     .podcasts .header-audio--post-content .post-meta--article .post-meta-name, .articles .header-audio--post-content .post-meta--article .post-meta-name {
       font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-right: 0.8em; }
+      letter-spacing: 0.5px; }
+    .podcasts .header-audio--post-content .post-meta--article .post-meta-twitter, .articles .header-audio--post-content .post-meta--article .post-meta-twitter {
+      text-transform: lowercase; }
 
 .header-simple {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(img/page-header.jpg) no-repeat;

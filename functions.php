@@ -31,6 +31,16 @@ function bodhi_svgs_disable_real_mime_check( $data, $file, $filename, $mimes ) {
 }
 add_filter( 'wp_check_filetype_and_ext', 'bodhi_svgs_disable_real_mime_check', 10, 4 );
 
+// Add Twitter name to user profiles
+function modify_contact_methods($profile_fields) {
+
+	// Add new fields
+	$profile_fields['twitter'] = 'Twitter Username';
+	$profile_fields['twitter-url'] = 'Twitter URL';
+	return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
+
 // Stop WP compressing images to 90% as already optimised pre-upload and also using WPSmush.it
 add_filter( 'jpeg_quality', function($arg){return 100;} );
 add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
