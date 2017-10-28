@@ -41,7 +41,6 @@
 	<main id="main" class="main" role="main">
 		<section>
 			<?php
-				query_posts('posts_per_page=8&offset=1');
 				if ( have_posts() ) {
 				    while ( have_posts() ) {
 				        the_post();
