@@ -1,6 +1,5 @@
 .author_bio {
-    width: 75%;
-    margin: 0 auto;
+    @include post-width;
     background: #f2f2f2;
 
     .author_name {

@@ -6,6 +6,9 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<div class="fb-comments">
+			<?php echo do_shortcode('[fbcomments count="off" num="5" width="100%"]'); ?>
+		</div>
 	</div>
 
 </article>

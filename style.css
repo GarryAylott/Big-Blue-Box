@@ -948,7 +948,14 @@ button.swiper-pagination-bullet {
       margin-bottom: 3em; } }
   .articles .main-content .main article p, .articles .main-content .main article article h4, .articles .main-content .main article article h3, .articles .main-content .main article blockquote, .articles .main-content .main article ol, .articles .main-content .main article ul, .podcasts .main-content .main article p, .podcasts .main-content .main article article h4, .podcasts .main-content .main article article h3, .podcasts .main-content .main article blockquote, .podcasts .main-content .main article ol, .podcasts .main-content .main article ul {
     width: 75%;
+    margin: 0 auto;
     margin: 0 auto 20px auto; }
+    @media only screen and (max-width: 1024px) {
+      .articles .main-content .main article p, .articles .main-content .main article article h4, .articles .main-content .main article article h3, .articles .main-content .main article blockquote, .articles .main-content .main article ol, .articles .main-content .main article ul, .podcasts .main-content .main article p, .podcasts .main-content .main article article h4, .podcasts .main-content .main article article h3, .podcasts .main-content .main article blockquote, .podcasts .main-content .main article ol, .podcasts .main-content .main article ul {
+        width: 85%; } }
+    @media only screen and (max-width: 480px) {
+      .articles .main-content .main article p, .articles .main-content .main article article h4, .articles .main-content .main article article h3, .articles .main-content .main article blockquote, .articles .main-content .main article ol, .articles .main-content .main article ul, .podcasts .main-content .main article p, .podcasts .main-content .main article article h4, .podcasts .main-content .main article article h3, .podcasts .main-content .main article blockquote, .podcasts .main-content .main article ol, .podcasts .main-content .main article ul {
+        width: 100%; } }
     @media only screen and (max-width: 1024px) {
       .articles .main-content .main article p, .articles .main-content .main article article h4, .articles .main-content .main article article h3, .articles .main-content .main article blockquote, .articles .main-content .main article ol, .articles .main-content .main article ul, .podcasts .main-content .main article p, .podcasts .main-content .main article article h4, .podcasts .main-content .main article article h3, .podcasts .main-content .main article blockquote, .podcasts .main-content .main article ol, .podcasts .main-content .main article ul {
         width: 85%; } }
@@ -957,7 +964,14 @@ button.swiper-pagination-bullet {
         width: 100%; } }
   .articles .main-content .main article h2, .articles .main-content .main article h3, .articles .main-content .main article h4, .podcasts .main-content .main article h2, .podcasts .main-content .main article h3, .podcasts .main-content .main article h4 {
     width: 75%;
+    margin: 0 auto;
     margin: 2.2rem auto 1rem auto; }
+    @media only screen and (max-width: 1024px) {
+      .articles .main-content .main article h2, .articles .main-content .main article h3, .articles .main-content .main article h4, .podcasts .main-content .main article h2, .podcasts .main-content .main article h3, .podcasts .main-content .main article h4 {
+        width: 85%; } }
+    @media only screen and (max-width: 480px) {
+      .articles .main-content .main article h2, .articles .main-content .main article h3, .articles .main-content .main article h4, .podcasts .main-content .main article h2, .podcasts .main-content .main article h3, .podcasts .main-content .main article h4 {
+        width: 100%; } }
   .articles .main-content .main article img, .podcasts .main-content .main article img {
     margin: 3em auto 5em auto; }
   .articles .main-content .main blockquote, .podcasts .main-content .main blockquote {
@@ -976,9 +990,16 @@ button.swiper-pagination-bullet {
       padding: 0 2em; }
   .articles .main-content .main .author-bio, .podcasts .main-content .main .author-bio {
     width: 75%;
+    margin: 0 auto;
     display: grid;
     margin: 7em auto 5em auto;
     grid-template-columns: auto 1fr; }
+    @media only screen and (max-width: 1024px) {
+      .articles .main-content .main .author-bio, .podcasts .main-content .main .author-bio {
+        width: 85%; } }
+    @media only screen and (max-width: 480px) {
+      .articles .main-content .main .author-bio, .podcasts .main-content .main .author-bio {
+        width: 100%; } }
     .articles .main-content .main .author-bio .author-avatar, .podcasts .main-content .main .author-bio .author-avatar {
       grid-column: 1 / 2;
       grid-row: 1 / 4;
@@ -2068,8 +2089,21 @@ footer {
 .single-post .post-notes-title {
   margin-bottom: 20px; }
 
-.fb-comments-title {
+.fb-comments {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center; }
+  @media only screen and (max-width: 1024px) {
+    .fb-comments {
+      width: 85%; } }
+  @media only screen and (max-width: 480px) {
+    .fb-comments {
+      width: 100%; } }
+
+.main article .fb-comments h3.fb-comments-title {
+  width: 100%;
   font-size: 1.5rem;
+  text-align: left;
   margin-top: 60px; }
 
 .page-id-1148 .wrap::before {

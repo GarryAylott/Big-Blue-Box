@@ -63,6 +63,20 @@
 //    }
 //  }
 
+// Post widths
+@mixin post-width {
+  width: 75%;
+  margin: 0 auto;
+
+  @include screen('tablet') {
+    width: 85%;
+  }
+
+  @include screen('mobile') {
+    width: 100%;
+  }
+}
+
 // Opacity
 @mixin opacity($opacity) {
   opacity: $opacity;

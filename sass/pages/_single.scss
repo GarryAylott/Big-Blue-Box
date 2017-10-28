@@ -5,7 +5,14 @@
   }
 }
 
-.fb-comments-title {
+.fb-comments {
+  @include post-width;
+  text-align: center;
+}
+
+.main article .fb-comments h3.fb-comments-title {
+  width: 100%;
   font-size: 1.5rem;
+  text-align: left;
   margin-top: 60px;
 }

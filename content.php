@@ -1,9 +1,3 @@
-<?php
-/**
- * @package Big Blue Box
- */
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="post-thumb">
