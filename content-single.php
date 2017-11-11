@@ -6,6 +6,7 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<?php echo do_shortcode('[easy-social-share ukey="1510432172"]'); ?> 
 		<div class="fb-comments">
 			<?php echo do_shortcode('[fbcomments count="off" num="5" width="100%"]'); ?>
 		</div>
