@@ -178,6 +178,10 @@
     // Share buttons
     .post-share-btns {
       @include post-width;
+
+      ul.essb_links_list {
+        width: 100%;
+      }
     }
   }
 }
