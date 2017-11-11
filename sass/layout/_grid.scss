@@ -131,6 +131,7 @@
       }
     }
 
+    // Author panel beneath posts
     .author-bio {
       @include post-width;
       display: grid;
@@ -172,6 +173,11 @@
             margin: 1em 0;
         }
       }
+    }
+
+    // Share buttons
+    .essb_links {
+      @include post-width;
     }
   }
 }
