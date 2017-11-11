@@ -81,7 +81,7 @@
 
     article { 
 
-      p, article h4, article h3, blockquote, ol, ul  {
+      p, article h4, article h3, ol, ul  {
       @include post-width;
       margin: 0 auto 20px auto;
 
@@ -94,18 +94,28 @@
         }
       }
     }
-
-    article h2, article h3, article h4 {
+    
+    article h2 {
       @include post-width;
-      margin: 2.2rem auto 1rem auto;
+      margin: 0 auto 2rem auto;
     }
 
-    article img {
-      margin: 3em auto 5em auto;
+    article h3, article h4 {
+      @include post-width;
+      margin: 2.2rem auto 0.6rem auto;
+    }
+
+    article .wp-caption {
+      margin: 3em auto;
+
+      @include screen('tablet') {
+        margin: 2em auto;
+      }
     }
 
     blockquote {
       display: block;
+      @include post-width;
       margin: 3rem auto;
       border-left: 4px solid $colour-link;
 
@@ -124,7 +134,7 @@
     .author-bio {
       @include post-width;
       display: grid;
-      margin: 7em auto 5em auto;
+      margin: 4em auto;
       grid-template-columns: auto 1fr;
 
       .author-avatar {
@@ -154,7 +164,6 @@
       @include screen('mobile') {
         width: 100%;
         display: block;
-        margin: 3em auto 0 auto;
         padding: 2em 0;
         border-top: 1px solid $colour-border-light;
         border-bottom: 1px solid $colour-border-light;

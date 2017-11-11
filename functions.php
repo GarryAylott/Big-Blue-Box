@@ -71,6 +71,19 @@ return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $conten
 }
 add_filter('the_content', 'filter_ptags_on_images');
 
+// Stop WP from wrapping images in <a> tags
+function attachment_image_link_remove_filter( $content ) {
+ $content =
+ preg_replace(
+ array('{<a(.*?)(wp-att|wp-content\/uploads)[^>]*><img}',
+ '{ wp-image-[0-9]*" /></a>}'),
+ array('<img','" />'),
+ $content
+ );
+ return $content;
+ }
+ add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+
 // Add category class to body tag for single posts
 add_filter('body_class','add_category_to_single');
 function add_category_to_single($classes) {

@@ -52,13 +52,11 @@ figure.aligncenter {
 }
 
 figcaption {
-  position: absolute;
-  left: 0;
-  bottom: -32px;
   @include font-size($base-font-size-small);
   text-transform: uppercase;
   letter-spacing: 0.3px;
   color: $text-fade;
+  padding-top: 0.6em;
 }
 
 ul {
