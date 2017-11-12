@@ -85,6 +85,11 @@
 }
 // Usage: .element { @include opacity(0.4); }
 
+// Global transition settings
+@mixin transition {
+  transition: all ease-in-out .2s;
+}
+
 // Clearfix
 @mixin clearfix($extend: true) {
   @if $extend {

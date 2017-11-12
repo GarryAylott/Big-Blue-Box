@@ -5,7 +5,7 @@
 
 	<section class="instagram">
 		<div class="instagram-title">
-			<h4>Instagram</h4>
+			<h4><a class="instagram-title-link" href="https://www.instagram.com/bigblueboxpodcast/" target="_blank">Instagram</a></h4>
 		</div>
 		<?php echo do_shortcode('[instagram-feed]'); ?>
 	</section>
