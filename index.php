@@ -60,9 +60,14 @@
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<div class='swiper-slide'>
-				<h4>Doctor Who News/Reviews Central</h4>
+				<h4>FANTASTIC</h4>
 				<h5>Just started a job and these guys save the boredem! I just plug in my earphones and the hours fly by! They have the show very well organised and is a great listen.</h5>
 				<h6>GFL_Nose - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>Highlight of every Friday morning!</h4>
+				<h5>Look forward to listening to this podcast every Friday. Garry and Adam are natural hosts and it's always great to hear their views on various parts of the Doctor Who fandom. As a newbie to Classic Who, the episode reviews are particularly useful. Great job guys!</h5>
+				<h6>CParry90 - iTunes</h6>
 			</div>
 			<div class='swiper-slide'>
 				<h4>Doctor Who News/Reviews Central</h4>
