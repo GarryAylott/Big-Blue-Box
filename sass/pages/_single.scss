@@ -128,19 +128,18 @@
           margin: 0;
         }
 
-          .essb_message_above_share {
-          margin-bottom: 10px;
+        .essb_message_above_share {
+          width: 100%;
+          text-align: left;
+          margin: 3rem 0 1rem 0;
+
+          h5 {
+            @include font-size(24px);
           }
+        }
 
         ul.essb_links_list {
           width: 100%;
-        }
-
-        h5.essb_message_above_share {
-          width: 100%;
-          @include font-size(24px);
-          text-align: left;
-          margin: 3rem 0 1rem 0;
         }
       }
     }
