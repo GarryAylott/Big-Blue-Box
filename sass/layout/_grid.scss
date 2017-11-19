@@ -64,3 +64,11 @@
     border-left: 1px solid $colour-border-light;
   }
 }
+
+.archive .main-content,
+.search .main-content,
+.page .main-content,
+.single .main-content,
+.page-template .wrap {
+  margin: 5rem 0;
+}

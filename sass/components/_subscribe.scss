@@ -56,6 +56,10 @@
       margin: 0 25px;
       transition: all .2s ease-in-out;
 
+      img {
+        width: 125px;
+      }
+
       &:hover {
         transform: translateY(-5px);
       }
