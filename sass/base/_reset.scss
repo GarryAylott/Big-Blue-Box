@@ -18,10 +18,19 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   vertical-align: baseline;
+  // Firefox specific font reset
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: $text-standard;
   background: $colour-bg-main;
+}
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
 }
 
 article,

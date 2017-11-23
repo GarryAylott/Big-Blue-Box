@@ -65,10 +65,14 @@
 .main {
 
   .post {
+    display: flex;
     margin-bottom: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid $colour-border-dark;
-    @include clearfix;
+
+    @include screen('mobile') {
+      flex-direction: column; 
+    }
 
     &.last {
       border: 0;
@@ -76,17 +80,22 @@
     }
 
     .post-thumb {
-      float: left;
-      margin-right: 20px;
       position: relative;
+      flex: 0 0 35%;
+      margin-right: 2em;
+      top: 5px;
+
+      @include screen('tablet') {
+        flex: 0 0 30%;
+      }
 
       @include screen('mobile') {
-        float: none;
-        width: 100%;
+        margin: 0;
       }
 
       .feat-img-small-container {
         position: relative;
+        max-width: 230px;
 
         &::after {
           content: '';
@@ -100,9 +109,11 @@
         }
 
         @include screen('mobile') {
+          max-width: 100%;
+          margin-bottom: 1em;
+
           img {
             width: 100%;
-            margin-bottom: 1em;
           }
         }
       }
@@ -113,8 +124,9 @@
     }
 
     .post-content-home {
-      overflow: hidden;
+      flex: 1;
       margin: 0;
+      overflow: hidden;
 
       h4 {
         display: inline-block;
