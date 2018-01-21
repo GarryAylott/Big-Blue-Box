@@ -1,73 +1,56 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package BigBlueBox
+ */
+
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49459784-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-49459784-1');
-	</script>
-
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bigbluebox' ); ?></a>
 
-	<header id="masthead" class="header-audio" role="banner">
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+			endif;
 
-		<!-- Header content -->
-		<div class="header-top">
-			<section class="header-main">
-				<div class="logo">
-					<a href="/">
-						<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
-					</a>
-				</div>
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif; ?>
+		</div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="main-navigation nav-collapse" role="navigation">
-					<a href="#" class="menu-link">
-			            <div id="nav-icon">
-			                <span></span>
-			                <span></span>
-			                <span></span>
-			            </div>
-			        </a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				</nav>
-			</section>
-		</div>
-		<!-- End header-top -->
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bigbluebox' ); ?></button>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+			?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
 
-		<!-- Start latest post -->
-		<section class="header-post">
-				<?php
-					$args = array (
-						'type' => 'post',
-						'posts_per_page' => '1'
-					);
-
-				$featured_post = new WP_Query( $args );
-
-				if ( $featured_post->have_posts() ) {
-					while ( $featured_post->have_posts() ) {
-						$featured_post->the_post();
-						get_template_part('content-header_home',get_post_format());
-					}
-						wp_reset_postdata();
-				} else {
-						get_template_part('content-none',get_post_format());
-				}
-				?>
-		</section>
-		<!-- End latest post -->
-
-	</header>
-
-	<div id="wrap" class="wrap">
-		<section class="inner">
+	<div id="content" class="site-content">
