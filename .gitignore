@@ -32,6 +32,12 @@ Icon
 # Thumbnails
 ._*
 
+# Composer
+vendors/composer/
+!assets/js/vendor/
+wpcs/
+composer.lock
+
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
@@ -87,6 +93,9 @@ jspm_packages/
 style.css.map
 *.css.map
 *.map
+**/.sass-cache
+**/.sass-cache/*
+**/.map
 
 # Compiled Files and Build Dirs
 /README.html
