@@ -1,57 +1,60 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<?php
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package BigBlueBox
+ */
 
-	<?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-	<header id="masthead" class="header" role="banner">
+get_header(); ?>
 
-		<!-- Header content -->
-		<div class="header-top">
-			<section class="header-main">
-				<div class="logo">
-					<a href="/">
-						<img src="<?php bloginfo('template_url'); ?>/img/BBB-Logo-darkbg.svg" width="211" height="98">
-					</a>
-				</div>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<a href="#" class="menu-link">
-			            <div id="nav-icon">
-			                <span></span>
-			                <span></span>
-			                <span></span>
-			            </div>
-			        </a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				</nav>
-			</section>
-		</div>
-		<!-- End header-top -->
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bigbluebox' ); ?></h1>
+				</header><!-- .page-header -->
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+				<div class="page-content">
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bigbluebox' ); ?></p>
 
-				<section class="error-404 not-found inner">
-					<header class="page-header">
-						<h2 class="page-title"><?php _e( 'Nope, nothing here Im afraid', 'bigbluebox' ); ?></h2>
-					</header><!-- .page-header -->
+					<?php
+						get_search_form();
 
-					<div class="page-content">
-						<p><?php _e( 'Things have gone a bit wibbly-wobbly or timey-wimey, maybe both!', 'bigbluebox' ); ?></p>
-						<p><?php _e( 'Try doing a search below or <a href="/">jump back to the homepage.</a>', 'bigbluebox' ); ?></p>
+						the_widget( 'WP_Widget_Recent_Posts' );
+					?>
 
-						<?php get_search_form(); ?>
+					<div class="widget widget_categories">
+						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bigbluebox' ); ?></h2>
+						<ul>
+						<?php
+							wp_list_categories( array(
+								'orderby'    => 'count',
+								'order'      => 'DESC',
+								'show_count' => 1,
+								'title_li'   => '',
+								'number'     => 10,
+							) );
+						?>
+						</ul>
+					</div><!-- .widget -->
 
-					</div><!-- .page-content -->
-				</section><!-- .error-404 -->
+					<?php
 
-			</main><!-- #main -->
-		</div><!-- #primary -->
+						/* translators: %1$s: smiley */
+						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bigbluebox' ), convert_smilies( ':)' ) ) . '</p>';
+						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
-<?php get_footer(); ?>
+						the_widget( 'WP_Widget_Tag_Cloud' );
+					?>
+
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_footer();
