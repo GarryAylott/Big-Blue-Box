@@ -1,0 +1,74 @@
+// Box model
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+// Main layout
+.home .wrap {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  @include clearfix;
+
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/space-bg.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.inner {
+  width: $content-max-width;
+  margin: 0 auto; 
+  @include clearfix;
+
+  @include screen('desktop') {
+    width: 90%;
+  }
+}
+
+// For homepage, archive and search
+.home .main-content,
+.archive .main-content,
+.search .main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include screen('tablet') {
+    flex-direction: column;
+  }
+
+  .main {
+    flex: 0 0 65%;
+
+    @include screen('tablet') {
+      margin-bottom: 3em;
+    }
+  }
+
+  aside {
+    flex: 0 0 30%;
+    border-left: 1px solid $colour-border-light;
+  }
+}
+
+.archive .main-content,
+.search .main-content,
+.page .main-content,
+.single .main-content,
+.page-template .wrap {
+  margin: 5rem 0;
+}

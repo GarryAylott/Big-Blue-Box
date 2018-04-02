@@ -1,0 +1,48 @@
+/*!
+Theme Name: Big Blue Box
+Author: Garry Aylott
+Author URI: http://www.garryaylottdesign.co.uk
+Description: Custom theme for the Big Blue Box website.
+Version: 2.0
+Text Domain: Big Blue Box
+*/
+
+// Utilities
+@import "utilities/variables";
+@import "utilities/mixins";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+@import "base/iconfont";
+
+// Vendors
+@import "vendors/swiper";
+
+// Layout
+@import "layout/grid";
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/footer";
+
+// Components
+@import "components/podcast-player";
+@import "components/buttons";
+@import "components/titles";
+@import "components/subscribe";
+@import "components/instagram";
+@import "components/images";
+@import "components/search-form";
+@import "components/contact-form";
+@import "components/testimonials";
+@import "components/spreadshirt";
+@import "components/form";
+
+// Pages
+@import "pages/home";
+@import "pages/single";
+@import "pages/about";
+@import "pages/archive";
+@import "pages/subscribe";
+@import "pages/error-404";

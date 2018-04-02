@@ -1,0 +1,149 @@
+.single-post {
+
+  .post-notes-title {
+    margin-bottom: 20px;
+  }
+}
+
+.articles .main-content, .podcasts .main-content {
+  .main {
+    width: 100%;
+    margin: 0 auto;
+
+    @include screen('tablet') {
+      margin-bottom: 3em;
+    }
+
+    article {
+      p, h4, h3, ol, ul  {
+        @include post-width;
+        margin: 0 auto 1.2rem auto;
+
+        @include screen('tablet') {
+          width: 85%;
+        }
+
+        @include screen('mobile') {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        @include post-width;
+        margin: 0 auto 2rem auto;
+      }
+
+      .wp-caption {
+        margin: 3em auto;
+
+        @include screen('tablet') {
+          margin: 2em auto;
+        }
+      }
+
+      blockquote {
+        display: block;
+        @include post-width;
+        margin: 3rem auto;
+        border-left: 4px solid $colour-link;
+
+        p {
+        width: auto;
+        @include font-size(20px);
+        font-style: italic;
+        background: -webkit-linear-gradient(180deg, #005b94, #94008d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        padding: 0 2em;
+        }
+      }
+
+      // Author panel beneath posts
+      .author-bio {
+        @include post-width;
+        display: grid;
+        margin: 4em auto 0 auto;
+        grid-template-columns: auto 1fr;
+
+        .author-avatar {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        align-items: center;
+
+        img {
+          margin: 0 2em 0 0;
+          border-radius: 50%;
+          }        
+        }
+
+        p {
+          width: 100%;
+          @include font-size(16px);
+          margin: 0;
+        }
+
+        .author-name {
+          font-size: $base-font-size-large;
+          font-weight: $base-font-weight-bold;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+        }
+
+        @include screen('mobile') {
+          width: 100%;
+          display: block;
+          padding: 2em 0;
+          border-top: 1px solid $colour-border-light;
+          border-bottom: 1px solid $colour-border-light;
+
+          .author-avatar {
+            margin: 1em 0;
+          }
+        }
+      }
+      
+      // Facebook comments
+      .fb-comments {
+        @include post-width;
+        text-align: center;
+
+        h3.fb-comments-title {
+          width: 100%;
+          @include font-size(24px);
+          text-align: left;
+          margin-top: 3rem;
+        }
+      }
+
+      // Share buttons
+      .post-share-btns {
+        @include post-width;
+
+        .essb_links {
+          margin: 0;
+        }
+
+        .essb_message_above_share {
+          width: 100%;
+          text-align: left;
+          margin: 4rem 0 1rem 0;
+
+          h5 {
+            @include font-size(24px);
+          }
+        }
+
+        ul.essb_links_list {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.articles .main-content .main article {
+  h4 {
+    margin: 2.2rem auto 1rem auto;
+  }
+}

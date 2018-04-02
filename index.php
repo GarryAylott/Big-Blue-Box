@@ -1,56 +1,117 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package BigBlueBox
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<section class="subscribe">
+	<div class="sub-itunes">
+		<h3>Subscribe on iTunes and never miss a show</h3>
+		<a class="itunes-link" href="https://itunes.apple.com/gb/podcast/the-doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1" target="_blank" rel="noopener">
+			<img alt="Listen on Apple Podcasts" src="<?php bloginfo('template_url'); ?>/img/badge-ListenApplePodcasts.svg" />
+		</a>
+		<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
+	</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="sub-others">
+		<div class="sub-others--link">
+			<a href="http://www.stitcher.com/s?fid=47023" target="_blank" rel="noopener">
+				<img src="<?php bloginfo('template_url'); ?>/img/badge-subStitcher.png" alt="Hear Us On Stitcher"/>
+			</a>
+		</div>
+		<div class="sub-others--link">
+			<a href="https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/Iotxjuso6fr7kqr3siuyewckecq?t%3DThe_Doctor_Who_Big_Blue_Box_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16" target="_blank" rel="noopener">
+				<img src="https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png" alt="Listen on Google Play Music"/>
+			</a>
+		</div>
+		<div class="sub-others--link">
+			<a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" alt="Subscribe on Android" target="_blank" rel="noopener">
+				<img src="<?php bloginfo('template_url'); ?>/img/badge-subAndroid.png" style="border:0;" />
+			</a>
+		</div>
+		<div class="sub-others--link">
+			<a href="https://www.bigblueboxpodcast.co.uk/feed/podcast/" alt="Subscribe on RSS - Podcasts" target="_blank" rel="noopener">
+				<img src="<?php bloginfo('template_url'); ?>/img/badge-subRSS-Pod.png" style="border:0;" />
+			</a>
+		</div>
+		<div class="sub-others--link">
+			<a href="https://www.bigblueboxpodcast.co.uk/feed/" alt="Subscribe on RSS - All" target="_blank" rel="noopener">
+				<img src="<?php bloginfo('template_url'); ?>/img/badge-subRSS-Main.png" style="border:0;" />
+			</a>
+		</div>
+	</div>
+</section>
 
-		<?php
-		if ( have_posts() ) :
+<section class="main-content">
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
+	<main id="main" class="main" role="main">
+		<section>
 			<?php
-			endif;
+				if ( have_posts() ) {
+				    while ( have_posts() ) {
+				        the_post();
+				        get_template_part('content',get_post_format());
+				    }
+					the_posts_navigation();
+				} else {
+					get_template_part( 'content', 'none' );
+				}
+			?>
+		</section>
+	</main>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+	<?php get_sidebar(); ?>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+</section>
 
-			endwhile;
+<section class="testimonials">
+	<h3>What some of our listeners think</h3>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class='swiper-slide'>
+				<h4>FANTASTIC</h4>
+				<h5>Just started a job and these guys save the boredem! I just plug in my earphones and the hours fly by! They have the show very well organised and is a great listen.</h5>
+				<h6>GFL_Nose - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>Highlight of every Friday morning!</h4>
+				<h5>Look forward to listening to this podcast every Friday. Garry and Adam are natural hosts and it's always great to hear their views on various parts of the Doctor Who fandom. As a newbie to Classic Who, the episode reviews are particularly useful. Great job guys!</h5>
+				<h6>CParry90 - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>Doctor Who News/Reviews Central</h4>
+				<h5>A really great podcast. Informative, a good laugh and very enjoyable to listent to too! My personal favourite on a Friday evening while playing a casual game or driving. "Fantastic" as the Doctor would say... Thanks guys for the work you put into this!</h5>
+				<h6>MultiRobbie10 - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>Fantastic</h4>
+				<h5>If you're a Doctor Who fan who isn't listening to this podcast, then you're missing out. Garry and Adam are both fun, relaxed, informative and overall-really nice guys. I highly recommend this podcast.</h5>
+				<h6>Badwilf - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>The best little podcast in Mutter's Spiral</h4>
+				<h5>Discovered this podcast by mistake and I'm really, really glad I did. It's funny, informative and utterly brilliant. I listen to one of these a day on my journey into work and I find myself talking along when a good point is made and shouting when I disagree. Seriously, I love what you guys are doing. 10/10</h5>
+				<h6>Kevin Mullen - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>Great show for Doctor Who fans</h4>
+				<h5>This show is awesome. It's got great structure, fair opinions, honesty, understanding and research. This show loves the Doctor Who universe and lives in the real world of today at the same time. These guys have got enthusiasm and professionalism too. Definitely worth listening. Thanks guys, and keep up the good work.</h5>
+				<h6>OJH :) - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>Thouroughly enjoyable</h4>
+				<h5>Started listening to these guys around ep 80 and loving every episode. Listening to the two of them laugh and joke about Dr Who is a joy every week, with their alternating classic and new Who choices it's a joy for all fans of Doctor Who, keep em coming guys your awesome.</h5>
+				<h6>XxElmXx - iTunes</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>The best Doctor Who podcast out there</h4>
+				<h5>Listened since the beginning. Funny, entertaining and they really know their Doctor Who.</h5>
+				<h6>NorthernJimbo - Stitcher</h6>
+			</div>
+			<div class='swiper-slide'>
+				<h4>Molto bene!</h4>
+				<h5>Let me tell you a thing, this podcast is perfect for surviving the hiatus of 2016 Doctor Who. Not only is it introducing me to a load of classic episodes, it also takes me to episodes in the new era that remind me why I love it so much. Garry and Adam are lovely lads and superb hosts, and the banter between them is top notch. I live for the Thursdays these come out.</h5>
+				<h6>yoocantsaythat - iTunes</h6>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</section>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

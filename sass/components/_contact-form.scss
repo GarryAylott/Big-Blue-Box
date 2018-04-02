@@ -1,0 +1,43 @@
+.wpcf7-form {
+  p {
+    margin-bottom: 5px;
+  }
+
+  input[type="text"], input[type="email"] {
+    @include form-field;
+    margin-bottom: 20px;
+  }
+
+  .wpcf7-textarea {
+    @include form-field;
+    height: 200px;
+  }
+
+  input[type="submit"] {
+    padding: 7px 13px;
+    border-radius: 3px;
+    border: none;
+    font-size: $base-font-size;
+    font-weight: $header-font-weight;
+    text-transform: uppercase;
+    color: white;
+    background: $colour-primary;
+    background-size: 25px;
+    background-position: 3px 50%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+      background: darken($colour-primary, 5%);
+    }
+
+    &:visited {
+      color: white;
+    }
+  }
+
+  .wpcf7-captchac {
+    margin-bottom: 10px;
+  }
+}

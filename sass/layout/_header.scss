@@ -1,0 +1,150 @@
+// Headers for audio and non-audio posts
+.header, .header-audio, .header-simple {
+  position: relative;
+  color: $text-light;
+
+  @include screen('tablet') {
+    .header-latest-post {
+      background-position: center center !important;
+    }
+  }
+
+  .header-top {
+    position: absolute;
+    width: 100%;
+
+      .header-main {
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 3em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+        .logo {
+          flex: 0 1 auto;
+          display: inline-block;
+          transition: all .2s ease-in-out;
+
+          img {
+            width: 60%;
+
+            @include screen('mobile') {
+              width: 50%;
+            }
+          }
+
+          &:hover {
+            transform: scale(1.1) rotate(-5deg);
+          }
+        }
+
+        @include screen('desktop') {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+  }
+
+  .post-meta--podcast {
+    @include post-meta--podcast;
+  }
+}
+
+// Homepage header
+.header-audio--post-content {
+  padding: 10em 0 5em 0;
+
+  @include screen('mobile') {
+    padding: 8em 0 3em 0;
+  }
+
+  .post-title {
+    position: relative;
+    @include clearfix;
+
+    h1 {
+      display: inline-block;
+      float: left;
+      line-height: 1; 
+      margin-bottom: 10px;
+      color: white;
+      background: linear-gradient(90deg, #5493fc 0%, #54fc69 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include screen('mobile') {
+        font-size: 44px;
+      }
+    }
+  }
+
+  .post-excerpt {
+    margin-bottom: 1em;
+
+    p {
+      @include font-size(19px);
+      margin-bottom: 0;
+    }
+  }
+
+  .show-notes-link {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: $base-font-weight-bold;
+    margin-bottom: 1em;
+  }
+  
+  .post-cta-audio {
+    display: none;
+  }
+
+  .post-cta-article {
+    margin-top: 1em;
+  }
+}
+
+// Single page header
+.podcasts, .articles {
+  .header-audio--post-content {
+    padding: 14em 0 8em 0;
+
+    @include screen('tablet') {
+      padding: 8em 0 3em 0;
+    }
+
+    .post-meta--article {
+      @include post-meta--article;
+    }
+  }
+}
+
+// Standard pages archive, about etc
+.header-simple {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(img/page-header.jpg) no-repeat;
+  background-size: cover;
+  background-position: 100% 40%;
+
+  .title-area {
+    width: 100%;
+    text-align: center;
+
+    .page-title {
+      color: white;
+      line-height: 300px;
+      padding-top: 20px;
+
+      @include screen('mobile') {
+        line-height: 1em;
+        padding: 3em 0 1.5em 0;
+      }
+    }
+  }
+}
+
+// Remove show notes link from non-audio posts
+.category-news, .category-articles, .category-reviews, .category-opinions {
+  .show-notes-link {
+    display: none;
+  }
+}

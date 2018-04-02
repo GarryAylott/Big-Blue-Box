@@ -1,35 +1,23 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package BigBlueBox
- */
+<?php get_header('single'); ?>
 
-get_header(); ?>
+<!-- Start main content -->
+<section class="main-content">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+	<main id="main" class="main" role="main">
 		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
+			if ( have_posts() ) {
+					while ( have_posts() ) {
+							the_post();
+							get_template_part('content', 'single');
+					}
+				the_posts_navigation();
+			} else {
+				get_template_part( 'content', 'none' );
+			}
 		?>
+	</main><!-- #main -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+</section>
+<!-- End main content -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

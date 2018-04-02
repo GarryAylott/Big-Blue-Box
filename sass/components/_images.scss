@@ -1,0 +1,8 @@
+// Correct spacing for in-post images
+.category-articles, .category-reviews, .category-opinions {
+  .main {
+    img {
+      margin-bottom: 30px;
+    }
+  }
+}

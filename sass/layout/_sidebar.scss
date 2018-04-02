@@ -1,0 +1,114 @@
+.main-content aside {
+  border-left: 1px solid $colour-border-light;
+
+  @include screen('tablet') {
+    border-left: 0;
+  }
+
+  section {
+    padding: 25px 0 25px 25px;
+    border-bottom: 1px solid $colour-border-light;
+
+    @include screen('tablet') {
+      padding: 0 0 2em 0;
+      margin-bottom: 2em;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .sidebar-items {
+    position: relative;
+    @include clearfix;
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  h5 {
+    margin: -5px 0 10px 0;
+  }
+
+  // Social Links
+  .social-links {
+    @include social-link-icons
+  }
+
+  // Newsletter Sign Up
+  .newsletter-form {
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="email"] {
+      @include form-field;
+    }
+
+    input[type="submit"] {
+      float: right;
+      border: 0;
+      cursor: pointer;
+    }
+
+    p {
+      width: 60%;
+      margin-bottom: 0;
+    }
+  }
+
+  // Tweets
+  .widget_oauth_twitter_widget {
+
+    .oauth-twitter-tweet {
+      font-style: normal;
+      margin-bottom: 5px;
+    }
+
+    .oauth-twitter-tweet-time {
+      font-family: $base-font-family;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Archive links
+  .widget_archive li {
+    margin-bottom: 10px;
+
+    @include screen('tablet') {
+      display: inline-block;
+      width: 30%;
+    }
+
+    @include screen('mobile') {
+      width: 100%;
+    }
+  }
+}
+
+.home .main-content aside {
+  border-left: 1px solid $colour-border-dark;
+
+  @include screen('tablet') {
+    border-left: none;
+  }
+
+  section {
+    border-bottom: 1px solid $colour-border-dark;
+  }
+}
+
+@include screen('tablet') {
+  #sfp_page_plugin_widget-2, #text-2 {
+    display: none;
+  }
+}

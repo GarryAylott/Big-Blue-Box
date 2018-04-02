@@ -1,0 +1,41 @@
+// Overrides for Instagram plugin layout and spacing
+.instagram-title {
+  color: white;
+  height: 40px;
+  padding: 0 30px;
+  background-image: linear-gradient(-90deg, #005b94, #94008d);
+
+  .instagram-title-link {
+    color: white;
+    line-height: 40px;
+    @include transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:after {
+      content: '\e901';
+      font-family: bigblueboxicons;
+      font-size: 15px;
+      margin-left: 4px;
+      position: relative;
+      top: -3px;
+    }
+  }
+}
+
+#sb_instagram {
+  #sbi_images .sbi_item {
+    width: 16.66666666667% !important;
+
+    @include screen('mobile') {
+      width: 50% !important;
+      height: auto;
+    }
+  }
+
+  #sbi_load {
+    padding-top: 0 !important;
+  }
+}
