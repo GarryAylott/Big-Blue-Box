@@ -1,0 +1,35 @@
+/*!
+Theme Name: bigbluebox
+Theme URI: 
+Author: Garry Aylott
+Author URI: http://www.garryaylott.co.uk
+Description: A custom theme for the Big Blue Box Podcast website.
+Version: 1.0.0
+Text Domain: bigbluebox
+*/
+
+// Sass Utilities
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Vendor *3rd party styles
+
+// Base
+@import 'base/normalize';
+
+// Layout
+@import 'layout/grid';
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+
+// Components
+@import 'components/buttons';
+
+// Pages
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/single';
+@import 'pages/legal';
