@@ -16,6 +16,8 @@ Text Domain: bigbluebox
 
 // Base
 @import 'base/normalize';
+@import 'base/reset';
+@import 'base/typography';
 
 // Layout
 @import 'layout/grid';
@@ -26,6 +28,9 @@ Text Domain: bigbluebox
 
 // Components
 @import 'components/buttons';
+@import 'components/post-images';
+@import 'components/helpers';
+@import 'components/testimonials';
 
 // Pages
 @import 'pages/home';

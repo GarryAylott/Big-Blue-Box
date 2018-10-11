@@ -1,0 +1,182 @@
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3%;
+    background: rgba(255,255,255, .05);
+ 
+    .logo {
+        position: relative;
+        width: 180px;
+        transition: all .3s ease;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+    }
+}
+
+.site-header {
+    background: linear-gradient(0deg, rgba(17, 17, 17, .85) 40%, rgba(39, 39, 39, .4) 100%), url(img/header-bg.jpg) no-repeat;
+    background-position: left top;
+    background-size: cover;
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 0;
+        @include inner;
+
+        &__latest-ep {
+            flex: 0 1 60%;
+            color: $colour-text-light;
+
+            h5 {
+                margin-bottom: 1rem;
+            }
+
+            img, h1 {
+                margin-bottom: 1rem;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+
+            .powerpress_links {
+                margin: 0;
+            }
+
+            // Header player styles
+            .mejs-container, .mejs-controls {
+                width: 100% !important;
+                background: none;
+                padding: 0;
+            }
+
+            .mejs-controls {
+                .mejs-button>button {
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+
+            @media screen and (max-width: 75em) {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid darken($colour-border, 60%);
+            }
+        }
+
+        &__subscribe {
+            flex: 0 1 32%;
+            color: $colour-text-light;
+
+            h2 {
+                margin-bottom: 1rem;
+            }
+
+            a, img {
+                filter: brightness(0.85);
+                transition: all .3s ease;
+
+                &:hover {
+                    filter: brightness(1);
+                }
+            }
+
+            .badge-itunes {
+                margin-bottom: 2rem;
+            }
+
+            .subscriber-badges {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                a {
+                    display: inline-block;
+                    margin-bottom: 1.2rem;
+                }
+
+                .sprite {
+                    display: inline-block;
+                    background-image: url(img/badges-sprite.png);
+                    background-repeat: no-repeat;
+                    background-size: 660px 44px;
+                }
+
+                .sprite-android-badge {
+                    width: 110px;
+                    height: 44px;
+                    background-position: 0 0;
+                }
+                
+                .sprite-googleplay-badge {
+                    width: 110px;
+                    height: 44px;
+                    background-position: -110px 0;
+                }
+                
+                .sprite-rssall-badge {
+                    width: 110px;
+                    height: 44px;
+                    background-position: -220px 0;
+                }
+                
+                .sprite-rsspod-badge {
+                    width: 110px;
+                    height: 44px;
+                    background-position: -330px 0;
+                }
+                
+                .sprite-spotify-badge {
+                    width: 110px;
+                    height: 44px;
+                    background-position: -440px 0;
+                }
+                
+                .sprite-stitcher-badge {
+                    width: 110px;
+                    height: 44px;
+                    background-position: -550px 0;
+                }
+
+                @media screen and (max-width: 75em) {
+                    justify-content: flex-start;
+                }
+            }
+
+            @supports (display: grid) {
+                .subscriber-badges {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 0.8rem;
+
+                    a {
+                        width: 110px;
+                        height: 44px;
+                        margin: 0;
+                    }
+
+                    @media screen and (max-width: 75em) {
+                        display: grid;
+                        grid-template-columns: repeat(6, 1fr);
+                    }
+
+                    @media screen and (max-width: 55em) {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 75em) {
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+// Clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Set max-width of desktop container
+@mixin inner() {
+    width: $inner;
+    margin: 0 auto;
+
+    @media screen and (max-width: 75em) {
+        width: 100%;
+        padding: 0 5%;
+    }
+}
+
+// Card styles with flex-basis variables
+@mixin post-card($fg: 1, $fs: 0, $fb: auto) {
+    $fg-boxflex: $fg;
+    @if type-of($fg) == 'list' {
+        $fg-boxflex: nth($fg, 1);
+    }
+    flex: $fg $fs $fb;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.08), 1px 3px 8px rgba(39,44,49,.05);
+    transition: all .3s ease;
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+        background: white;
+
+        .post-card--details {
+            flex: 1 0 auto;
+            padding: 1.3rem 1.3rem 1rem 1.3rem;
+
+            .post-card--title {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .post-card--meta {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1.3rem 1.3rem;
+
+            .author-info {
+                position: relative;
+            }
+
+            .post-card--name-tooltip {
+                position: absolute;
+                display: block;
+                bottom: 15%;
+                left: 13%;
+                padding: 5px 10px;
+                font-size: 13px;
+                white-space: nowrap;
+                color: white;
+                background: $colour-text-dark;
+                border-radius: 3px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+                transition: all .3s ease;
+                pointer-events: none;
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            .author-info:hover .post-card--name-tooltip {
+                opacity: 1;
+                transform: translateX(50px);
+            }
+    
+            img {
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+            }
+
+            span {
+                font-size: 13px;
+                color: lighten($colour-text-dark, 25%);
+                line-height: 45px;
+                text-transform: uppercase;
+            }
+        }
+    }    
+}
+
+// Style form placeholders
+@mixin placeholder() {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+}

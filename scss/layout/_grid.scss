@@ -1,0 +1,49 @@
+.recent-posts {
+    @include inner;
+    margin: 3rem auto;
+
+    h5 {
+        margin-bottom: 1rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .post-card {
+        @include post-card(0, 1, 48%);
+    }
+}
+
+.main-content {
+    @include inner;
+    display: flex;
+    justify-content: space-between;
+
+    .other-posts {
+        display: flex;
+        flex: 0 1 66%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .post-card {
+            @include post-card(0, 1, 48%);
+            margin-bottom: 1.8rem;
+
+            .size-feat-sml {
+                height: 200px;
+            }
+        }
+    }
+
+    aside {
+        flex: 0 1 30%;
+    }
+}
+
+// @supports (display: grid) {
+//     .main-content {
+//         display: grid;
+//     }
+// }

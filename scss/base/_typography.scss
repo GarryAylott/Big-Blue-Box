@@ -1,0 +1,43 @@
+// Headings
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-headings;
+    font-weight: $font-weight-bold;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+// Paragraphs and body copy
+p {
+    font-size: $font-size-normal;
+}
+
+p.small {
+  font-size: $font-size-small;
+}
+
+// Links
+a {
+    color: $colour-primary;
+    text-decoration: none;
+    transition: color ease .3s;
+    
+    &:visited {
+      color: $colour-primary;
+    }
+    &:hover {
+      color: $colour-primary-hover;
+    }
+    &:active {
+      color: $colour-primary;
+    }
+  }

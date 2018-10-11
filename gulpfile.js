@@ -15,7 +15,7 @@ const project                 = 'BigBlueBox'; // Project Name.
       team                    = ''; // Team's Email ID.
 
       // Style related.
-      styleSRC                = './sass/style.scss'; // Path to main .scss file.
+      styleSRC                = './scss/style.scss'; // Path to main .scss file.
       styleDestination        = './'; // Path to place the compiled CSS file.
       // Default set to root folder.
 
@@ -36,7 +36,7 @@ const project                 = 'BigBlueBox'; // Project Name.
       imagesDestination       = './img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
       // Watch files paths.
-      styleWatchFiles         = './sass/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
+      styleWatchFiles         = './scss/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
       vendorJSWatchFiles      = './js/vendor/*.js'; // Path to all vendor JS files.
       customJSWatchFiles      = './js/custom/*.js'; // Path to all custom JS files.
       projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
@@ -64,7 +64,7 @@ const gulp          = require('gulp'); // Gulp of-course
 
 // JS related plugins.
       concat        = require('gulp-concat'); // Concatenates JS files
-      uglify        = require('gulp-uglify'); // Minifies JS fi      
+      uglify        = require('gulp-terser'); // Minifies JS files
 // Image realted plugins.
       imagemin      = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG images with imagemin.
 

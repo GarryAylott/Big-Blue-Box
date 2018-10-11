@@ -1,0 +1,14 @@
+.menu-bluebox-header-container {
+    ul li {
+        display: inline-block;
+
+        a {
+            font-family: $font-family-headings;
+            font-size: 15px;
+            font-weight: 700;
+            margin-left: 4rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+}

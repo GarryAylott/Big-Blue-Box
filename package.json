@@ -23,7 +23,7 @@
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-notify": "^3.2.0",
     "gulp-sort": "^2.0.0",
-    "gulp-uglify": "^3.0.1",
+    "gulp-terser": "^1.1.5",
     "gulp-wp-pot": "^2.3.2"
   },
   "scripts": {

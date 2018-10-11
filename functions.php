@@ -41,10 +41,14 @@ if ( ! function_exists( 'bigbluebox_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'feat-lrg', 750, 250, true );
+		add_image_size( 'feat-med', 570, 250, true );
+		add_image_size( 'feat-sml', 370, 200, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'bigbluebox' ),
+			'top-nav' => __( 'Header Menu', 'bigbluebox' ),
+			'btm-nav' => __( 'Footer Menu', 'bigbluebox' )
 		) );
 
 		/*
@@ -71,9 +75,22 @@ if ( ! function_exists( 'bigbluebox_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'bigbluebox_setup' );
 
+// Make featured images (not single posts) link to their post
+function link_featured_images( $html, $post_id, $post_image_id ) {
+	If (! is_singular()) {
+		$html = '<a class="post-card--feat-img-link" href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_the_title( $post_id ) ) . '">' . $html . '</a>';
+		return $html;
+	} else {
+		return $html;
+	}
+}
+add_filter( 'post_thumbnail_html', 'link_featured_images', 10, 3 );
+
+// Remove admin bar
+show_admin_bar(false);
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
- *
  * Priority 0 to make it available to lower priority callbacks.
  *
  * @global int $content_width
@@ -82,7 +99,7 @@ function bigbluebox_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'bigbluebox_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'bigbluebox_content_width', 1170 );
 }
 add_action( 'after_setup_theme', 'bigbluebox_content_width', 0 );
 
@@ -104,14 +121,47 @@ function bigbluebox_widgets_init() {
 }
 add_action( 'widgets_init', 'bigbluebox_widgets_init' );
 
+// Custom excerpt length
+function my_excerpt_length($length) {
+	return 30;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
+// Custom ending to excerpt
+function excerpt_readmore($more) {
+	return '...';
+}
+add_filter('excerpt_more', 'excerpt_readmore');
+
+// Load Google Font
+function load_fonts() {
+	wp_register_style('et-googleFonts', '//fonts.googleapis.com/css?family=Lato:700|Open+Sans:400,700');
+	wp_enqueue_style( 'et-googleFonts');
+	}
+	add_action('wp_print_styles', 'load_fonts');
+
+// Load jQuery
+function load_jQuery() {
+    if (!is_admin())
+    {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1', true);
+        wp_enqueue_script('jquery');
+    }
+}
+add_action('init', 'load_jQuery');
+
 /**
  * Enqueue scripts and styles.
  */
 function bigbluebox_scripts() {
 	wp_enqueue_style( 'bigbluebox-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'bigbluebox-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'bigbluebox-skip-link-focus-fix', get_template_directory_uri() . '/vendor/js/skip-link-focus-fix.js', array(), '20151215', true );
+	// wp_enqueue_script( 'bigbluebox-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array(), '20151215', true );
+	// wp_enqueue_script( 'bigbluebox-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '20151215', true );
+	// wp_enqueue_script( 'bigbluebox-slider', get_template_directory_uri() . '/js/vendor/siema.js', array(), 'null', true );
+	wp_enqueue_script( 'bigbluebox-vendorjs', get_template_directory_uri() . '/js/vendors.js', array(), 'null', true );
+	wp_enqueue_script( 'bigbluebox-customjs', get_template_directory_uri() . '/js/custom.js', array(), 'null', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

@@ -22,37 +22,87 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bigbluebox' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$bigbluebox_description = get_bloginfo( 'description', 'display' );
-			if ( $bigbluebox_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $bigbluebox_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<section class="top-nav">
+			<div class="logo">
+				<a href="/">
+					<img src="<?php bloginfo('template_url'); ?>/img/bbb-logo.svg" />
+				</a>
+			</div>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bigbluebox' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'top-nav',
+				) );
+				?>
+			</nav>
+		</section>
+
+		<section class="header-content">		
+			<div class="header-content__latest-ep">
+				<?php
+					$args1 = array(
+						'type' => 'post',
+						'posts_per_page' => '1'
+					);
+					$header_post = new WP_Query($args1);
+
+					if($header_post->have_posts()) : 
+					while($header_post->have_posts()) : 
+						$header_post->the_post();
+				?>
+					<?php echo '<div class="card-recentpost">'; ?>
+
+					<?php if (in_category('podcasts')) { ?>
+						<h5>Latest podcast episode&hellip;</h5>
+					<?php } else { (in_category('articles')) ?>
+						<h5>Latest article&hellip;</h5>
+					<?php } ?>
+
+					<div class="post-img">
+						<?php if (in_category('podcasts')) { ?>
+							<span class="post-img-type-icon">
+								<svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/post-icons.svg#headphones"></use></svg>
+							</span>
+						<?php } else { ?>
+							<span class="post-img-type-icon">
+								<svg class="post-img-type-icon__article"><use xlink:href="<?php bloginfo('template_url'); ?>/img/post-icons.svg#article"></use></svg>
+							</span>
+						<?php } ?>
+						
+						<?php the_post_thumbnail('feat-lrg'); ?>
+					</div>
+
+					<a href="<?php the_permalink(); ?>">
+						<h1><?php echo wp_trim_words( get_the_title(), 9, '...' ); ?></h1>
+					</a>
+					<?php the_powerpress_content(); ?>
+					<?php echo '</div>'; ?>
+
+				<?php endwhile;	else: ?>
+					Oops, there are no posts.
+				<?php endif;
+					wp_reset_postdata();
+				?>
+			</div>
+
+			<div class="header-content__subscribe">
+				<h2>Subscribe and never miss a show</h2>
+				<a href="#"><img class="badge-itunes" src="<?php bloginfo('template_url'); ?>/img/itunes-badge.png" width="173" height="44" /></a>
+				<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
+				<div class="subscriber-badges">
+					<a href="1"><span class="sprite sprite-stitcher-badge"></span></a>
+					<a href="2"><span class="sprite sprite-spotify-badge"></span></a>
+					<a href="3"><span class="sprite sprite-googleplay-badge"></span></a>
+					<a href="4"><span class="sprite sprite-android-badge"></span></a>
+					<a href="5"><span class="sprite sprite-rsspod-badge"></span></a>
+					<a href="6"><span class="sprite sprite-rssall-badge"></span></a>
+				</div>
+			</div>
+		</section>
+
+	</header>
 
 	<div id="content" class="site-content">
