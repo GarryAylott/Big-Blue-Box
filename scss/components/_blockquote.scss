@@ -1,0 +1,19 @@
+.single
+.single-post-content
+article
+blockquote {
+    display: block;
+    width: 75%;
+    margin: 3rem auto;
+    border-left: 5px solid $colour-secondary;
+
+    p {
+        width: 100%;
+        font-size: 110%;
+        font-weight: $font-weight-bold;
+        background: -webkit-linear-gradient(180deg, #005b94, #94008d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0 2rem;
+    }
+}

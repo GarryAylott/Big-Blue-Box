@@ -1,0 +1,22 @@
+.social-icons {
+    a {
+        display: inline-block;
+        margin-right: 1.4rem;
+        opacity: .8;
+        transition: all .3s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .twitter    { width: 31px; height: 23px; }
+    .facebook   { width: 13px; height: 26px; }
+    .instagram  { width: 26px; height: 26px; }
+    .email      { width: 31px; height: 25px; }
+
+    &:last-child {
+        margin-bottom: 0;
+        border: none;
+    }
+}

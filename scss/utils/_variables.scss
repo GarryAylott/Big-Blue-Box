@@ -12,11 +12,14 @@ $colour-text-light: #ffffff;
 $font-family-body: 'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-headings: 'Lato', sans-serif;
 $font-size-normal: 17px;
-$font-size-small: 13px; 
+$font-size-small: 13px;
 $font-weight-bold: 700;
 
-// Helper sizes
-
+// Breakpoints
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
 
 // Helper layouts and spacing
 $inner: 1170px;

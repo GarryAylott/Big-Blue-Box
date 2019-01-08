@@ -10,14 +10,40 @@
     }
 }
 
+// Breakpoints
+@mixin sm {
+    @media (min-width: #{$screen-sm}) {
+        @content;
+    }
+ }
+
+ @mixin md {
+    @media (min-width: #{$screen-md}) {
+        @content;
+    }
+ }
+
+ @mixin lg {
+    @media (min-width: #{$screen-lg}) {
+        @content;
+    }
+ }
+
+ @mixin xl {
+    @media (min-width: #{$screen-xl}) {
+        @content;
+    }
+ }
+
 // Set max-width of desktop container
 @mixin inner() {
-    width: $inner;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 5%;
 
-    @media screen and (max-width: 75em) {
-        width: 100%;
-        padding: 0 5%;
+    @include xl {
+        width: $inner;
+        margin: 0 auto;
+        padding: 0;
     }
 }
 

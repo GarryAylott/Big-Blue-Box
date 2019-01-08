@@ -1,0 +1,46 @@
+.home-main {
+    @include inner;
+
+    h5 {
+        margin-bottom: 1rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @include md {
+            flex-direction: row;
+            justify-content: space-between;
+
+            section {
+                flex: 0 1 67%;
+            }
+        
+            aside {
+                flex: 0 1 30%;
+            }
+        }
+    }
+}
+
+// Grid layout
+@supports (display: grid) {
+    .home-main__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+
+        .post-card {
+            margin: 0;
+        }
+
+        .cta-full-width {
+            grid-column: 1 / -1;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr 30%;
+        }
+    }
+}

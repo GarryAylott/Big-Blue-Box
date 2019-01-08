@@ -1,0 +1,63 @@
+.site-footer {
+    color: white;
+    background: linear-gradient(0deg, rgba(17, 17, 17, .85) 40%, rgba(39, 39, 39, .4) 100%), url('img/space-bg.jpg') no-repeat;
+    background-position: right top;
+    padding: 4rem 0 2rem 0;
+}
+
+.footer-info {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
+    &__col {
+        flex: 0 1 30%;
+        margin-bottom: 2rem;
+
+        h4 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @include md {
+        flex-direction: row;
+        
+
+        &__col {
+            flex: 0 1 30%;
+    
+            h4 {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.footer-legal {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__info {
+        flex: 0 1 60%;
+
+        h6 {
+            display: inline-block;
+            margin: 0 2rem 1rem 0;
+        }
+    }
+
+    &__logo {
+        img {
+            width: 200px;
+        }
+    }
+
+    @include md {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

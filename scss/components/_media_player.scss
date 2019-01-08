@@ -1,0 +1,16 @@
+// Header player styles
+.powerpress_player {
+    .mejs-container, .mejs-controls,
+    .mejs-container .mejs-controls {
+        width: 100% !important;
+        background: none;
+        padding: 0;
+    }
+
+    .mejs-controls {
+        .mejs-button>button {
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
+}

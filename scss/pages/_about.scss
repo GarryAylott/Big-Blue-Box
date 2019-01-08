@@ -1,0 +1,190 @@
+.about-content {
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .section-intro {
+        font-weight: $font-weight-bold;
+        margin-bottom: 2rem;
+    }
+
+    &__hosts {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+
+        @include md {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .garry, .adam {
+            flex: 0 1 45%;
+            margin-bottom: 3rem;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .profile-pic {
+                height: 300px;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+
+                @include md {
+                    height: 370px;
+                    box-shadow: -27px 30px 125px -25px rgba(50,50,93,.4), -16px 38px 75px -37px rgba(0,0,0,.6);
+                    transform: rotate3d(.5,.866,0,15deg) rotate(-1deg);
+                    margin-bottom: 3rem;
+                }
+            }
+
+            p, h4 {
+                width: 100%;
+
+                @include md {
+                    width: 90%;
+                }
+            }
+        }
+
+        .garry {
+            position: relative;
+            perspective: 50rem;
+
+            .profile-pic {
+                background: url('img/about-garry.jpg') no-repeat;
+                background-size: cover;
+                background-position: center top;
+                transform: none;
+
+                @include md {
+                    transform: rotateX(2deg) rotateY(6deg);
+                }
+            }
+
+            p, h4 {
+                padding: 0;
+
+                @include md {
+                    padding-left: 3%;
+                }
+            }
+        }
+
+        .adam {
+            position: relative;
+            perspective: 50rem;
+
+            .profile-pic {
+                background: url('img/about-adam.jpg') no-repeat;
+                background-size: cover;
+                background-position: center top;
+                transform: none;
+
+                @include md {
+                    transform: rotateX(2deg) rotateY(-6deg);
+                }
+            }
+
+            p, h4 {
+                padding: 0;
+
+                @include md {
+                    padding-left: 7%;
+                }
+            }
+        }
+    }
+
+    &__writers {
+        .team-writer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3rem 0;
+            border-bottom: 1px dashed lighten($colour-secondary, 20%);
+
+            &:last-child {
+                padding-bottom: 0;
+                border: none;
+            }
+
+            @include sm {
+                flex-direction: row;
+                justify-content: space-between;
+
+                &:last-child {
+                    border: none;
+                    padding-bottom: 2rem;
+                }
+            }
+
+            &:first-of-type {
+                padding-top: 1rem;
+            }
+
+            h4 {
+                margin-bottom: 0.3rem;
+            }
+
+            &__author-link {
+                font-size: $font-size-small;
+                font-weight: $font-weight-bold;
+                text-transform: uppercase;
+            }
+        }
+
+        .profile-pic {
+            flex: 1;
+            margin-bottom: 1rem;
+
+            @include sm {
+                flex: 0 1 250px;
+            }
+            
+            > div {
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
+                background-size: cover;
+            }
+
+            &__maria {
+                background: url("img/writer-maria.jpg") no-repeat;
+            }
+
+            &__jordan {
+                background: url("img/writer-jordan.jpg") no-repeat;
+            }
+
+            &__mark {
+                background: url("img/writer-mark.jpg") no-repeat;
+            }
+
+            &__cathaoir {
+                background: url("img/writer-cathaoir.jpg") no-repeat;
+            }
+        }
+
+        .profile-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin: 0;
+            }
+
+            p:first-of-type {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

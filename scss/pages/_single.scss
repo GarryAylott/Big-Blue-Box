@@ -1,0 +1,139 @@
+// Single post general styles
+.single {
+
+    h1.single-post-title {
+        font-size: 45px;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .single-post-content {
+        display: flex;
+        flex-direction: column;
+        @include inner;
+
+        article {
+            h3, h4 {
+                margin: 0 auto 3rem auto;
+            }
+
+            h4 {
+                margin: 0 auto 0.8rem auto;
+            }
+
+            p {
+                font-size: 16px;
+                margin: 0 auto 2rem auto;
+
+                &:first-child {
+                    font-size: 105%;
+                }
+            }
+
+            @include sm {
+                h3, h4, p {
+                    width: 75%;
+                }
+
+                p {
+                    font-size: $font-size-normal;
+
+                    &:first-child {
+                        font-size: 110%;
+                    }
+                }
+            }
+
+            figure {
+                margin: 3rem auto;
+    
+                figcaption {
+                    font-size: 90%;
+                    letter-spacing: 0.2px;
+                    margin-top: 0.5rem;
+                    opacity: .6;
+                }
+            }
+        }
+    }
+
+    article {
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px dashed lighten($colour-secondary, 20%);
+
+        .post-title-audio {
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        h3, p {
+            margin-bottom: 2rem;
+        }
+
+        h4 {
+            margin-bottom: 0.4rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .post-navigation {
+
+        h2 {
+            display: none;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+
+            > div {
+                flex: 0 1 35%;
+                position: relative;
+
+                a {
+                    display: block;
+                    transition: all .3s ease;
+                }
+            }
+        }
+
+        .nav-previous {
+            a:hover {
+                transform: translateX(-5px);
+            }
+        }
+
+        .nav-next {
+            text-align: right;
+
+            a:hover {
+                transform: translateX(5px);
+            }
+        }
+    }
+}
+
+// Single page general styles
+.page-content-wrapper {
+    @include inner;
+    margin-bottom: 6rem;
+
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

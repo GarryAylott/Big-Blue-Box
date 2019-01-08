@@ -1,32 +1,61 @@
+// Top logo and nav area
 .top-nav {
+    position: fixed;
+    width: 100%;
+    height: 105px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 3%;
-    background: rgba(255,255,255, .05);
+    background: rgba(255,255,255, .07);
+    transition: all .3s ease;
+    z-index: 100;
  
     .logo {
         position: relative;
-        width: 180px;
+        width: 170px;
         transition: all .3s ease;
 
         &:hover {
             filter: brightness(1.2);
         }
+
+        @include sm {
+            width: 200px;
+        }
     }
 }
 
+// Alternate styles for nav when in body
+.top-nav.scrolled {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.99);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    .logo {
+        width: 150px;
+    }
+
+    .menu-bluebox-header-container li a {
+        font-size: 13px;
+    }
+}
+
+// Main header styles
 .site-header {
-    background: linear-gradient(0deg, rgba(17, 17, 17, .85) 40%, rgba(39, 39, 39, .4) 100%), url(img/header-bg.jpg) no-repeat;
+    background: linear-gradient(0deg, rgba(17, 17, 17, .85) 40%, rgba(39, 39, 39, .4) 100%), url('img/header-bg.jpg') no-repeat;
     background-position: left top;
     background-size: cover;
+
+    .header-wrapper {
+        @include inner;
+    }
 
     .header-content {
         display: flex;
         justify-content: space-between;
-        padding: 3rem 0;
-        @include inner;
-
+        padding: 10rem 0 3rem 0;
+        
         &__latest-ep {
             flex: 0 1 60%;
             color: $colour-text-light;
@@ -41,26 +70,11 @@
 
             img {
                 width: 100%;
-                height: auto;
                 border-radius: 5px;
             }
 
             .powerpress_links {
                 margin: 0;
-            }
-
-            // Header player styles
-            .mejs-container, .mejs-controls {
-                width: 100% !important;
-                background: none;
-                padding: 0;
-            }
-
-            .mejs-controls {
-                .mejs-button>button {
-                    padding-left: 0;
-                    margin-left: 0;
-                }
             }
 
             @media screen and (max-width: 75em) {
@@ -103,7 +117,7 @@
 
                 .sprite {
                     display: inline-block;
-                    background-image: url(img/badges-sprite.png);
+                    background-image: url('img/badges-sprite.png');
                     background-repeat: no-repeat;
                     background-size: 660px 44px;
                 }
@@ -161,14 +175,9 @@
                         margin: 0;
                     }
 
-                    @media screen and (max-width: 75em) {
+                    @media screen and (max-width: 380px) {
                         display: grid;
-                        grid-template-columns: repeat(6, 1fr);
-                    }
-
-                    @media screen and (max-width: 55em) {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: repeat(2, 1fr);
                     }
                 }
             }
@@ -176,7 +185,135 @@
 
         @media screen and (max-width: 75em) {
             flex-direction: column;
-            padding-top: 2rem;
+        }
+    }
+}
+
+// Single post header styles
+.header-single-post {
+    height: 41rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .7);
+    }
+
+    .top-nav {
+        width: 100%;
+        z-index: 1;
+    }
+
+    .header-info {
+        margin-top: 105px;
+    }
+
+    &__content {
+        @include inner;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        text-align: center;
+        z-index: 1;
+
+        .header-post-tag {
+            align-self: center;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 1.2rem;
+            padding: 0.3rem 0.5rem;
+            background: rgba(160, 79, 209, .4);
+            border: 1px solid $colour-secondary;
+
+            .post-img-type-icon__podcast,
+            .post-img-type-icon__article {
+                position: relative;
+                width: 25px;
+                height: 25px;
+                margin-right: 0.5rem;
+                fill: white;
+            }
+
+            .post-img-type-icon__article {
+                width: 28px;
+                height: 22px;
+                top: 1px;
+            }
+        }
+
+        .header-post-meta {
+            color: white;
+        }
+
+        .header-audio-player {
+            text-align: left;
+            color: white;
+        }
+    }
+}
+
+// Static post header styles
+.header-static {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    padding-top: 6rem;
+    background: url('img/header-bg-static.jpg') no-repeat;
+    background-size: cover;
+    background-position: 99% 40%;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 auto;
+        color: white;
+        text-align: center;
+
+        span {
+            display: block;
+        }
+
+        h1 {
+            display: block;
+            font-size: 42px;
+        }
+
+        .author-page-title {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .author-page-twitter {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            padding: 0.3rem 0.5rem;
+            border: 1px solid $colour-primary;
+
+            .twitter {
+                width: 20px;
+                height: 20px;
+                margin-right: 0.3rem;
+            }
         }
     }
 }

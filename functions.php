@@ -75,6 +75,20 @@ if ( ! function_exists( 'bigbluebox_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'bigbluebox_setup' );
 
+// Add category class to body tag for single posts
+add_filter('body_class','add_category_to_single');
+function add_category_to_single($classes) {
+  if (is_single() ) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $category) {
+      // add category slug to the $classes array
+      $classes[] = $category->category_nicename;
+    }
+  }
+  // return the $classes array
+  return $classes;
+}
+
 // Make featured images (not single posts) link to their post
 function link_featured_images( $html, $post_id, $post_image_id ) {
 	If (! is_singular()) {
@@ -133,19 +147,53 @@ function excerpt_readmore($more) {
 }
 add_filter('excerpt_more', 'excerpt_readmore');
 
-// Load Google Font
-function load_fonts() {
-	wp_register_style('et-googleFonts', '//fonts.googleapis.com/css?family=Lato:700|Open+Sans:400,700');
-	wp_enqueue_style( 'et-googleFonts');
-	}
-	add_action('wp_print_styles', 'load_fonts');
+// Add Twitter name to user profiles
+function modify_contact_methods($profile_fields) {
+	// Add new fields
+	$profile_fields['twitter'] = 'Twitter Username';
+	$profile_fields['twitter-url'] = 'Twitter URL';
+	return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
+
+// Archive page pagination
+function pagination_nums( $custom_query ) {
+
+    $total_pages = $custom_query->max_num_pages;
+    $big = 999999999;
+
+    if ($total_pages > 1){
+        $current_page = max(1, get_query_var('paged'));
+
+        echo paginate_links(array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => $current_page,
+			'total' => $total_pages,
+			'prev_text' => 'Previous',
+			'next_text' => 'Next'
+        ));
+    }
+}
+
+// Remove tag prefixes from category, author etc
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_author() ) {
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+        }
+    return $title;
+});
 
 // Load jQuery
 function load_jQuery() {
     if (!is_admin())
     {
         wp_deregister_script('jquery');
-        wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1', true);
+        wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1', true);
         wp_enqueue_script('jquery');
     }
 }
@@ -156,12 +204,13 @@ add_action('init', 'load_jQuery');
  */
 function bigbluebox_scripts() {
 	wp_enqueue_style( 'bigbluebox-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bigbluebox-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css' );
 
 	// wp_enqueue_script( 'bigbluebox-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array(), '20151215', true );
 	// wp_enqueue_script( 'bigbluebox-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '20151215', true );
-	// wp_enqueue_script( 'bigbluebox-slider', get_template_directory_uri() . '/js/vendor/siema.js', array(), 'null', true );
-	wp_enqueue_script( 'bigbluebox-vendorjs', get_template_directory_uri() . '/js/vendors.js', array(), 'null', true );
-	wp_enqueue_script( 'bigbluebox-customjs', get_template_directory_uri() . '/js/custom.js', array(), 'null', true );
+	wp_enqueue_script( 'bigbluebox-vendorjs', get_template_directory_uri() . '/js/vendors.min.js', array(), 'null', true );
+	wp_enqueue_script( 'bigbluebox-customjs', get_template_directory_uri() . '/js/custom.min.js', array(), 'null', true );
+	wp_enqueue_script( 'bigbluebox-swiper', get_template_directory_uri() . '/js/swiper.min.js', array(), 'null', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -184,4 +233,3 @@ require get_template_directory() . '/inc/template-functions.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

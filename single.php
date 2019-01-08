@@ -7,31 +7,32 @@
  * @package bigbluebox
  */
 
-get_header();
+get_header('post_single');
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		
+		<div class="single-post-content">
+			<?php
+			while ( have_posts() ) :
+				the_post();
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+				get_template_part( 'template-parts/content', get_post_type() );
 
-			get_template_part( 'template-parts/content', get_post_type() );
+				the_post_navigation( array(
+					'prev_text'				=> __( '&larr; Previous post: %title' ),
+					'next_text'           	=> __( 'Next post: %title &rarr;' ),
+					'screen_reader_text' 	=> __( 'Continue Reading' ),
+				) );
 
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+			endwhile; // End of the loop.
+			?>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

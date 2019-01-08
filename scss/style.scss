@@ -12,8 +12,6 @@ Text Domain: bigbluebox
 @import 'utils/variables';
 @import 'utils/mixins';
 
-// Vendor *3rd party styles
-
 // Base
 @import 'base/normalize';
 @import 'base/reset';
@@ -21,16 +19,22 @@ Text Domain: bigbluebox
 
 // Layout
 @import 'layout/grid';
-@import 'layout/navigation';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';
 
 // Components
+@import 'components/navigation';
+@import 'components/media_player';
 @import 'components/buttons';
 @import 'components/post-images';
 @import 'components/helpers';
+@import 'components/social-icons';
 @import 'components/testimonials';
+@import 'components/author-bio';
+@import 'components/blockquote';
+@import 'components/cards-grid';
+@import 'components/search-full';
 
 // Pages
 @import 'pages/home';

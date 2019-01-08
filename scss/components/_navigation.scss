@@ -1,0 +1,194 @@
+.menu-bluebox-header-container {
+    li {
+        display: inline-block;
+        margin: 0 2rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            font-family: $font-family-headings;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            opacity: 1;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                position: relative;
+                margin-right: 8px;
+                transition: all ease .3s;
+                opacity: 1;
+            }
+        }
+
+        a:hover, a:hover:before {
+            color: $colour-primary;
+            opacity: 0.8;
+        }
+
+        &.current-menu-item a {
+            padding-bottom: 40px;
+            border-bottom: 3px solid $colour-secondary;
+            transition: border-bottom .3s;
+        }
+    }
+
+    .menu-item-podcasts a:before {
+        width: 18px;
+        height: 16px;
+        top: 2px;
+        background: url(img/podcast.svg) no-repeat;
+    }
+
+    .menu-item-articles a:before {
+        width: 22px;
+        height: 16px;
+        top: 4px;
+        background: url(img/article.svg) no-repeat;
+    }
+
+    .menu-item-team a:before {
+        width: 12px;
+        height: 20px;
+        top: 4px;
+        background: url(img/tardis.svg) no-repeat;
+    }
+
+    .menu-item-shop a:before {
+        width: 20px;
+        height: 15px;
+        top: 2px;
+        background: url(img/cart.svg) no-repeat;
+    }
+}
+
+.top-nav.scrolled {
+    .menu-bluebox-header-container {
+        li {
+            &.current-menu-item a {
+                padding-bottom: 22px;
+                border-bottom: 4px solid $colour-secondary;
+            }
+        }
+    }
+}
+
+// Archive pagination
+.pagination {
+    margin: 2rem auto 1rem auto;
+
+    .screen-reader-text {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+    
+        a, span {
+            background: $colour-primary;
+            color: white;
+            margin: 0 0.5rem;
+            padding: 0.1rem 0.6rem 0.2rem 0.6rem;
+            border-radius: 3px;
+            transition: all .3s ease;
+    
+            &:hover {
+                box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+            }
+        }
+    
+        .dots {
+            background: none;
+            color: $colour-text-dark;
+    
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    
+        .current {
+            background: $colour-secondary;
+    
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+// Mobile off-canvas nav
+.nav-sidebar {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 270px;
+    text-align: center;
+    background: $colour-text-dark;
+    box-shadow: inset 10px -50px 50px rgba(0, 0, 0, .3);
+    z-index: 1;
+
+    @include lg {
+        display: none;
+    }
+
+    h4 {
+        display: inline-block;
+        color: white;
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    ul {
+        margin-top: 105px;
+        text-align: left;
+        text-transform: uppercase;
+
+        li {
+            display: flex;
+            font-weight: $font-weight-bold;
+            padding: 1.2rem 0 1.2rem 1.2rem;
+            border-bottom: 1px solid darken($colour-border, 55%);
+        }
+
+        a.nav-sidebar__link {
+            display: block;
+
+            .nav-siderbar__icon {
+                position: relative;
+                margin-right: 0.6rem;
+                text-align: center;
+                fill: $colour-primary;
+            }
+
+            svg {
+                width: 20px;
+                height: 27px;
+            }
+
+            .article {
+                top: 1px;
+            }
+        }
+    }
+}
+
+// Switch out nav links and menu button depending on browser width
+.main-navigation {
+    display: none;
+}
+
+@include lg {
+    .mob-nav-btn {
+        display: none !important;
+    }
+
+    .main-navigation {
+        display: block;
+    }
+} 

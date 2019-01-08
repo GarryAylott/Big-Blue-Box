@@ -17,29 +17,31 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<h2>Let's be social</h2>
 		<p>We chat lots on the interwebs. Follow us to join in the conversation.</p>
 
-		<a href="https://twitter.com/bigblueboxpcast" target="_blank" rel="noopener">
-			<svg class="social-icon twitter">
-				<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
-			</svg>
-		</a>
+		<div class="social-icons">
+			<a href="https://twitter.com/bigblueboxpcast" target="_blank" rel="noopener">
+				<svg class="social-icon twitter">
+					<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
+				</svg>
+			</a>
 
-		<a href="https://facebook.com/bigblueboxpodcast" target="_blank" rel="noopener">
-			<svg class="social-icon facebook">
-				<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#facebook" /></use>
-			</svg>
-		</a>
+			<a href="https://facebook.com/bigblueboxpodcast" target="_blank" rel="noopener">
+				<svg class="social-icon facebook">
+					<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#facebook" /></use>
+				</svg>
+			</a>
 
-		<a href="https://instagram.com/bigblueboxpodcast" target="_blank" rel="noopener">
-			<svg class="social-icon instagram">
-				<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#instagram" /></use>
-			</svg>
-		</a>
+			<a href="https://instagram.com/bigblueboxpodcast" target="_blank" rel="noopener">
+				<svg class="social-icon instagram">
+					<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#instagram" /></use>
+				</svg>
+			</a>
 
-		<a href="mailto:hello@bigblueboxpodcast.co.uk">
-			<svg class="social-icon email">
-				<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#email" /></use>
-			</svg>
-		</a>
+			<a href="mailto:hello@bigblueboxpodcast.co.uk">
+				<svg class="social-icon email">
+					<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#email" /></use>
+				</svg>
+			</a>
+		</div>
 	</section>
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
@@ -49,7 +51,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<p>Receive our weekly newsletter so you can stay up-to-date and any announcements.</p>
 
 		<span>Your Data</span>
-		<p class="small">We’ll never sell or pass your data on for marketing purposes and your data will be treated with the upmost care. More details can be seen in our Privacy Policy.</p>
+		<p class="small">We'll never sell or pass your data on for marketing purposes and your data will be treated with the upmost care. More details can be seen in our Privacy Policy.</p>
 
 		<div id="mc_embed_signup">
 			<form action="//bigblueboxpodcast.us1.list-manage.com/subscribe/post?u=72630f2037dc3aa1ffb849594&amp;id=38641c1f67" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
@@ -74,6 +76,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</div>
 	</section>
 
+	<?php if ( is_home() ) { ?>
 	<section class="widget">
 		<a href="https://www.youtube.com/channel/UC89E0K6JoDdPViAYHqoVe6Q" target="_blank" rel="noopener">
 			<img src="<?php bloginfo('template_url'); ?>/img/geeks-handbag-bnr.jpg">
@@ -86,4 +89,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			<?php wp_get_archives( array( 'type' => 'monthly', 'limit' => 12, 'show_post_count' => true ) ); ?>
 		</ul>
 	</section>
+	<?php } ?>
 </aside><!-- #secondary -->
