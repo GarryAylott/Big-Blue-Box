@@ -38,7 +38,7 @@ get_header(); ?>
 									<div class="post-img">
 										<?php if (in_category('podcasts')) { ?>
 											<span class="post-img-type-icon">
-												<svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#headphones"></use></svg>
+												<svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#podcast"></use></svg>
 											</span>
 										<?php } else { ?>
 											<span class="post-img-type-icon">
