@@ -54,7 +54,7 @@
 					<svg class="social-icon twitter">
 						<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
 					</svg>
-					<?php if (is_author('7')) { ?>
+					<?php if (is_author('2')) { ?>
 						<a href="https://twitter.com/@CJMModels" target="_blank" rel="noopener"><span class="author-title-twitter">@cjmmodels</span></a>
 					<?php } elseif (is_author('3')) { ?>
 						<a href="https://twitter.com/@JordanShortman1" target="_blank" rel="noopener"><span class="author-title-twitter">@jordanshortman1</span></a>

@@ -23,7 +23,7 @@ get_header('post_author');
 						$archive_query = array(
 							'type' => 'post',
 							'posts_per_page' => '30',
-							'author__in' => '7',
+							'author__in' => '2',
 							'paged' => $paged
 						);
 						$archive_query = new WP_Query( $archive_query );
