@@ -4,16 +4,22 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
     padding: 2rem;
-    background: lighten($colour-secondary, 40%);
+    border-radius: 5px;
+    background: lighten($colour-border, 5%);
 
     @include sm {
         width: 80%;
         grid-template-columns: 180px 1fr;
-        margin: 3rem auto 0 auto;
+        margin: 5rem auto 0 auto;
     }
 
     &__name, &__links {
         grid-column: 1 / -1;
+    }
+
+    &__name {
+        margin: 0 0 1.2rem 0 !important;
+        padding-top: 0 !important;
     }
 
     &__avatar {
@@ -34,15 +40,11 @@
         margin-bottom: 0;
     }
 
-    h4, p {
+    &__name, &__biotext {
         width: 100% !important;
     }
 
-    h4 {
-        margin-bottom: 1.2rem !important;
-    }
-
-    p {
+    &__biotext {
         font-size: 17px !important;
         margin-bottom: 0.8rem !important;
     }

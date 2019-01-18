@@ -48,7 +48,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 	<section id="signup-widget" class="widget widget-newsletter">
 		<h2>Get the newsletter</h2>
-		<p>Receive our weekly newsletter so you can stay up-to-date and any announcements.</p>
+		<p>Receive our weekly newsletter so you know when new shows release plus any announcements.</p>
 
 		<span>Your Data</span>
 		<p class="small">We'll never sell or pass your data on for marketing purposes and your data will be treated with the upmost care. More details can be seen in our Privacy Policy.</p>

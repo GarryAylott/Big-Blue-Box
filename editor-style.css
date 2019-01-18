@@ -1,0 +1,9 @@
+/* Main column width */
+.wp-block {
+    max-width: 875px;
+}
+
+/* Image cover text */
+.wp-block-cover .wp-block-cover-text {
+    font-size: 30px;
+}

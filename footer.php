@@ -48,7 +48,7 @@
 
 				<div class="footer-info__col">
 					<h4>About the show</h4>
-					<p>A weekly Doctor Who podcast show bringing you news, reviews, commentaries and general chat on everything Who from your hosts Garry and Adam. <a href="index.php?page_id=1148">Read more</a></p>
+					<p>A weekly Doctor Who podcast show bringing you news, reviews, commentaries and general chat on everything Who from your hosts Garry and Adam. <a href="index.php?page_id=4046">Read more</a></p>
 				</div>
 				<div class="footer-info__col">
 					<h4>What do you think?</h4>
@@ -61,7 +61,7 @@
 					<a href="index.php?page_id=493"><h6>Privacy Policy</h6></a>
 					<a href="index.php?page_id=492"><h6>Terms &amp; Conditions</h6></a>
 
-					<p class="small">&copy; 2018 Big Blue Box Original Content. This website and audio podcast has no affiliation with the BBC and Doctor Who is &copy;BBC. Any copyright infringement is unintentional.</p>
+					<p class="small">&copy; 2014 - <?php echo date("Y"); ?> Big Blue Box Original Content. This website and audio podcast has no affiliation with the BBC and Doctor Who is &copy;BBC. Any copyright infringement is unintentional.</p>
 				</div>
 
 				<div class="footer-legal__logo">

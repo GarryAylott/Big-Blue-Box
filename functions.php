@@ -188,6 +188,10 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 });
 
+// Editor styles
+add_theme_support('editor-styles');
+add_editor_style( 'editor-style.css' );
+
 // Load jQuery
 function load_jQuery() {
     if (!is_admin())

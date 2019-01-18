@@ -16,7 +16,13 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
 </head>
 
@@ -96,15 +102,31 @@
 
 					<div class="header-content__subscribe">
 						<h2>Subscribe and never miss a show</h2>
-						<a href="#"><img class="badge-itunes" src="<?php bloginfo('template_url'); ?>/img/itunes-badge.png" width="173" height="44" /></a>
+
+						<a href="https://itunes.apple.com/gb/podcast/the-doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1"  target="_blank">
+							<img class="badge-itunes" src="<?php bloginfo('template_url'); ?>/img/itunes-badge.png" width="173" height="44" />
+						</a>
+
 						<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
 						<div class="subscriber-badges">
-							<a href="1"><span class="sprite sprite-stitcher-badge"></span></a>
-							<a href="2"><span class="sprite sprite-spotify-badge"></span></a>
-							<a href="3"><span class="sprite sprite-googleplay-badge"></span></a>
-							<a href="4"><span class="sprite sprite-android-badge"></span></a>
-							<a href="5"><span class="sprite sprite-rsspod-badge"></span></a>
-							<a href="6"><span class="sprite sprite-rssall-badge"></span></a>
+							<a href="https://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">
+								<span class="sprite sprite-stitcher-badge"></span>
+							</a>
+							<a href="https://open.spotify.com/show/2vRtn5865vpoNNpD5wUtZS?si=NNX0phChS8-iEGVJZTnXBQ" target="_blank">
+								<span class="sprite sprite-spotify-badge"></span>
+							</a>
+							<a href="https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iotxjuso6fr7kqr3siuyewckecq?t%3DThe_Doctor_Who_Big_Blue_Box_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16" target="_blank">
+								<span class="sprite sprite-googleplay-badge"></span>
+							</a>
+							<a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">
+								<span class="sprite sprite-android-badge"></span>
+							</a>
+							<a href="https://www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">
+								<span class="sprite sprite-rsspod-badge"></span>
+							</a>
+							<a href="https://www.bigblueboxpodcast.co.uk/feed/" target="_blank">
+								<span class="sprite sprite-rssall-badge"></span>
+							</a>
 						</div>
 					</div>
 				</div>
