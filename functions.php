@@ -75,6 +75,18 @@ if ( ! function_exists( 'bigbluebox_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'bigbluebox_setup' );
 
+// Add featured image to RSS feed
+function rss_post_thumbnail($content) {
+	global $post;
+	if(has_post_thumbnail($post->ID)) {
+		$content = '<p>' . get_the_post_thumbnail($post->ID) .
+		'</p>' . get_the_content();
+	}
+	return $content;
+}
+add_filter('the_excerpt_rss', 'rss_post_thumbnail');
+add_filter('the_content_feed', 'rss_post_thumbnail');
+
 // Add category class to body tag for single posts
 add_filter('body_class','add_category_to_single');
 function add_category_to_single($classes) {

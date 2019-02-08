@@ -263,6 +263,22 @@
         .header-audio-player {
             text-align: left;
             color: white;
+
+            .powerpress_player {
+                margin-bottom: 1rem;
+
+                .mejs-controls {
+                    .mejs-time-rail {
+                        .mejs-time-current {
+                            background: $colour-secondary;
+                        }
+                    }
+                }
+            }
+
+            p.powerpress_subscribe_links {
+                margin-bottom: 0;
+            }
         }
     }
 }
