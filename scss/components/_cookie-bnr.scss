@@ -1,0 +1,36 @@
+#catapult-cookie-bar.rounded-corners {
+    border-radius: 5px;
+}
+
+#catapult-cookie-bar {
+    background-color: $colour-primary;
+
+    h3 {
+        margin-top: 0 !important;
+    }
+
+    .ctcc-left-side {
+        margin: 0.5rem 0 !important;
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .ctcc-right-side {
+        margin-bottom: 0 !important;
+
+        button#catapultCookie {
+            padding: 8px 20px !important;
+            border-radius: 3px;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
