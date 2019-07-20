@@ -88,7 +88,7 @@
 							</div>
 
 							<a href="<?php the_permalink(); ?>">
-								<h1><?php echo wp_trim_words( get_the_title(), 9, '...' ); ?></h1>
+								<h1><?php echo wp_trim_words( get_the_title(), 12, '...' ); ?></h1>
 							</a>
 							<?php the_powerpress_content(); ?>
 							<?php echo '</div>'; ?>
