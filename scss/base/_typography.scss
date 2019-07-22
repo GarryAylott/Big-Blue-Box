@@ -9,8 +9,7 @@
   --line-height-small: 24px;
 }
 
-// Custom fonts
-/* merritweather-regular */
+// Merriweather - Body/main font
 @font-face {
   font-family: 'Merriweather Light';
   font-style: normal;
@@ -20,7 +19,7 @@
        url('fonts/merriweather-light-webfont.woff') format('woff');
 }
 
-/* lato-700 - latin */
+// Lato - Headings
 @font-face {
   font-family: 'Lato';
   font-style: normal;

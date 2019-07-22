@@ -10,7 +10,7 @@
         a {
             font-family: var(--font-family-headings);
             font-size: 15px;
-            font-weight: 700;
+            font-weight: var(--font-weight-bold);
             letter-spacing: 1px;
             text-transform: uppercase;
             border-bottom: 3px solid transparent;
@@ -178,7 +178,7 @@
     }
 }
 
-// Switch out nav links and menu button depending on browser width
+// Switch out links and menu button depending on browser width
 .main-navigation {
     display: none;
 }

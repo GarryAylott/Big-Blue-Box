@@ -1,7 +1,4 @@
-.single
-.single-post-content
-article
-blockquote {
+.single .single-post-content article blockquote {
     display: block;
     width: 75%;
     font-family: var(--font-family-headings);
@@ -12,7 +9,7 @@ blockquote {
 
     p {
         width: 100%;
-        background: -webkit-linear-gradient(180deg, #005b94, #94008d);
+        background: -webkit-linear-gradient(180deg, var(--colour-primary-hover), var(--colour-secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0 0 0.3rem 1rem;

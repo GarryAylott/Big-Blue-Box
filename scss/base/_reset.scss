@@ -4,7 +4,6 @@ html {
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: var(--font-size-normal);
     background: transparent;
     box-sizing: border-box;
   }
@@ -32,7 +31,7 @@ html {
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     color: var(--colour-text-dark);
-    background: lighten($colour-border, 14%);
+    background: lighten(#d8d8d8, 14%);
     overflow-x: hidden;
   }
   
