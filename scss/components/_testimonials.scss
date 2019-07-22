@@ -24,7 +24,7 @@
 
     span {
         font-size: 14px;
-        font-weight: $font-weight-bold;
+        font-weight: var(--font-weight-bold);
         letter-spacing: 0.6px;
         text-transform: uppercase;
     }

@@ -96,7 +96,7 @@
                 font-size: 13px;
                 white-space: nowrap;
                 color: white;
-                background: $colour-text-dark;
+                background: var(--colour-text-dark);
                 border-radius: 3px;
                 box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
                 transition: all .3s ease;
@@ -118,7 +118,7 @@
 
             span {
                 font-size: 13px;
-                color: lighten($colour-text-dark, 25%);
+                color: lighten(#111111, 25%);
                 line-height: 45px;
                 text-transform: uppercase;
             }

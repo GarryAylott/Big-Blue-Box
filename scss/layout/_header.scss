@@ -58,7 +58,7 @@
         
         &__latest-ep {
             flex: 0 1 60%;
-            color: $colour-text-light;
+            color: var(--colour-text-light);
 
             h5 {
                 margin-bottom: 1rem;
@@ -86,7 +86,7 @@
 
         &__subscribe {
             flex: 0 1 32%;
-            color: $colour-text-light;
+            color: var(--colour-text-light);
 
             h2 {
                 margin-bottom: 1rem;
@@ -238,7 +238,7 @@
             margin-bottom: 1.2rem;
             padding: 0.3rem 0.5rem;
             background: rgba(160, 79, 209, .4);
-            border: 1px solid $colour-secondary;
+            border: 1px solid var(--colour-secondary);
 
             .post-img-type-icon__podcast,
             .post-img-type-icon__article {
@@ -270,7 +270,7 @@
                 .mejs-controls {
                     .mejs-time-rail {
                         .mejs-time-current {
-                            background: $colour-secondary;
+                            background: var(--colour-secondary);
                         }
                     }
                 }
@@ -320,7 +320,7 @@
             display: flex;
             align-items: center;
             font-size: 14px;
-            font-weight: $font-weight-bold;
+            font-weight: var(--font-weight-bold);
             text-transform: uppercase;
             padding: 0.3rem 0.5rem;
             border: 1px solid $colour-primary;

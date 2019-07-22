@@ -2,7 +2,7 @@
 .widget {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid $colour-border;
+    border-bottom: 1px solid var(--colour-border);
     @include clearfix;
 
     &:last-child {
@@ -30,7 +30,7 @@
     ul li {
         list-style-type: none;
         margin-bottom: 0.5rem;
-        color: lighten($colour-text-dark, 40%);
+        color: lighten(#111111, 40%);
 
         a {
             font-size: 16px;
@@ -53,6 +53,6 @@
     span {
         font-size: 14px;
         text-transform: uppercase;
-        font-weight: $font-weight-bold;
+        font-weight: var(--font-weight-bold);
     }
 }
