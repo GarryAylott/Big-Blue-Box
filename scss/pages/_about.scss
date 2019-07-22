@@ -8,7 +8,7 @@
     }
 
     .section-intro {
-        font-weight: $font-weight-bold;
+        font-weight: var(--font-weight-bold);
         margin-bottom: 2rem;
     }
 
@@ -108,7 +108,7 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 3rem 0;
-            border-bottom: 1px dashed lighten($colour-secondary, 20%);
+            border-bottom: 1px dashed lighten(#a04fd1, 20%);
 
             &:last-child {
                 padding-bottom: 0;
