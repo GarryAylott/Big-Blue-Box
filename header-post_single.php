@@ -57,9 +57,6 @@
 					<h6 class="header-post-tag"><svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/post-icons.svg#headphones"></use></svg> Podcast</h6>
 					<h1 class="single-post-title"><?php single_post_title(); ?></h1>
 					<?php echo ('<div class="header-post-meta">'.get_the_time('jS F, Y').'</div>'); ?>
-					<div class="header-audio-player">
-						<?php the_powerpress_content(); ?>
-					</div>
 				<?php } else { ?>
 					<h6 class="header-post-tag"><svg class="post-img-type-icon__article"><use xlink:href="<?php bloginfo('template_url'); ?>/img/post-icons.svg#article"></use></svg> Article</h6>
 					<h1 class="single-post-title"><?php single_post_title(); ?></h1>
