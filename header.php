@@ -120,7 +120,7 @@
 							<a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">
 								<span class="sprite sprite-android-badge"></span>
 							</a>
-							<a href="https://www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">
+							<a href="https://feeds.captivate.fm/doctor-who-big-blue-box-podcast/" target="_blank">
 								<span class="sprite sprite-rsspod-badge"></span>
 							</a>
 							<a href="https://www.bigblueboxpodcast.co.uk/feed/" target="_blank">
