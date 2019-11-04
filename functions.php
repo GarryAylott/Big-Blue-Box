@@ -215,12 +215,24 @@ function load_jQuery() {
 }
 add_action('init', 'load_jQuery');
 
+// DNS prefetch Google Fonts
+function dns_prefetch() {
+    echo '<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />';
+}
+add_action('wp_head', 'dns_prefetch', 0);
+
 /**
  * Enqueue scripts and styles.
  */
 function bigbluebox_scripts() {
 	wp_enqueue_style( 'bigbluebox-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bigbluebox-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css' );
+
+	// Google Fonts
+	function add_google_fonts() {
+	wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Montserrat:800|Open+Sans:400,700&display=swap', false );}
+	add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 	// wp_enqueue_script( 'bigbluebox-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array(), '20151215', true );
 	// wp_enqueue_script( 'bigbluebox-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '20151215', true );

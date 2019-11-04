@@ -29,7 +29,7 @@ get_header('post_single');
 						<?php echo get_avatar( get_the_author_email(), '120' ); ?>
 					</div>
 					<div class="post-author__details">
-						<h4><?php the_author_posts_link(); ?></h4>
+						<h2><?php the_author_posts_link(); ?></h2>
 						<p><?php the_author_description(); ?></p>
 
 						<?php
