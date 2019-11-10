@@ -54,13 +54,15 @@
     .header-content {
         display: flex;
         justify-content: space-between;
-        padding: 10rem 0 3rem 0;
+        padding: 10rem 0 4rem 0;
         
         &__latest-ep {
             flex: 0 1 60%;
             color: var(--colour-text-light);
 
             h5 {
+                letter-spacing: 1px;
+                text-transform: uppercase;
                 margin-bottom: 1rem;
             }
 

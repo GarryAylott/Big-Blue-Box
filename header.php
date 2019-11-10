@@ -88,7 +88,7 @@
 							</div>
 
 							<a href="<?php the_permalink(); ?>">
-								<h1><?php echo wp_trim_words( get_the_title(), 12, '...' ); ?></h1>
+								<h2><?php echo wp_trim_words( get_the_title(), 12, '...' ); ?></h2>
 							</a>
 							<?php echo '</div>'; ?>
 
@@ -105,8 +105,7 @@
 						<a href="https://itunes.apple.com/gb/podcast/the-doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1"  target="_blank">
 							<img class="badge-itunes" src="<?php bloginfo('template_url'); ?>/img/itunes-badge.png" width="173" height="44" />
 						</a>
-
-						<p>Listen on these platforms? We're on those too, go subscribe&hellip;</p>
+						
 						<div class="subscriber-badges">
 							<a href="https://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">
 								<span class="sprite sprite-stitcher-badge"></span>
