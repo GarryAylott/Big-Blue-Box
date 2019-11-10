@@ -51,7 +51,7 @@ get_header(); ?>
 									<div class="post-card__content">
 										<div class="post-card--details">
 											<a href="<?php the_permalink(); ?>">
-												<h2 class="post-card--title"><?php echo wp_trim_words( get_the_title(), 10, '...' ); ?></h2>
+												<h3 class="post-card--title"><?php echo wp_trim_words( get_the_title(), 10, '...' ); ?></h3>
 											</a>
 											<?php the_excerpt(); ?>
 										</div>

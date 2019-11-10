@@ -39,14 +39,14 @@
 
 .btn-reg, a.btn-reg, input.btn-reg {
     @include btn;
-    padding: 8px 15px;
+    padding: 6px 17px 5px;
     opacity: 1;
 }
 
 .btn-lrg, a.btn-lrg {
     @include btn;
     font-size: 16px;
-    padding: 12px 22px;
+    padding: 12px 22px 9px;
 }
 
 // Overrides for forms
