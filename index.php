@@ -125,14 +125,28 @@ get_header(); ?>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
+					<h2>My Dose of Who?</h2>
+					<p>I found this Podcast a few years ago and love its content and Garry and Adam's banter. I have watched Who since 1973 and been a fan since PDs in 1982.</p>
+					<p>This is my interaction ( mute ) with other fans and I really miss it when its off air.</p>
+					<p>Keep up the great work.</p>
+					<span>Sidcup Man - Apple Podcasts</span>
+				</div>
+				<div class="swiper-slide">
+					<h2>Vastly superior</h2>
+					<p>Easily the best DW podcast going. They dissect stories/performances without making it boring.</p>
+					<p>Independent podcasts tend to risk becoming about the participants rather than the topic but this one doesn't fall victim to this.</p>
+					<p>Good structure, very interactive on social media and respectful of listeners opinions.</p>
+					<span>Patgsy - Apple Podcasts</span>
+				</div>
+				<div class="swiper-slide">
 					<h2>A great adventure through time and space</h2>
 					<p>A stellar podcast from 2 great hosts in Garry and Adam. You can tell these guys are absolutely passionate about what they do and it's great to see. They give you the run down of this week's news to merch, then a review episode from Classic to New Who, as well as reviews on epsidodes from spin offs such as The Sarah Jane Adventures and Torchwood. A must for any Doctor Who fan.</p>
-					<span>TheAshOfAwesome - iTunes</span>
+					<span>TheAshOfAwesome - Apple Podcasts</span>
 				</div>
 				<div class="swiper-slide">
 					<h2>Love it</h2>
 					<p>I love listening to Adam and Garry, definitely my favourite Doctor Who podcast. I cam to the party quite late, so I'm working my way through the back catalogue, this means I'm watching stories that I wouldn't normally choose to watch and I'm really enjoying them - which is fantastic. Thanks lads keep up the good work.</p>
-					<span>Devon Dan - iTunes</span>		
+					<span>Devon Dan - Apple Podcasts</span>		
 				</div>
 				<div class="swiper-slide">
 					<h2>Great Show for New or Old Who Fans</h2>
@@ -142,12 +156,12 @@ get_header(); ?>
 				<div class="swiper-slide">
 					<h2>BEST PODCAST IN THE WHONIVERSE!</h2>
 					<p>This is my all time favourite podcast, I look forward to my weekly 'Friday Fix' of Garry & Adam reviewing New Who, Classic Who & more recently the addition of Sarah Jane Adventures & Torchwood - they give honest, detailed reviews, & including fan reviews is a key part of every episode. Keep up the good work guys, you always start off my weekend on a positive note! 👝</p>
-					<span>xXxSLBxXx - iTunes</span>
+					<span>xXxSLBxXx - Apple Podcasts</span>
 				</div>
 				<div class="swiper-slide">
 					<h2>A Whovian's Dream</h2>
 					<p>I totally recommend this podcast, presented by two awesome Whovians who really know their stuff, it's an absolute treat to recieve this in my inbox each week. Packed full of Who news, merch and weekly modern/classic episode reviews, this is a Whovian's no.1 podcast and one you really should be listening to!!</p>
-					<span>Lewis Blackmore - iTunes</span>
+					<span>Lewis Blackmore - Apple Podcasts</span>
 				</div>
 			</div>
 		</div>
