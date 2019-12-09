@@ -52,7 +52,7 @@
 				</div>
 				<div class="footer-info__col">
 					<h4>What do you think?</h4>
-					<p>We love hearing from you and your thoughts on the show. Shoot us an email <a href="mailto:hello@bigblueboxpodcast.co.uk">here</a> or if you’re an iTunes listener you can leave a review <a href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2" target="_blank" rel="noopener">here.</a></p>
+					<p>We love hearing from you and your thoughts on the show. Shoot us an email <a href="mailto:hello@bigblueboxpodcast.co.uk">here</a> or if you're an Apple Podcasts listener you can leave a review <a href="https://itunes.apple.com/gb/podcast/doctor-who-big-blue-box-podcast/id852653886?mt=2" target="_blank" rel="noopener">here.</a></p>
 				</div>
 			</div>
 
@@ -60,6 +60,7 @@
 				<div class="footer-legal__info">
 					<a href="index.php?page_id=493"><h6>Privacy Policy</h6></a>
 					<a href="index.php?page_id=492"><h6>Terms &amp; Conditions</h6></a>
+					<a href="index.php?page_id=7349"><h6>Code of Conduct</h6></a>
 
 					<p class="small">&copy; 2014 - <?php echo date("Y"); ?> Big Blue Box Original Content. This website and audio podcast has no affiliation with the BBC and Doctor Who is &copy;BBC. Any copyright infringement is unintentional.</p>
 				</div>

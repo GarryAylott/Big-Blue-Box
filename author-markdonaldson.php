@@ -17,14 +17,14 @@ get_header('post_author');
 		<main id="main" class="site-main">
 
 			<div class="main-content">
-			<section class="post-cards-grid">
+				<section class="post-cards-grid">
 					<?php
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						$archive_query = array(
 							'type' => 'post',
 							'posts_per_page' => '30',
 							'author__in' => '5',
-							'category_in' => '2',
+							'category_name' => 'articles',
 							'paged' => $paged
 						);
 						$archive_query = new WP_Query( $archive_query );

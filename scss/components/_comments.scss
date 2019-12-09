@@ -1,0 +1,210 @@
+// Styles for comments area on single posts
+.comments-area {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 4rem 0;
+    color: var(--colour-text-light);
+    background: var(--colour-dark);
+
+    &__content {
+        @include inner;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        // Posted comment(s) styles
+        .comment-list {
+            padding: 0;
+
+            .comment {
+                list-style-type: none;
+                margin-bottom: 4rem;
+            }
+
+            .parent .comment-respond {
+                margin: 2rem 0 2rem 2rem;
+
+                @include lg {
+                    margin: 2rem 0 2rem 9rem;
+                }
+            }
+
+            // Comment card layout
+            .comment-body {
+                display: block;
+                padding: 2rem;
+                background: lighten(#0C121E, 5%);
+                border-radius: 10px;
+                box-shadow: 0 5px 75px #080B13;
+
+                @include lg {
+                    display: grid;
+                    grid-template-columns: 80px minmax(100px, 1fr) 160px;
+                    grid-gap: 2rem;
+                }
+            }
+
+            // Comment replies
+            .children {
+                .comment {
+                    margin: 2rem 0;
+                }
+
+                .comment-body {
+                    margin-left: 2rem;
+                    background: none;
+                    box-shadow: none;
+
+                    @include lg {
+                        margin-left: 6rem;
+                    }
+                }
+
+                .comment-action a {
+                    display: none;
+                }
+            }
+
+            .comment-author img {
+                max-width: 60px;
+                float: left;
+                margin: 0 1rem 1.2rem 0;
+                border: 3px solid var(--colour-secondary);
+                border-radius: 50%;
+
+                @include lg {
+                    max-width: 80px;
+                    float: none;
+                    margin: 0;
+                }
+            }
+
+            .comment-meta {
+                margin-bottom: 1rem;
+            }
+
+            .comment-action {
+                text-align: right;
+
+                a {
+                    @include btn;
+                    padding: 6px 17px 5px;
+                }
+            }
+        }
+
+        // New comment form styling
+        .comments-form {
+            display: grid;
+            grid-template-rows: 1fr 30%;
+            grid-gap: 4rem;
+
+            @include lg {
+                display: grid;
+                grid-template-rows: none;
+                grid-template-columns: 1fr 30%;
+                grid-gap: 4rem;
+            }
+
+            &__code-of-conduct {
+                width: 100%;
+            }
+        }
+
+        // Reply form styling
+        #respond {
+            flex: 1;
+
+            #reply-title {
+                margin-bottom: 1rem;
+            }
+
+            #commentform {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+
+                @include lg {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                input[id="comment"], input[id="author"], input[id="email"], input[id="url"] {
+                        width: 100%;
+                        color: white;
+                        padding: 1.2rem;
+                        line-height: normal;
+                        background: lighten(#0C121E, 10%);
+                        border: 2px solid transparent;
+                        border-radius: 10px;
+                        grid-column: 1/-1;
+
+                        &:focus {
+                            border: 2px solid var(--colour-secondary);
+                        }
+                }
+
+                label[for=comment] {
+                    position: absolute!important;
+                    clip: rect(1px,1px,1px,1px);
+                }
+
+                .comment-form-comment {
+                    grid-column: 1/-1;
+                    
+                    textarea {
+                        width: 100%;
+                        color: white;
+                        line-height: var(--line-height-normal);
+                        padding: 1.4rem;
+                        background: lighten(#0C121E, 10%);
+                        border: 2px solid transparent;
+                        border-radius: 10px;
+
+                        &:focus {
+                            outline: none;
+                            border: 2px solid var(--colour-secondary);
+                        }
+
+                        &::placeholder {
+                            @include placeholder();
+                        }
+                    }
+                }
+
+                .comment-form-url {
+                    grid-column: 1/-1;
+                }
+
+                .comment-form-cookies-consent {
+                    grid-column: 1/-1;
+
+                    input {
+                        position: relative;
+                        top: -2px;
+                        margin-right: 2px;
+                    }
+                }
+
+                .form-submit {
+                    margin: 0;
+
+                    input.submit {
+                        @include btn;
+                        padding: 14px 17px 14px;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .comment-notes {
+        display: none;
+    }
+}

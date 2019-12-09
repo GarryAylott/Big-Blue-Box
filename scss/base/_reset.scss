@@ -6,85 +6,86 @@ html {
     outline: 0;
     background: transparent;
     box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height-normal);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  vertical-align: baseline;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: var(--colour-text-dark);
+  background: lighten(#d8d8d8, 14%);
+  overflow-x: hidden;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary, {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 1rem 0;
+
+  a {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  background: lighten(#d8d8d8, 5%);
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--colour-secondary);
   }
 
-  *,
-  *:before,
-  *:after {
-      box-sizing: inherit;
+  &::placeholder {
+    @include placeholder();
+    opacity: 0.7;
   }
-  
-  body {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-family-body);
-    font-size: var(--font-size-normal);
-    line-height: var(--line-height-normal);
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    vertical-align: baseline;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    color: var(--colour-text-dark);
-    background: lighten(#d8d8d8, 14%);
-    overflow-x: hidden;
-  }
-  
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  main,
-  menu,
-  nav,
-  section,
-  summary, {
-    display: block;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  figure {
-    max-width: 100%;
-  }
-
-  p {
-    margin: 0 0 1rem 0;
-
-    a {
-      font-weight: var(--font-weight-bold);
-    }
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  input[type="search"] {
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--colour-border);
-
-    &:focus {
-      outline: none;
-    }
-
-    &::placeholder {
-      @include placeholder();
-      opacity: 0.6;
-    }
-  }
+}

@@ -204,6 +204,25 @@ add_filter( 'get_the_archive_title', function ($title) {
 add_theme_support('editor-styles');
 add_editor_style( 'editor-style.css' );
 
+// Custom default avatar for comments
+function wpb_new_gravatar ($avatar_defaults) {
+	$myavatar = 'https://bigblueboxpodcast.co.uk/wp-content/uploads/2019/12/wpb-default-gravatar-1.png';
+	$avatar_defaults[$myavatar] = "Default Gravatar";
+	return $avatar_defaults;
+}
+add_filter( 'avatar_defaults', 'wpb_new_gravatar' );
+
+// Include better comments file
+require_once get_parent_theme_file_path( '/inc/better-comments.php' );
+
+// Change comment form message text area
+function wpsites_customize_comment_form_text_area($arg) {
+    $arg['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x( 'Your Feedback Is Appreciated', 'noun' ) . '</label><textarea id="comment" name="comment" placeholder="Your comment here..."cols="45" rows="4" aria-required="true"></textarea></p>';
+    return $arg;
+}
+
+add_filter('comment_form_defaults', 'wpsites_customize_comment_form_text_area');
+
 // Load jQuery
 function load_jQuery() {
     if (!is_admin())
@@ -215,12 +234,12 @@ function load_jQuery() {
 }
 add_action('init', 'load_jQuery');
 
-// DNS prefetch Google Fonts
-function dns_prefetch() {
-    echo '<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="//fonts.googleapis.com" />';
+// Google Fonts loading optimisation
+function bigbluebox_font_optimisation() {
+	echo '<meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//fonts.googleapis.com" />';
+	echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
 }
-add_action('wp_head', 'dns_prefetch', 0);
+add_action('wp_head', 'bigbluebox_font_optimisation', 0);
 
 /**
  * Enqueue scripts and styles.
