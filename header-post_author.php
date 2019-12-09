@@ -50,26 +50,40 @@
 	<div class="site-content-wrapper">
 
 		<div class="header-static">
-
 			<section class="header-static__content">
 				<div class="author-page-title">
 					<?php echo '<span>All articles by</span><h1 class="page-title">'; the_archive_title(); '</h1>'; ?>
 				</div>
-				
-				<div class="author-page-twitter">
-					<svg class="social-icon twitter">
-						<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
-					</svg>
-					<?php if (is_author('2')) { ?>
+								
+				<?php if (is_author('2')) { ?>
+					<div class="author-page-twitter">
+						<svg class="social-icon twitter">
+							<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
+						</svg>
 						<a href="https://twitter.com/@CJMModels" target="_blank" rel="noopener"><span class="author-title-twitter">@cjmmodels</span></a>
-					<?php } elseif (is_author('3')) { ?>
+					</div>
+				<?php } elseif (is_author('3')) { ?>
+					<div class="author-page-twitter">
+						<svg class="social-icon twitter">
+							<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
+						</svg>
 						<a href="https://twitter.com/@JordanShortman1" target="_blank" rel="noopener"><span class="author-title-twitter">@jordanshortman1</span></a>
-					<?php } elseif (is_author('4')) { ?>
+					</div>
+				<?php } elseif (is_author('4')) { ?>
+					<div class="author-page-twitter">
+						<svg class="social-icon twitter">
+							<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
+						</svg>
 						<a href="https://twitter.com/@kalotichy" target="_blank" rel="noopener"><span class="author-title-twitter">@kalotichy</span></a>
-					<?php } elseif (is_author('5')) { ?>
+					</div>
+				<?php } elseif (is_author('5')) { ?>
+					<div class="author-page-twitter">
+						<svg class="social-icon twitter">
+							<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#twitter" /></use>
+						</svg>
 						<a href="https://twitter.com/@Oldmankrondas" target="_blank" rel="noopener"><span class="author-title-twitter">@oldmankrondas</span></a>
-					<?php } ?>
-				</div>
+					</div>
+				<?php } ?>
 			</section>
 		</div>
 

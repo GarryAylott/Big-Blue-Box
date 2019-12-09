@@ -9,13 +9,13 @@
 
     .section-intro {
         font-weight: var(--font-weight-bold);
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     &__hosts {
         display: flex;
         flex-direction: column;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
 
         @include md {
             flex-direction: row;
@@ -172,6 +172,41 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+
+            .profile-social {
+                display: inline-block;
+
+                h4 {
+                    display: inline-block;
+                }
+
+                p {
+                    display: inline-block;
+                }
+
+                .profile-tw {
+                    position: relative;
+                    width: 18px;
+                    height: 18px;
+                    top: 2px;
+                    margin-left: 10px;
+                    fill: var(--colour-primary);
+
+                    &:hover {
+                        fill: var(--colour-primary-hover);
+                    }
+                }
+
+                // a {
+                //     display: inline-block;
+                //     position: relative;
+                //     width: 18px;
+                //     height: 18px;
+                //     top: 2px;
+                //     margin-left: 10px;
+                //     background: url(img/icon-twitter.svg) no-repeat;
+                // }
+            }
 
             p {
                 margin: 0;

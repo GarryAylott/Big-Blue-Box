@@ -39,9 +39,11 @@ get_header('post_single');
 						?>
 					</div>
 				</div>
-			<?php } else { ?>
-				
 			<?php } ?>
+
+			<?php if ( in_category('articles') ) {
+				comments_template();
+			} ?>
 
 			<?php
 				the_post_navigation( array(

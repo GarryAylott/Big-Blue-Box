@@ -24,7 +24,7 @@ get_header('post_author');
 							'type' => 'post',
 							'posts_per_page' => '30',
 							'author__in' => '3',
-							'category_in' => '2',
+							'category_name' => 'articles',
 							'paged' => $paged
 						);
 						$archive_query = new WP_Query( $archive_query );
