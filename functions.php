@@ -249,9 +249,7 @@ function bigbluebox_scripts() {
 	wp_enqueue_style( 'bigbluebox-swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css' );
 
 	// Google Fonts
-	function add_google_fonts() {
-	wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Montserrat:800|Open+Sans:400,700&display=swap', false );}
-	add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+	wp_enqueue_style( 'add_google_fonts', 'https://fonts.googleapis.com/css?family=Montserrat:700,800|Open+Sans:400,700&display=swap', false );
 
 	// wp_enqueue_script( 'bigbluebox-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array(), '20151215', true );
 	// wp_enqueue_script( 'bigbluebox-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '20151215', true );
