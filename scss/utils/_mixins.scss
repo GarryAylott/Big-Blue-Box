@@ -70,7 +70,7 @@
 
         .post-card--details {
             flex: 1 0 auto;
-            padding: 1.3rem 1.3rem 1rem 1.3rem;
+            padding: 1.3rem 1.3rem 0 1.3rem;
 
             .post-card--title {
                 display: block;
@@ -85,19 +85,20 @@
 
             .author-info {
                 position: relative;
+                display: inline-table;
             }
 
             .post-card--name-tooltip {
                 position: absolute;
                 display: block;
-                bottom: 15%;
+                bottom: 20%;
                 left: 13%;
-                padding: 5px 10px;
+                padding: 0 10px;
                 font-size: 13px;
                 white-space: nowrap;
                 color: white;
-                background: var(--colour-text-dark);
-                border-radius: 3px;
+                background: darken(#a04fd1, 30%);
+                border-radius: 5px;
                 box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
                 transition: all .3s ease;
                 pointer-events: none;
@@ -116,11 +117,33 @@
                 border-radius: 100%;
             }
 
-            span {
-                font-size: 13px;
-                color: lighten(#111111, 25%);
-                line-height: 45px;
-                text-transform: uppercase;
+            .post-card--comment-date {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: right;
+
+                a {
+                    display: block;
+                    font-size: 13px;
+                    font-weight: bold;
+                    letter-spacing: 0.3px;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid var(--colour-border);
+
+                    .comment-count {
+                        margin-bottom: 0.5rem;
+                        line-height: normal;
+                    }
+                }
+
+                .comment-date {
+                    font-size: 13px;
+                    color: lighten(#111111, 25%);
+                    line-height: normal;
+                    text-transform: uppercase;
+                    margin: 0.5rem 0 0;
+                }
             }
         }
     }    

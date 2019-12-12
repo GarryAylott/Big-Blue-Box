@@ -20,58 +20,25 @@ get_header(); ?>
 			<section class="recent-posts">
 				<div class="recent-posts__content">
 					<h5>Recent posts</h5>
-
 					<div class="recent-posts__grid">
+					<!-- Recent posts block -->
 					<?php
 						$args2 = array(
 							'type' => 'post',
 							'posts_per_page' => '2',
 							'offset' => '1'
 						);
-
 						$query2 = new WP_Query( $args2 );
-
-						if ( $query2->have_posts() ) {
-							while ( $query2->have_posts() ) {
-								$query2->the_post();
-								echo '<article class="post-card">' ?>
-									<div class="post-img">
-										<?php if (in_category('podcasts')) { ?>
-											<span class="post-img-type-icon">
-												<svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#podcast"></use></svg>
-											</span>
-										<?php } else { ?>
-											<span class="post-img-type-icon">
-												<svg class="post-img-type-icon__article"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#article"></use></svg>
-											</span>
-										<?php } ?>
-
-										<?php the_post_thumbnail('feat-med'); ?>
-									</div>
-									<div class="post-card__content">
-										<div class="post-card--details">
-											<a href="<?php the_permalink(); ?>">
-												<h3 class="post-card--title"><?php echo wp_trim_words( get_the_title(), 10, '...' ); ?></h3>
-											</a>
-											<?php the_excerpt(); ?>
-										</div>
-										<footer class="post-card--meta">
-											<div class="author-info">
-												<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-													<?php echo get_avatar( get_the_author_meta( 'ID' ) , 40 ); ?>
-												</a>
-												<div class="post-card--name-tooltip">
-													<?php the_author(); ?>
-												</div>
-											</div>
-											<span><?php the_time('F jS, Y'); ?></span>
-										</footer>
-									</div>
-								<?php echo '</article>';
-							}
-							wp_reset_postdata();
-						}
 					?>
+
+					<?php if ( $query2->have_posts() ) {
+						while ( $query2->have_posts() ) {
+							$query2->the_post(); ?>
+							<?php get_template_part( 'template-parts/content', 'post-cards-recent' ); ?>
+						<?php }
+						wp_reset_postdata();
+					} ?>
+					<!-- /Recent posts block -->
 					</div>
 				</div>
 			</section>
@@ -81,6 +48,7 @@ get_header(); ?>
 
 				<div class="home-main__content">
 					<section class="posts-cards-grid-home">
+						<!-- Other posts block -->
 						<?php
 							$args3 = array(
 								'type' => 'post',
@@ -97,6 +65,7 @@ get_header(); ?>
 							<?php }
 							wp_reset_postdata();
 						} ?>
+						<!-- /Other posts block -->
 
 						<div class="cta-full-width">
 						<?php

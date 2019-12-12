@@ -87,6 +87,12 @@
 
             .comment-meta {
                 margin-bottom: 1rem;
+
+                span {
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    opacity: .6;
+                }
             }
 
             .comment-action {
@@ -114,6 +120,7 @@
 
             &__code-of-conduct {
                 width: 100%;
+                text-align: right;
             }
         }
 
