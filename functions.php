@@ -220,7 +220,6 @@ function wpsites_customize_comment_form_text_area($arg) {
     $arg['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x( 'Your Feedback Is Appreciated', 'noun' ) . '</label><textarea id="comment" name="comment" placeholder="Your comment here..."cols="45" rows="4" aria-required="true"></textarea></p>';
     return $arg;
 }
-
 add_filter('comment_form_defaults', 'wpsites_customize_comment_form_text_area');
 
 // Load jQuery

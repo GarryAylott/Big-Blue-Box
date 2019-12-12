@@ -1,21 +1,22 @@
 <?php
 /**
-* Template for standard card-based post
+* Template for standard recent (larger) card-based posts
 */
 ?>
 
 <article class="post-card">
     <div class="post-img">
         <?php if (in_category('podcasts')) { ?>
-        <span class="post-img-type-icon">
-            <svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#podcast"></use></svg>
-        </span>
+            <span class="post-img-type-icon">
+                <svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#podcast"></use></svg>
+            </span>
         <?php } else { ?>
-        <span class="post-img-type-icon">
-            <svg class="post-img-type-icon__article"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#article"></use></svg>
-        </span>
+            <span class="post-img-type-icon">
+                <svg class="post-img-type-icon__article"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#article"></use></svg>
+            </span>
         <?php } ?>
-        <?php the_post_thumbnail('feat-sml'); ?>
+
+        <?php the_post_thumbnail('feat-med'); ?>
     </div>
     <div class="post-card__content">
         <div class="post-card--details">

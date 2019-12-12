@@ -43,14 +43,7 @@ function better_comments( $comment, $args, $depth ) {
 						?>
 					</div>
 					<div class="comment-meta commentmetadata">
-						<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
-							/* translators: 1: date, 2: time */
-							printf(
-								__( '%1$s', 'textdomain' ),
-								get_comment_date()
-							); ?>
-						</a><?php
-						edit_comment_link( __( '(Edit)', 'textdomain' ), '  ', '' ); ?>
+						<span><?php echo get_comment_date()?></span>
 					</div><!-- .comment-meta -->
 					<div class="comment-text"><?php comment_text(); ?></div><!-- .comment-text -->
 					<?php
