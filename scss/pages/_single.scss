@@ -38,26 +38,27 @@
                 }
             }
 
+            ul, ol {
+                margin: 0 auto 2rem auto;
+
+                li {
+                    margin-bottom: 0.6rem;
+                }
+            }
+
+            ul {
+                list-style-type: decimal;
+            }
+
+            ol {
+                list-style-type: disc;
+                padding: 0;
+            }
+
+
             @include sm {
                 h2, h3, h4, p, ul, ol {
                     width: 75%;
-                }
-
-                ul, ol {
-                    margin: 0 auto 2rem auto;
-
-                    li {
-                        margin-bottom: 0.6rem;
-                    }
-                }
-
-                ul {
-                    list-style-type: decimal;
-                }
-
-                ol {
-                    list-style-type: disc;
-                    padding: 0;
                 }
 
                 p {
