@@ -40,6 +40,7 @@
 
             ul, ol {
                 margin: 0 auto 2rem auto;
+                padding: 0 0 0 1.1rem;
 
                 li {
                     margin-bottom: 0.6rem;
@@ -52,7 +53,6 @@
 
             ol {
                 list-style-type: disc;
-                padding: 0;
             }
 
 
@@ -68,6 +68,10 @@
                         font-size: 110%;
                         font-weight: var(--font-weight-bold);
                     }
+                }
+
+                ul, ol {
+                    padding: 0;
                 }
             }
 
