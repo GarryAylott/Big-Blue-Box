@@ -10,7 +10,7 @@
 
     h2 {
         font-size: 20px;
-        color: lighten($colour-text-dark, 30%);
+        color: var(--color-text-dark);
         margin-bottom: 0.4rem;
     }
 
@@ -24,6 +24,10 @@
             width: 100%;
             height: 40px;
             padding: 0 10px;
+
+            &:focus {
+                background: var(--colour-text-light);
+            }
         }
     }
 

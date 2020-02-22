@@ -31,7 +31,7 @@
                 margin: 0 auto 1.6rem auto;
 
                 &:first-child {
-                    color: lighten($colour-text-dark, 25%);
+                    color: var(--colour-text-dark);
                     font-size: 115%;
                     font-weight: var(--font-weight-bold);
                     line-height: var(--line-height-larger);

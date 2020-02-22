@@ -18,6 +18,7 @@
 
         &:hover {
             filter: brightness(1.2);
+            transform: translate(0, -1px);
         }
 
         @include sm {

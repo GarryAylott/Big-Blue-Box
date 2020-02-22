@@ -1,24 +1,24 @@
 // Colours
 :root {
     --colour-primary: #5e94f4;
-    --colour-primary-hover: #4872BD;
+    --colour-primary-hover: var(--colour-secondary);
     --color-primary-light: #EEF4FE;
     --colour-secondary: #a04fd1;
     --colour-secondary-light: #cca0e6;
     --colour-dark: #0C121E;
     --colour-border: #d8d8d8;
-    --colour-text-dark: #222222;
+    --colour-text-dark: #281434;
     --colour-text-light: #ffffff;
 }
 
 // Colours (remove once CSS Custom Properties can work in things like "lighten")
 $colour-primary: #5e94f4;
-$colour-primary-hover: #4872BD;
+$colour-primary-hover: #a04fd1;
 $color-primary-light: #EEF4FE;
 $colour-secondary: #a04fd1;
 $colour-secondary-light: #cca0e6;
 $colour-border: #d8d8d8;
-$colour-text-dark: #111111;
+$colour-text-dark: #281434;
 $colour-text-light: #ffffff;
 
 // Breakpoints

@@ -81,7 +81,15 @@
         .post-card--meta {
             display: flex;
             justify-content: space-between;
-            padding: 0 1.3rem 1.3rem;
+            width: calc(100% - 2.6rem);
+            padding: 1.3rem 0;
+            margin: auto;
+            border-top: 1px dashed var(--colour-border);
+
+            .post-card--sub-titles {
+                color: darken(#d8d8d8, 20%);
+                margin-bottom: 0.5rem;
+            }
 
             .author-info {
                 position: relative;
@@ -91,7 +99,7 @@
             .post-card--name-tooltip {
                 position: absolute;
                 display: block;
-                bottom: 20%;
+                bottom: 15%;
                 left: 13%;
                 padding: 0 10px;
                 font-size: 13px;
@@ -120,7 +128,6 @@
             .post-card--comment-date {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
                 text-align: right;
 
                 a {
@@ -129,7 +136,6 @@
                     font-weight: bold;
                     letter-spacing: 0.3px;
                     text-transform: uppercase;
-                    border-bottom: 1px solid var(--colour-border);
 
                     .comment-count {
                         margin-bottom: 0.5rem;

@@ -1,9 +1,14 @@
+.header-content__latest-ep .post-img a {
+    padding: 0;
+}
+
 .post-img {
     position: relative;
     overflow: hidden;
 
     a {
         display: block;
+        padding-top: 45px;
 
         img {
             width: 100%;
@@ -20,29 +25,39 @@
 
     .post-img-type-icon {
         position: absolute;
-        top: 1rem;
         left: 0;
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 45px;
+        width: 100%;
         height: 45px;
+        padding-left: 1.3rem;
+        color: var(--colour-text-light);
         background: var(--colour-secondary);
         fill: white;
-        border-radius: 0 5px 5px 0;
         z-index: 10;
 
-        &__podcast {
+        span {
             position: relative;
-            width: 25px;
-            height: 22px;
+            top: 1px;
+            font-family: var(--font-family-headings);
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        svg {
+            margin-right: 0.5rem;
+        }
+
+        &__podcast {
+            width: 16px;
+            height: 16px;
         }
 
         &__article {
+            width: 20px;
+            height: 14px;
             position: relative;
-            width: 27px;
-            height: 19px;
-            top: 1px;
+            top: 2px;
         }
     }
 }
