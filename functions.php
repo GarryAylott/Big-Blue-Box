@@ -149,7 +149,7 @@ add_action( 'widgets_init', 'bigbluebox_widgets_init' );
 
 // Custom excerpt length
 function my_excerpt_length($length) {
-	return 30;
+	return 20;
 }
 add_filter('excerpt_length', 'my_excerpt_length');
 
@@ -221,6 +221,12 @@ function wpsites_customize_comment_form_text_area($arg) {
     return $arg;
 }
 add_filter('comment_form_defaults', 'wpsites_customize_comment_form_text_area');
+
+// Remove link from author name
+add_filter( 'get_comment_author_link', 'remove_comment_author_link', 10, 3 );
+function remove_comment_author_link( $return, $author, $comment_ID ) {
+	return $author;
+}
 
 // Load jQuery
 function load_jQuery() {

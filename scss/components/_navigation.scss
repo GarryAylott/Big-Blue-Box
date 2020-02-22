@@ -8,12 +8,16 @@
         }
 
         a {
+            display: inline-block;
+            position: relative;
+            top: 1px;
             font-family: var(--font-family-headings);
             font-size: 15px;
             font-weight: var(--font-weight-bold);
             letter-spacing: 1px;
             text-transform: uppercase;
             border-bottom: 3px solid transparent;
+            transition: all ease .3s;
             opacity: 1;
 
             &:before {
@@ -21,14 +25,15 @@
                 display: inline-block;
                 position: relative;
                 margin-right: 8px;
-                transition: all ease .3s;
                 opacity: 1;
             }
-        }
 
-        a:hover, a:hover:before {
-            color: var(--colour-primary);
-            opacity: 0.8;
+            &:hover {
+                color: var(--colour-primary);
+                filter: brightness(1.2);
+                text-shadow: 0 0 25px rgba(94,148,244,0.4);
+                transform: translate(0, -1px);
+            }
         }
 
         &.current-menu-item a {

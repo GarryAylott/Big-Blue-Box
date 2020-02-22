@@ -66,30 +66,19 @@
 								$header_post->the_post();
 						?>
 							<?php echo '<div class="card-recentpost">'; ?>
-
-							<?php if (in_category('podcasts')) { ?>
-								<h5>Latest podcast episode</h5>
-							<?php } else { (in_category('articles')) ?>
-								<h5>Latest article</h5>
-							<?php } ?>
-
-							<div class="post-img">
 								<?php if (in_category('podcasts')) { ?>
-									<span class="post-img-type-icon">
-										<svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/post-icons.svg#headphones"></use></svg>
-									</span>
-								<?php } else { ?>
-									<span class="post-img-type-icon">
-										<svg class="post-img-type-icon__article"><use xlink:href="<?php bloginfo('template_url'); ?>/img/post-icons.svg#article"></use></svg>
-									</span>
+									<h5>Latest podcast episode</h5>
+								<?php } else { (in_category('articles')) ?>
+									<h5>Latest article</h5>
 								<?php } ?>
-								
-								<?php the_post_thumbnail('feat-lrg'); ?>
-							</div>
 
-							<a href="<?php the_permalink(); ?>">
-								<h2><?php echo wp_trim_words( get_the_title(), 12, '...' ); ?></h2>
-							</a>
+								<div class="post-img">								
+									<?php the_post_thumbnail('feat-lrg'); ?>
+								</div>
+
+								<a href="<?php the_permalink(); ?>">
+									<h2><?php echo wp_trim_words( get_the_title(), 12, '...' ); ?></h2>
+								</a>
 							<?php echo '</div>'; ?>
 
 						<?php endwhile;	else: ?>
