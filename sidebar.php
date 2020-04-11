@@ -36,6 +36,18 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				</svg>
 			</a>
 
+			<a href="https://discord.gg/8jZ42Qg" target="_blank" rel="noopener">
+				<svg class="social-icon discord">
+					<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#discord" /></use>
+				</svg>
+			</a>
+
+			<a href="https://discord.gg/8jZ42Qg" target="_blank" rel="noopener">
+				<svg class="social-icon youtube">
+					<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#youtube" /></use>
+				</svg>
+			</a>
+
 			<a href="mailto:hello@bigblueboxpodcast.co.uk">
 				<svg class="social-icon email">
 					<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#email" /></use>

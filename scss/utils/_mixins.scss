@@ -66,7 +66,7 @@
         flex-direction: column;
         flex-grow: 1;
         justify-content: space-between;
-        background: white;
+        background: var(--light-100);
 
         .post-card--details {
             flex: 1 0 auto;
@@ -84,10 +84,10 @@
             width: calc(100% - 2.6rem);
             padding: 1.3rem 0;
             margin: auto;
-            border-top: 1px dashed var(--colour-border);
+            border-top: 1px dashed var(--light-300);
 
             .post-card--sub-titles {
-                color: darken(#d8d8d8, 20%);
+                color: var(--light-400);
                 margin-bottom: 0.5rem;
             }
 
@@ -104,8 +104,8 @@
                 padding: 0 10px;
                 font-size: 13px;
                 white-space: nowrap;
-                color: white;
-                background: darken(#a04fd1, 30%);
+                color: var(--light-100);
+                background: var(--secondary-dark);
                 border-radius: 5px;
                 box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
                 transition: all .3s ease;

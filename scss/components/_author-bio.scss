@@ -4,7 +4,7 @@
     flex-direction: column;
     margin: 0 auto 3rem auto;
     padding: 2rem;
-    background: var(--color-primary-light);
+    background: var(--light-200);
     border-radius: 10px;
 
     @include lg {
@@ -24,7 +24,7 @@
 
         img {
             border-radius: 50%;
-            border: 3px solid var(--colour-primary);
+            border: 3px solid var(--accent);
             box-shadow: 0 6px 25px 0 rgba(0, 0, 0, .5);
         }
     }
@@ -50,7 +50,7 @@
 //     grid-template-columns: 1fr;
 //     grid-template-rows: repeat(2, auto);
 //     padding: 2rem;
-//     background: var(--color-primary-light);
+//     background: var(--light-200);
 //     border-radius: 5px;
 
 //     @include sm {

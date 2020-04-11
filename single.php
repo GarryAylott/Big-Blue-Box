@@ -42,7 +42,9 @@ get_header('post_single');
 			<?php } ?>
 
 			<?php comments_template(); ?>
+		</div>
 
+		<div class="post-nav-wrapper">
 			<?php
 				the_post_navigation( array(
 					'prev_text'				=> __( '&larr; Previous post: %title' ),

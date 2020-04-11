@@ -35,19 +35,19 @@ p.small {
 
 // Links
 a {
-    color: var(--colour-primary);
+    color: var(--accent);
     text-decoration: none;
     transition: color ease .3s;
     
     &:visited {
-      color: var(--colour-primary);
+      color: var(--accent);
     }
 
     &:hover {
-      color: var(--colour-primary-hover);
+      color: var(--accent-hover);
     }
 
     &:active {
-      color: var(--colour-primary);
+      color: var(--accent);
     }
   }
