@@ -44,7 +44,7 @@
 							</svg>
 						</a>
 
-						<a href="https://discord.gg/8jZ42Qg" target="_blank" rel="noopener">
+						<a href="https://www.youtube.com/c/BigblueboxpodcastTV" target="_blank" rel="noopener">
 							<svg class="social-icon youtube">
 								<use xlink:href="<?php bloginfo('template_url'); ?>/img/social-icons.svg#youtube" /></use>
 							</svg>
