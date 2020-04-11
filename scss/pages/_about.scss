@@ -108,7 +108,7 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 3rem 0;
-            border-bottom: 1px dashed lighten(#a04fd1, 20%);
+            border-bottom: 1px dashed var(--secondary-light);
 
             &:last-child {
                 padding-bottom: 0;
@@ -190,10 +190,10 @@
                     height: 18px;
                     top: 2px;
                     margin-left: 10px;
-                    fill: var(--colour-primary);
+                    fill: var(--accent);
 
                     &:hover {
-                        fill: var(--colour-primary-hover);
+                        fill: var(--accent-hover);
                     }
                 }
 

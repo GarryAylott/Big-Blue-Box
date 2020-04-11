@@ -30,8 +30,8 @@ body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: var(--colour-text-dark);
-  background: lighten(#d8d8d8, 14%);
+  color: var(--secondary-dark);
+  background: var(--light-100);
   overflow-x: hidden;
 }
 
@@ -81,11 +81,10 @@ input {
 
   &:focus {
     outline: none;
-    border: 2px solid var(--colour-secondary);
+    border: 2px solid var(--secondary);
   }
 
   &::placeholder {
     @include placeholder();
-    opacity: 0.7;
   }
 }

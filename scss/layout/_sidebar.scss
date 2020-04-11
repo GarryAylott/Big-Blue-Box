@@ -1,7 +1,7 @@
 .widget {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid var(--colour-border);
+    border-bottom: 1px solid var(--light-300);
     @include clearfix;
 
     &:last-child {
@@ -26,7 +26,7 @@
             padding: 0 10px;
 
             &:focus {
-                background: var(--colour-text-light);
+                background: var(--light-100);
             }
         }
     }

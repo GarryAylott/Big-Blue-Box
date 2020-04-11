@@ -7,7 +7,7 @@
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     letter-spacing: 0.1px;
-    background: linear-gradient(to right, var(--colour-primary), var(--colour-secondary));
+    background: linear-gradient(to right, var(--accent), var(--secondary));
     border-radius: 5px;
     cursor: pointer;
     transition: all .3s ease;
@@ -22,7 +22,7 @@
         top: 0;
         left: 0;
         border-radius: inherit;
-        background: linear-gradient(to right, var(--colour-secondary), var(--colour-primary));
+        background: linear-gradient(to right, var(--secondary), var(--accent));
         opacity: 0;
         z-index: -100;
         transition: all .5s ease;

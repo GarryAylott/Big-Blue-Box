@@ -5,11 +5,11 @@
     font-size: 18px;
     font-weight: var(--font-weight-bold);
     margin: 3rem auto;
-    border-left: 5px solid var(--colour-secondary);
+    border-left: 5px solid var(--secondary);
 
     p {
         width: 100%;
-        background: -webkit-linear-gradient(180deg, var(--colour-primary-hover), var(--colour-secondary));
+        background: -webkit-linear-gradient(180deg, var(--accent-hover), var(--secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0 0 0.3rem 1rem;

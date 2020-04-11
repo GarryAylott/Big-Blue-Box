@@ -3,7 +3,7 @@
 
     h1.single-post-title {
         font-size: 45px;
-        color: white;
+        color: var(--light-100);
         margin-bottom: 1rem;
 
         @include md {
@@ -31,7 +31,7 @@
                 margin: 0 auto 1.6rem auto;
 
                 &:first-child {
-                    color: var(--colour-text-dark);
+                    color: var(--secondary-dark);
                     font-size: 115%;
                     font-weight: var(--font-weight-bold);
                     line-height: var(--line-height-larger);
@@ -151,40 +151,43 @@
         }
     }
 
-    .post-navigation {
-        padding-top: 3rem;
-        border-top: 1px dashed lighten(#a04fd1, 20%);
+    .post-nav-wrapper {
+        background: var(--dark-200);
+        padding: 4rem 0;
 
-        h2 {
-            display: none;
-        }
+        .post-navigation {
+            @include inner;
 
-        .nav-links {
-            display: flex;
-            justify-content: space-between;
+            h2 {
+                display: none;
+            }
 
-            > div {
-                flex: 0 1 35%;
-                position: relative;
+            .nav-links {
+                display: flex;
+                justify-content: space-between;
 
-                a {
-                    display: block;
-                    transition: all .3s ease;
+                > div {
+                    position: relative;
+
+                    a {
+                        display: block;
+                        transition: all .3s ease;
+                    }
                 }
             }
-        }
 
-        .nav-previous {
-            a:hover {
-                transform: translateX(-5px);
+            .nav-previous {
+                a:hover {
+                    transform: translateX(-5px);
+                }
             }
-        }
 
-        .nav-next {
-            text-align: right;
+            .nav-next {
+                text-align: right;
 
-            a:hover {
-                transform: translateX(5px);
+                a:hover {
+                    transform: translateX(5px);
+                }
             }
         }
     }

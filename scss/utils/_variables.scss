@@ -1,17 +1,20 @@
 // Colours
 :root {
-    --colour-primary: #5e94f4;
-    --colour-primary-hover: var(--colour-secondary);
-    --color-primary-light: #EEF4FE;
-    --colour-secondary: #a04fd1;
-    --colour-secondary-light: #cca0e6;
-    --colour-dark: #0C121E;
-    --colour-border: #d8d8d8;
-    --colour-text-dark: #281434;
-    --colour-text-light: #ffffff;
+    --accent: #5e94f4;
+    --accent-hover: var(--secondary);
+    --secondary: #a04fd1;
+    --secondary-light: #cca0e6;
+    --secondary-dark: #281434;
+    --light-100: #ffffff;
+    --light-200: #eef4fe;
+    --light-300: #d8d8d8;
+    --light-400: #767676;
+    --dark-100: #0C121E;
+    --dark-200: #131d30;
+    --dark-300: #1b2842;
 }
 
-// Colours (remove once CSS Custom Properties can work in things like "lighten")
+// Colours (remove once CSS Custom Properties can work with things like "lighten")
 $colour-primary: #5e94f4;
 $colour-primary-hover: #a04fd1;
 $color-primary-light: #EEF4FE;

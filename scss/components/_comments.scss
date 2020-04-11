@@ -7,8 +7,8 @@
     margin-left: -50vw;
     margin-right: -50vw;
     padding: 4rem 0;
-    color: var(--colour-text-light);
-    background: var(--colour-dark);
+    color: var(--light-100);
+    background: var(--dark-100);
 
     &__content {
         @include inner;
@@ -39,7 +39,7 @@
             .comment-body {
                 display: block;
                 padding: 2rem;
-                background: lighten(#0C121E, 5%);
+                background: var(--dark-200);
                 border-radius: 10px;
                 box-shadow: 0 5px 75px #080B13;
 
@@ -75,7 +75,7 @@
                 max-width: 60px;
                 float: left;
                 margin: 0 1rem 1.2rem 0;
-                border: 3px solid var(--colour-secondary);
+                border: 3px solid var(--secondary);
                 border-radius: 50%;
 
                 @include lg {
@@ -101,6 +101,42 @@
                 a {
                     @include btn;
                     padding: 6px 17px 5px;
+                }
+            }
+
+            // Add badge to author comments
+            .bypostauthor {
+                .name {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    @include md {
+                        flex-direction: row;
+                        align-items: flex-start;  
+                    }
+
+                    h3 {
+                        position: relative;
+                    }
+
+                    &::after {
+                        content: 'Author';
+                        position: relative;
+                        top: 4px;
+                        margin: 0 0 1rem 0;
+                        padding: 5px 8px;
+                        font-size: 12px;
+                        font-weight: var(--font-weight-bold);
+                        line-height: normal;
+                        text-transform: uppercase;
+                        border: 1px solid var(--secondary);
+                        border-radius: 3px;
+
+                        @include md {
+                            margin: 0 0 0 1rem;
+                        }
+                    }
                 }
             }
         }
@@ -143,16 +179,16 @@
 
                 input[id="comment"], input[id="author"], input[id="email"], input[id="url"] {
                         width: 100%;
-                        color: white;
+                        color: var(--light-100);
                         padding: 1.2rem;
                         line-height: normal;
-                        background: lighten(#0C121E, 10%);
+                        background: var(--dark-300);
                         border: 2px solid transparent;
                         border-radius: 10px;
                         grid-column: 1/-1;
 
                         &:focus {
-                            border: 2px solid var(--colour-secondary);
+                            border: 2px solid var(--secondary);
                         }
                 }
 
@@ -166,16 +202,16 @@
                     
                     textarea {
                         width: 100%;
-                        color: white;
+                        color: var(--light-100);
                         line-height: var(--line-height-normal);
                         padding: 1.4rem;
-                        background: lighten(#0C121E, 10%);
+                        background: var(--dark-300);
                         border: 2px solid transparent;
                         border-radius: 10px;
 
                         &:focus {
                             outline: none;
-                            border: 2px solid var(--colour-secondary);
+                            border: 2px solid var(--secondary);
                         }
 
                         &::placeholder {

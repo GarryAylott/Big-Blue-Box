@@ -59,7 +59,7 @@
         
         &__latest-ep {
             flex: 0 1 60%;
-            color: var(--colour-text-light);
+            color: var(--light-100);
 
             h5 {
                 letter-spacing: 1px;
@@ -83,13 +83,13 @@
             @media screen and (max-width: 75em) {
                 margin-bottom: 2rem;
                 padding-bottom: 2rem;
-                border-bottom: 1px solid darken($colour-border, 60%);
+                border-bottom: 1px solid var(--dark-300);
             }
         }
 
         &__subscribe {
             flex: 0 1 32%;
-            color: var(--colour-text-light);
+            color: var(--light-100);
 
             h2 {
                 margin-bottom: 1rem;
@@ -237,11 +237,11 @@
             align-items: center;
             font-size: 14px;
             text-transform: uppercase;
-            color: white;
+            color: var(--light-100);
             margin-bottom: 1.2rem;
             padding: 0.3rem 0.5rem;
             background: rgba(160, 79, 209, .4);
-            border: 1px solid var(--colour-secondary);
+            border: 1px solid var(--secondary);
 
             .post-img-type-icon__podcast,
             .post-img-type-icon__article {
@@ -260,14 +260,14 @@
         }
 
         .header-post-meta {
-            color: white;
+            color: var(--light-100);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .header-audio-player {
             text-align: left;
-            color: white;
+            color: var(--light-100);
 
             .powerpress_player {
                 margin-bottom: 1rem;
@@ -275,7 +275,7 @@
                 .mejs-controls {
                     .mejs-time-rail {
                         .mejs-time-current {
-                            background: var(--colour-secondary);
+                            background: var(--secondary);
                         }
                     }
                 }
@@ -304,7 +304,7 @@
         justify-content: center;
         align-items: center;
         flex: 1 0 auto;
-        color: white;
+        color: var(--light-100);
         text-align: center;
 
         span {
@@ -328,7 +328,7 @@
             font-weight: var(--font-weight-bold);
             text-transform: uppercase;
             padding: 0.3rem 0.5rem;
-            border: 1px solid $colour-primary;
+            border: 1px solid var(--accent);
 
             .twitter {
                 width: 20px;

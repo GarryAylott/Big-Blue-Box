@@ -7,7 +7,7 @@ root = true
 charset = utf-8
 end_of_line = lf
 insert_final_newline = true
-trim_trailing_whitespace = true
+trim_trailing_--light-100space = true
 indent_style = tab
 
 [{package.json,*.yml}]
