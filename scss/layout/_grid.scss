@@ -6,7 +6,7 @@
     position: relative;
     transform: translate3d(0,0,0);
     transition: transform .3s;
-    background: #fcfcfc;
+    background: var(--light-100);
     z-index: 50;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .site-main {
-    padding-top: 4rem;
+    padding: 4rem 0;
 }
 
 .recent-posts {

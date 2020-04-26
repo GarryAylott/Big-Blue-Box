@@ -50,35 +50,9 @@
 	<div class="site-content-wrapper">
 
 		<div class="header-static">
-			<section class="header-static__content">
-				<div class="author-header">
-					<?php echo get_avatar( get_the_author_email(), '180' ); ?>
 
-					<div class="author-header__meta">
-						<div class="author-header__meta-title">
-							<span class="author-header-all-subtitle">All articles by</span>
-							<h1 class="page-title"><?php echo the_archive_title(); ?></h1>
-						</div>
-								
-						<?php if (is_author('2')) { ?>
-							<div class="author-header__twitter">
-								<a href="https://twitter.com/@CJMModels" target="_blank" rel="noopener"><span class="author-title-twitter">@cjmmodels</span></a>
-							</div>
-						<?php } elseif (is_author('3')) { ?>
-							<div class="author-header__twitter">
-								<a href="https://twitter.com/@JordanShortman1" target="_blank" rel="noopener"><span class="author-title-twitter">@jordanshortman1</span></a>
-							</div>
-						<?php } elseif (is_author('4')) { ?>
-							<div class="author-header__twitter">
-								<a href="https://twitter.com/@kalotichy" target="_blank" rel="noopener"><span class="author-title-twitter">@kalotichy</span></a>
-							</div>
-						<?php } elseif (is_author('5')) { ?>
-							<div class="author-header__twitter">
-								<a href="https://twitter.com/@Oldmankrondas" target="_blank" rel="noopener"><span class="author-title-twitter">@oldmankrondas</span></a>
-							</div>
-						<?php } ?>
-					</div>
-				</div>
+			<section class="header-static__content">
+				<h1 class="page-title">Damn! Bloody Cybermats</h1>
 			</section>
 		</div>
 

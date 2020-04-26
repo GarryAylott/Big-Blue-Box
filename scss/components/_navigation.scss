@@ -8,7 +8,6 @@
         }
 
         a {
-            display: inline-block;
             position: relative;
             top: 1px;
             font-family: var(--font-family-headings);
@@ -37,7 +36,7 @@
         }
 
         &.current-menu-item a {
-            padding-bottom: 40px;
+            padding-bottom: 38px;
             border-bottom: 3px solid var(--secondary);
             transition: border-bottom .3s;
         }
@@ -85,7 +84,7 @@
 
 // Archive pagination
 .pagination {
-    margin: 2rem auto 1rem auto;
+    margin: 2rem auto 4rem auto;
 
     .screen-reader-text {
         display: none;

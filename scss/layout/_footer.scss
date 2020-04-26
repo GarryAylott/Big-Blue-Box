@@ -1,7 +1,8 @@
 .site-footer {
     color: var(--light-100);
     background: linear-gradient(0deg, rgba(17, 17, 17, .85) 40%, rgba(39, 39, 39, .4) 100%), url('img/header-bg.jpg') no-repeat;
-    background-position: right top;
+    background-position: right;
+    background-size: cover;
     padding: 6rem 0 2rem 0;
 }
 
