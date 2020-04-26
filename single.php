@@ -40,9 +40,11 @@ get_header('post_single');
 					</div>
 				</div>
 			<?php } ?>
-
-			<?php comments_template(); ?>
 		</div>
+
+		</main><!-- #main -->
+
+		<?php comments_template(); ?>
 
 		<div class="post-nav-wrapper">
 			<?php
@@ -53,8 +55,6 @@ get_header('post_single');
 				) );
 			?>
 		</div>
-
-		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php

@@ -1,0 +1,52 @@
+.error-404-wrapper {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+    background: white;
+
+    @include md {
+        flex-direction: row;
+        justify-content: space-between;
+        background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%), url('img/doctor-rain-said.gif') no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    h4 {
+        margin-bottom: 3rem;
+    }
+
+    .search-form {
+        margin-bottom: 3rem;
+
+        span {
+            display: none;
+        }
+
+        input[type="search"] {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .widget ul li a {
+        font-size: 17px;
+        text-transform: none;
+    }
+
+    .not-found {
+        flex: 0 1 40%;
+        margin-right: 0;
+        padding-top: 0;
+
+        @include md {
+            margin-right: 2rem;
+            padding-top: 3rem;
+        }
+    }
+
+    .error-404-img {
+        img {
+            border-radius: 10px;
+        }
+    }
+}
