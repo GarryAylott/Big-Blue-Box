@@ -5,7 +5,7 @@
 ?>
 
 <article class="post-card">
-<div class="post-img">
+    <div class="post-img">
         <?php if (in_category('podcasts')) { ?>
             <div class="post-img-type-icon">
                 <svg class="post-img-type-icon__podcast"><use xlink:href="<?php bloginfo('template_url'); ?>/img/site-icons.svg#podcast"></use></svg>

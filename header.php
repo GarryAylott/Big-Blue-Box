@@ -91,27 +91,27 @@
 					<div class="header-content__subscribe">
 						<h2>Subscribe and never miss a show</h2>
 
-						<a href="https://itunes.apple.com/gb/podcast/the-doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1"  target="_blank">
+						<a href="https://itunes.apple.com/gb/podcast/the-doctor-who-big-blue-box-podcast/id852653886?mt=2&ls=1"  target="_blank" rel="noopener">
 							<img class="badge-itunes" src="<?php bloginfo('template_url'); ?>/img/itunes-badge.png" width="173" height="44" />
 						</a>
 						
 						<div class="subscriber-badges">
-							<a href="https://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank">
+							<a href="https://www.stitcher.com/podcast/the-doctor-who-big-blue-box-podcast" target="_blank" rel="noopener">
 								<span class="sprite sprite-stitcher-badge"></span>
 							</a>
-							<a href="https://open.spotify.com/show/2vRtn5865vpoNNpD5wUtZS?si=NNX0phChS8-iEGVJZTnXBQ" target="_blank">
+							<a href="https://open.spotify.com/show/2vRtn5865vpoNNpD5wUtZS?si=NNX0phChS8-iEGVJZTnXBQ" target="_blank" rel="noopener">
 								<span class="sprite sprite-spotify-badge"></span>
 							</a>
-							<a href="https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iotxjuso6fr7kqr3siuyewckecq?t%3DThe_Doctor_Who_Big_Blue_Box_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16" target="_blank">
+							<a href="https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iotxjuso6fr7kqr3siuyewckecq?t%3DThe_Doctor_Who_Big_Blue_Box_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16" target="_blank" rel="noopener">
 								<span class="sprite sprite-googleplay-badge"></span>
 							</a>
-							<a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank">
+							<a href="http://www.subscribeonandroid.com/www.bigblueboxpodcast.co.uk/feed/podcast" target="_blank" rel="noopener">
 								<span class="sprite sprite-android-badge"></span>
 							</a>
-							<a href="https://feeds.captivate.fm/doctor-who-big-blue-box-podcast/" target="_blank">
+							<a href="https://feeds.captivate.fm/doctor-who-big-blue-box-podcast/" target="_blank" rel="noopener">
 								<span class="sprite sprite-rsspod-badge"></span>
 							</a>
-							<a href="https://www.bigblueboxpodcast.co.uk/feed/" target="_blank">
+							<a href="https://www.bigblueboxpodcast.co.uk/feed/" target="_blank" rel="noopener">
 								<span class="sprite sprite-rssall-badge"></span>
 							</a>
 						</div>
