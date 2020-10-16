@@ -87,6 +87,12 @@ function rss_post_thumbnail($content) {
 add_filter('the_excerpt_rss', 'rss_post_thumbnail');
 add_filter('the_content_feed', 'rss_post_thumbnail');
 
+// Force Jetpack Publicize to attach feat image to Twitter instead of Twitter cards
+add_filter( 'jetpack_publicize_options', function( $option ) { 
+    $option['attach_media'] = true;
+    return $option;
+} );
+
 // Add category class to body tag for single posts
 add_filter('body_class','add_category_to_single');
 function add_category_to_single($classes) {
