@@ -56,30 +56,31 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</div>
 	</section>
 
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-
-	<section id="signup-widget" class="widget widget-newsletter">
-		<h2>Get the newsletter</h2>
-		<p>Receive our weekly newsletter so you know when new shows release plus any announcements.</p>
-
-		<span>Your Data</span>
-		<p class="small">We'll never sell or pass your data on for marketing purposes and your data will be treated with the upmost care. More details can be seen in our Privacy Policy.</p>
-
-		<div id="mc_embed_signup">
-			<form action="//bigblueboxpodcast.us1.list-manage.com/subscribe/post?u=72630f2037dc3aa1ffb849594&amp;id=38641c1f67" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
-				<div id="mc_embed_signup_scroll">
-					<div class="mc-field-group">
-						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email address here">
+	<section class="widget widget-newsletter">
+		<div id="revue-embed">
+			<h2>Get the newsletter</h2>
+			<p>Subscribe and get our weekly newsletter so you know when new shows release plus any announcements.</p>
+			<form class="newsletter-sub" action="https://www.getrevue.co/profile/bigblueboxpodcast/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+				<div class="revue-form-group">
+					<label for="member_email"></label>
+					<input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]" id="member_email">
+				</div>
+				<!-- <div class="revue-form-group">
+					<label for="member_first_name">First name <span class="optional">(Optional)</span></label>
+					<input class="revue-form-field" placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name">
+				</div>
+				<div class="revue-form-group">
+					<label for="member_last_name">Last name <span class="optional">(Optional)</span></label>
+					<input class="revue-form-field" placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name">
+				</div> -->
+				<div class="form-footer">
+					<div class="revue-form-legals">
+						<p class="small">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</p>
 					</div>
-					<div id="mce-responses" class="clear">
-						<div class="response" id="mce-error-response" style="display:none"></div>
-						<div class="response" id="mce-success-response" style="display:none"></div>
-					</div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-					<div style="position: absolute; left: -5000px;" aria-hidden="true">
-						<input type="text" name="b_72630f2037dc3aa1ffb849594_38641c1f67" tabindex="-1" value="">
-					</div>
-					<div class="clear">
-						<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-reg">
+					<div class="revue-form-actions">
+						<!-- <input class="btn-reg" type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"> -->
+
+						<button type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" class="btn-reg">
 							Submit
 						</button>
 					</div>
@@ -87,6 +88,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			</form>
 		</div>
 	</section>
+
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 	<?php if ( is_home() ) { ?>
 	<section class="widget">
