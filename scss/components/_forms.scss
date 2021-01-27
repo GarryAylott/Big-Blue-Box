@@ -1,0 +1,21 @@
+// Common styles for form elements
+form {
+    input {
+        background: lighten(#d8d8d8, 7%);
+        border: 2px solid transparent;
+        border-radius: 5px;
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+
+        &:focus {
+            background: white;
+            outline: none;
+            border: 2px solid var(--secondary);
+        }
+
+        &::placeholder {
+            @include placeholder();
+          }
+    }
+}
