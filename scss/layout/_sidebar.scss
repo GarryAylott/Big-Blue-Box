@@ -54,6 +54,20 @@
 }
 
 .widget-newsletter {
+    .newsletter-sub {
+        display: flex;
+        flex-direction: column;
+
+        .form-footer {
+            display: flex;
+            
+            .revue-form-legals {
+                margin-top: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+
     span {
         font-size: 14px;
         text-transform: uppercase;
