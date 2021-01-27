@@ -59,17 +59,17 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	<section class="widget widget-newsletter">
 		<div id="revue-embed">
 			<h2>Get the newsletter</h2>
-			<p>Subscribe and get our weekly newsletter so you know when new shows release plus any announcements.</p>
+			<p>Subscribe now and get your weekly newsletter for new episode updates plus show announcements.</p>
 			<form class="newsletter-sub" action="https://www.getrevue.co/profile/bigblueboxpodcast/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
 				<div class="revue-form-group">
-					<label for="member_email"></label>
-					<input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]" id="member_email">
-				</div>
-				<!-- <div class="revue-form-group">
-					<label for="member_first_name">First name <span class="optional">(Optional)</span></label>
-					<input class="revue-form-field" placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name">
+					<label for="member_first_name"></label>
+					<input class="revue-form-field" placeholder="First name" type="text" name="member[first_name]" id="member_first_name">
 				</div>
 				<div class="revue-form-group">
+					<label for="member_email"></label>
+					<input class="revue-form-field" placeholder="Email address" type="email" name="member[email]" id="member_email">
+				</div>
+				<!-- <div class="revue-form-group">
 					<label for="member_last_name">Last name <span class="optional">(Optional)</span></label>
 					<input class="revue-form-field" placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name">
 				</div> -->
