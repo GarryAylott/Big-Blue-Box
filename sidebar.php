@@ -56,39 +56,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</div>
 	</section>
 
-	<section class="widget widget-newsletter">
-		<div id="revue-embed">
-			<h2>Get the newsletter</h2>
-			<p>Subscribe now and get your weekly newsletter for new episode updates plus show announcements.</p>
-			<form class="newsletter-sub" action="https://www.getrevue.co/profile/bigblueboxpodcast/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
-				<div class="revue-form-group">
-					<label for="member_first_name"></label>
-					<input class="revue-form-field" placeholder="First name" type="text" name="member[first_name]" id="member_first_name">
-				</div>
-				<div class="revue-form-group">
-					<label for="member_email"></label>
-					<input class="revue-form-field" placeholder="Email address" type="email" name="member[email]" id="member_email">
-				</div>
-				<!-- <div class="revue-form-group">
-					<label for="member_last_name">Last name <span class="optional">(Optional)</span></label>
-					<input class="revue-form-field" placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name">
-				</div> -->
-				<div class="form-footer">
-					<div class="revue-form-legals">
-						<p class="small">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</p>
-					</div>
-					<div class="revue-form-actions">
-						<!-- <input class="btn-reg" type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"> -->
-
-						<button type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" class="btn-reg">
-							Submit
-						</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</section>
-
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 	<?php if ( is_home() ) { ?>
