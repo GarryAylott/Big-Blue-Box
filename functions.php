@@ -290,7 +290,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// Captivate ACF field setup
+// ACF field setup
 require get_template_directory() . '/inc/acf-fields.php';
 
 // Captivate API Tools (admin menu + sync UI)
