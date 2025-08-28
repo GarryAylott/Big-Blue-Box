@@ -290,7 +290,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// ACF field setup
+// ACF fields setup
 require get_template_directory() . '/inc/acf-fields.php';
 
 // Captivate API Tools (admin menu + sync UI)
@@ -299,5 +299,5 @@ require get_template_directory() . '/inc/api-shutdown.php';
 // Captivate external audio helper
 require get_template_directory() . '/inc/captivate-external-audio.php';
 
-// Captivate sync tool (batch match + update)
+// Captivate sync tool (batch matching + updating episodes)
 require get_template_directory() . '/inc/sync-captivate-episodes.php';
