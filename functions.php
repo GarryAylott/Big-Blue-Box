@@ -299,5 +299,5 @@ require get_template_directory() . '/inc/api-shutdown.php';
 // Captivate external audio helpers
 require get_template_directory() . '/inc/captivate-external-audio.php';
 
-// Captivate sync tool (batch update episodes)
+// Captivate sync tool (batch matching and updating episodes)
 require get_template_directory() . '/inc/sync-captivate-episodes.php';
